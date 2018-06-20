@@ -17,7 +17,7 @@ class BootActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_splash)
 
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, RegisterActivity::class.java)
 
         Thread{
             try{
