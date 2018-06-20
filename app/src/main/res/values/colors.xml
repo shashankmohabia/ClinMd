@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    #custom colours
+    <color name="white">#FFFFFF</color>
+    <color name="black_overlay">#9f9898</color>
+    <color name="black">#000000</color>
+    <color name="logoColor">#2ee8c8</color>
+    <color name="transparent">#80000000</color>
+    <color name="primaryDark">#292b3d</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
+    <color name="dialog">#454656</color>
+    <color name="error">#ff032d</color>
+    <color name="red">#ff1744</color>
+    <color name="blue">#4757c1</color>
+    <color name="green">#4d993e</color>
+    <color name="yellow">#dab908</color>
+</resources>
