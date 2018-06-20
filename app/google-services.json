@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "797726450587",
+    "firebase_url": "https://clinmd-1efc3.firebaseio.com",
+    "project_id": "clinmd-1efc3",
+    "storage_bucket": "clinmd-1efc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797726450587:android:328dabc35b3b0152",
+        "android_client_info": {
+          "package_name": "com.example.shashankmohabia.clinmd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797726450587-ertujgpes5gn6qnutg8dh7vgkkrih93b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "797726450587-ertujgpes5gn6qnutg8dh7vgkkrih93b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR6PiMN97ZSoG30pJsRXkCvwbJTLNeS2M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
