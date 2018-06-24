@@ -14,6 +14,8 @@ import com.example.shashankmohabia.clinmd.R
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.jetbrains.anko.toast
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -86,6 +88,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .addOnCompleteListener {
                             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
                             finish()
+                        }
+            }
+            R.id.nav_delete_account -> {
+                AuthUI.getInstance()
+                        .delete(this)
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                                finish()
+
+                            } else {
+                                toast("Unable to delete account")
+                            }
                         }
             }
         }
