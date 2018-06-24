@@ -4,13 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.R
 
-class LoginActivity : AppCompatActivity() {
-
-
+class RegisterationDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
+        setContentView(R.layout.activity_registeration_details)
     }
 }

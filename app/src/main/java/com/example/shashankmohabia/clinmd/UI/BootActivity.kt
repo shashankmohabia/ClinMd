@@ -3,6 +3,7 @@ package com.example.shashankmohabia.clinmd.UI
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.shashankmohabia.clinmd.Authentication.LoginActivity
 import com.example.shashankmohabia.clinmd.R
 import java.lang.Thread.sleep
 
@@ -17,7 +18,7 @@ class BootActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_splash)
 
-        val intent = Intent(this, RegisterActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
 
         Thread{
             try{

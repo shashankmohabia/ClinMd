@@ -19,12 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".UI.RegisterActivity" />
         <activity
             android:name=".UI.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UI.OTPActivity" />
+        <activity android:name=".UI.SetPinActivity" />
+        <activity android:name=".UI.EnterPinActivity" />
+        <activity android:name=".UI.RegisterationDetailsActivity"></activity>
     </application>
 
 </manifest>
