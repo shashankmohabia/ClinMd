@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 AuthUI.getInstance()
                         .signOut(this)
                         .addOnCompleteListener {
-                            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                            startActivity(Intent(this@MainActivity, InformationActivity::class.java))
                             finish()
                         }
             }
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .delete(this)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                                startActivity(Intent(this@MainActivity, InformationActivity::class.java))
                                 finish()
 
                             } else {

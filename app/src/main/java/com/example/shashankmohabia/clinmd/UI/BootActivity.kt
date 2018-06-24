@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.Authentication.LoginActivity
 import com.example.shashankmohabia.clinmd.R
+import com.google.firebase.auth.FirebaseAuth
 import java.lang.Thread.sleep
 
 /**
@@ -13,21 +14,26 @@ import java.lang.Thread.sleep
  */
 class BootActivity : AppCompatActivity() {
 
+    val Auth = FirebaseAuth.getInstance()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_splash)
 
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = if (Auth.currentUser != null) {
+            Intent(this, MainActivity::class.java)
+        } else {
+            Intent(this, InformationActivity::class.java)
+        }
 
-        Thread{
-            try{
+        Thread {
+            try {
                 sleep(3000)
-            }
-            catch (e:InterruptedException){
+            } catch (e: InterruptedException) {
                 e.printStackTrace()
-            }
-            finally {
+            } finally {
                 startActivity(intent)
                 finish()
             }

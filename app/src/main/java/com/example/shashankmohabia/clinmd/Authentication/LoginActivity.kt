@@ -9,10 +9,7 @@ import java.util.*
 import com.firebase.ui.auth.ErrorCodes
 import android.app.Activity
 import android.util.Log
-import com.example.shashankmohabia.clinmd.UI.EnterPinActivity
-import com.example.shashankmohabia.clinmd.UI.MainActivity
-import com.example.shashankmohabia.clinmd.UI.RegisterationDetailsActivity
-import com.example.shashankmohabia.clinmd.UI.SetPinActivity
+import com.example.shashankmohabia.clinmd.UI.*
 import com.firebase.ui.auth.IdpResponse
 import org.jetbrains.anko.toast
 import com.google.firebase.auth.FirebaseUserMetadata
@@ -28,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (Auth.currentUser != null) {
             //Already Logged In condition
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, EnterPinActivity::class.java))
             finish()
         } else {
             startActivityForResult(
@@ -57,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     } else {
                         // This is an existing user, show them a welcome back screen.
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, SetPinActivity::class.java))
                         finish()
                     }
                 }
