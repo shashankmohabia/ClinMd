@@ -28,7 +28,8 @@
         <activity android:name=".UI.OTPActivity" />
         <activity android:name=".UI.SetPinActivity" />
         <activity android:name=".UI.EnterPinActivity" />
-        <activity android:name=".UI.RegisterationDetailsActivity"></activity>
+        <activity android:name=".UI.RegisterationDetailsActivity" />
+        <activity android:name=".UI.InformationActivity"></activity>
     </application>
 
 </manifest>

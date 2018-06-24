@@ -11,6 +11,7 @@ import android.app.Activity
 import android.util.Log
 import com.example.shashankmohabia.clinmd.UI.EnterPinActivity
 import com.example.shashankmohabia.clinmd.UI.MainActivity
+import com.example.shashankmohabia.clinmd.UI.RegisterationDetailsActivity
 import com.example.shashankmohabia.clinmd.UI.SetPinActivity
 import com.firebase.ui.auth.IdpResponse
 import org.jetbrains.anko.toast
@@ -27,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (Auth.currentUser != null) {
             //Already Logged In condition
-            startActivity(Intent(this, EnterPinActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
             startActivityForResult(
@@ -52,11 +53,11 @@ class LoginActivity : AppCompatActivity() {
                 if (metadata != null) {
                     if (metadata.creationTimestamp == metadata.lastSignInTimestamp) {
                         // The user is new, show them a fancy intro screen!
-                        startActivity(Intent(this, SetPinActivity::class.java))
+                        startActivity(Intent(this, RegisterationDetailsActivity::class.java))
                         finish()
                     } else {
                         // This is an existing user, show them a welcome back screen.
-                        startActivity(Intent(this, SetPinActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     }
                 }

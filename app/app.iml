@@ -173,6 +173,7 @@
     <orderEntry type="library" name="com.google.firebase:firebase-iid-interop-16.0.0" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-support-v4-commons:0.10.4@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:27.1.1@jar" level="project" />
+    <orderEntry type="library" name="com.ramotion.paperonboarding:paper-onboarding-1.1.1" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko:0.10.4@jar" level="project" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-27.1.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-base-15.0.1" level="project" />
