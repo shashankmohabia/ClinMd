@@ -24,7 +24,7 @@ class InformationActivity : AppCompatActivity() {
         createSlider()
 
         signInButton.setOnClickListener(View.OnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, RegisterationDetailsActivity::class.java))
             finish()
         })
 

@@ -23,7 +23,7 @@ class BootActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val intent = if (Auth.currentUser != null) {
-            Intent(this, EnterPinActivity::class.java)
+            Intent(this, MainActivity::class.java)
         } else {
             Intent(this, InformationActivity::class.java)
         }

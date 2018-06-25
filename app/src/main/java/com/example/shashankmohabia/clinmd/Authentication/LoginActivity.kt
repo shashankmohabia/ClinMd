@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (Auth.currentUser != null) {
             //Already Logged In condition
-            startActivity(Intent(this, EnterPinActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
             startActivityForResult(
