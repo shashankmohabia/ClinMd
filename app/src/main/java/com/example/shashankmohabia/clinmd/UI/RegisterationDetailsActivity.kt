@@ -1,5 +1,4 @@
 package com.example.shashankmohabia.clinmd.UI
-
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -41,6 +40,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
             patientInfo.put("age", age_registration.text.toString())
             newdbref.updateChildren(patientInfo)
             toast("$userID added")
+            startActivity(Intent(this, MainActivity::class.java))
         }
         else{
             test_registration.text = "Fill all the details"

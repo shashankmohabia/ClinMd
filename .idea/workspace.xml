@@ -14,7 +14,6 @@
     <list default="true" id="b407154e-0080-41bf-94a9-65b764e97ae1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/InformationActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/InformationActivity.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -123,23 +122,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterationDetailsActivity.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-              <folding>
-                <element signature="e#47#503#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1496">
+              <caret line="102" column="29" lean-forward="false" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/MainActivity.kt">
+      <file leaf-file-name="LoginActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+            <state relative-caret-position="368">
+              <caret line="52" column="72" lean-forward="false" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -2256,8 +2253,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_registeration_details.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/BootActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/InformationActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt" />
       </list>
     </option>
   </component>
@@ -2408,20 +2405,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Authentication" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2606,7 +2589,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529916338420" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529917189133" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2654,7 +2637,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529916338420" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529917189134" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2874,7 +2857,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529916338422" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1529917189135" />
       </method>
     </configuration>
     <list size="5">
@@ -2985,12 +2968,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529915141049</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Registration Data updated with generated ID">
+      <created>1529916365766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1529916365766</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -3007,7 +2996,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25869894" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17810458" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2875817" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3073,7 +3062,8 @@
     <MESSAGE value="Information Screen added" />
     <MESSAGE value="Information Activity modified" />
     <MESSAGE value="Registration Details Activity added and connected to firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration Details Activity added and connected to firebase" />
+    <MESSAGE value="Registration Data updated with generated ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration Data updated with generated ID" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3399,19 +3389,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/MainActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="53" column="65" lean-forward="false" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="714">
+          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+          <folding>
+            <element signature="e#46#502#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3423,13 +3407,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/RegisterationDetailsActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/UI/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-          <folding>
-            <element signature="e#47#503#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1496">
+          <caret line="102" column="29" lean-forward="false" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="52" column="72" lean-forward="false" selection-start-line="52" selection-start-column="72" selection-end-line="52" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
