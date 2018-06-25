@@ -4,11 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.R
 import com.ramotion.paperonboarding.PaperOnboardingPage
-import android.graphics.Color.parseColor
-import android.R.attr.key
 import android.graphics.Color
 import android.R.attr.key
 import android.content.Intent
+import android.support.design.R.id.add
 import android.view.View
 import com.example.shashankmohabia.clinmd.Authentication.LoginActivity
 import com.ramotion.paperonboarding.PaperOnboardingFragment
@@ -22,6 +21,8 @@ class InformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
 
+        createSlider()
+
         signInButton.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
@@ -29,7 +30,7 @@ class InformationActivity : AppCompatActivity() {
 
     }
 
-    /*private fun createSlider() {
+    private fun createSlider() {
         val scr1 = PaperOnboardingPage("Hotels",
                 "All hotels and hostels are sorted by hospitality rating",
                 Color.parseColor("#678FB4"), R.drawable.hotels, R.drawable.key)
@@ -47,9 +48,9 @@ class InformationActivity : AppCompatActivity() {
 
         val onBoardingFragment = PaperOnboardingFragment.newInstance(elements)
 
-        *//*val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.fragment_container, onBoardingFragment)
-        fragmentTransaction.commit()*//*
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.info_fragment, onBoardingFragment)
+                .commit()
 
-    }*/
+    }
 }

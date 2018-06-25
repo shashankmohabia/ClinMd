@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     } else {
                         // This is an existing user, show them a welcome back screen.
-                        startActivity(Intent(this, SetPinActivity::class.java))
+                        startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     }
                 }
