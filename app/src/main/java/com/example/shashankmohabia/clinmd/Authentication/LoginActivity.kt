@@ -50,7 +50,9 @@ class LoginActivity : AppCompatActivity() {
                 if (metadata != null) {
                     if (metadata.creationTimestamp == metadata.lastSignInTimestamp) {
                         // The user is new, show them a fancy intro screen!
-                        startActivity(Intent(this, RegisterationDetailsActivity::class.java))
+                        val intent = Intent(this, RegisterationDetailsActivity::class.java)
+                        intent.putExtra("phone", Auth.currentUser?.phoneNumber)
+                        startActivity(intent)
                         finish()
                     } else {
                         // This is an existing user, show them a welcome back screen.

@@ -1,5 +1,6 @@
 package com.example.shashankmohabia.clinmd.UI
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.R
@@ -14,6 +15,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
 
     val dbref = FirebaseDatabase.getInstance().reference.child("Patients")
     var childCount = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +37,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
             val patientInfo: MutableMap<String, Any> = mutableMapOf()
             patientInfo.put("first_name", first_name_registration.text.toString())
             patientInfo.put("second_name", last_name_registration.text.toString())
+            patientInfo.put("phone", intent.extras.get("phone"))
             patientInfo.put("age", age_registration.text.toString())
             newdbref.updateChildren(patientInfo)
             toast("$userID added")
