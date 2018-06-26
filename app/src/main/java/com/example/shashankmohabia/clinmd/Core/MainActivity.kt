@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.UI
+package com.example.shashankmohabia.clinmd.Core
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -24,7 +25,7 @@ import com.google.firebase.database.DatabaseError
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val dbRef = FirebaseDatabase.getInstance().reference.child("PatientModal").child("PatientID")
+    val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
     var familyList = ArrayList<PatientModal>()
 

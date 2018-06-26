@@ -25,7 +25,6 @@ class InformationActivity : AppCompatActivity() {
 
         signInButton.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
         })
 
     }

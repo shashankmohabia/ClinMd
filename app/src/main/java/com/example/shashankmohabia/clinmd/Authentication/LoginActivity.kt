@@ -9,8 +9,6 @@ import java.util.*
 import com.firebase.ui.auth.ErrorCodes
 import android.app.Activity
 import android.util.Log
-import com.example.shashankmohabia.clinmd.Authentication.Pin.PinActivity
-import com.example.shashankmohabia.clinmd.UI.*
 import com.firebase.ui.auth.IdpResponse
 import org.jetbrains.anko.toast
 

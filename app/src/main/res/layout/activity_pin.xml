@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context="com.example.shashankmohabia.clinmd.Authentication.Pin.PinActivity">
+    tools:context="com.example.shashankmohabia.clinmd.Authentication.PinActivity">
 
     <ImageView
         android:id="@+id/profile_image"
@@ -41,13 +41,23 @@
         android:id="@+id/pin_lock_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/indicator_dots"
+        android:layout_below="@+id/pinError"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         app:keypadButtonSize="72dp"
         app:keypadShowDeleteButton="true"
         app:keypadTextColor="@color/white"
-        app:keypadTextSize="18dp"/>
+        app:keypadTextSize="18dp" />
+
+    <TextView
+        android:id="@+id/pinError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/indicator_dots"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:text="" />
 
 </RelativeLayout>
 

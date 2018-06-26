@@ -3,7 +3,7 @@ package com.example.shashankmohabia.clinmd.UI
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.shashankmohabia.clinmd.Authentication.Pin.PinActivity
+import com.example.shashankmohabia.clinmd.Authentication.PinActivity
 import com.example.shashankmohabia.clinmd.R
 import com.google.firebase.auth.FirebaseAuth
 import java.lang.Thread.sleep
@@ -23,7 +23,8 @@ class BootActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val intent = if (Auth.currentUser != null) {
-            Intent(this, PinActivity::class.java).putExtra("type", "Enter")
+            Intent(this, PinActivity::class.java)
+                    .putExtra("type", "Enter")
         } else {
             Intent(this, InformationActivity::class.java)
         }

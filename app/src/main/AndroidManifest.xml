@@ -24,11 +24,11 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Authentication.LoginActivity" />
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".Core.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Authentication.Pin.SetPinActivity" />
-        <activity android:name=".Authentication.Pin.PinActivity" />
+        <activity android:name=".Authentication.PinActivity" />
         <activity android:name=".Authentication.RegisterationDetailsActivity" />
         <activity android:name=".Authentication.Pin.ConfirmPinActivity"></activity>
     </application>
