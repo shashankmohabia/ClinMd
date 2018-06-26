@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.example.shashankmohabia.clinmd.R
 import com.andrognito.pinlockview.PinLockListener
 import com.example.shashankmohabia.clinmd.Core.MainActivity
@@ -26,6 +27,11 @@ class PinActivity : AppCompatActivity() {
 
         if (intent.extras.get("error") != null) {
             pinError.text = intent.extras.get("error").toString()
+        }
+
+        if(type == "Enter"){
+            forgotPin.isClickable =true
+            forgotPin.visibility = View.VISIBLE
         }
 
         pin_lock_view.setPinLockListener(mPinLockListener)
@@ -85,6 +91,7 @@ class PinActivity : AppCompatActivity() {
 
         override fun onEmpty() {
             Log.d("pin", "Pin empty")
+
         }
 
         override fun onPinChange(pinLength: Int, intermediatePin: String) {
