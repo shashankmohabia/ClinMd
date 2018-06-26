@@ -12,7 +12,6 @@ import android.util.Log
 import com.example.shashankmohabia.clinmd.UI.*
 import com.firebase.ui.auth.IdpResponse
 import org.jetbrains.anko.toast
-import com.google.firebase.auth.FirebaseUserMetadata
 
 
 class LoginActivity : AppCompatActivity() {

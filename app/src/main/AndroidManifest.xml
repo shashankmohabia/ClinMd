@@ -29,7 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UI.SetPinActivity" />
         <activity android:name=".UI.EnterPinActivity" />
-        <activity android:name=".UI.RegisterationDetailsActivity" />
+        <activity android:name=".Authentication.RegisterationDetailsActivity" />
 
     </application>
 

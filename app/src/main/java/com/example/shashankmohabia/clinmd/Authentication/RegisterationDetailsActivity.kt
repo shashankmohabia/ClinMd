@@ -1,8 +1,9 @@
-package com.example.shashankmohabia.clinmd.UI
+package com.example.shashankmohabia.clinmd.Authentication
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.UI.MainActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -12,7 +13,7 @@ import org.jetbrains.anko.toast
 
 class RegisterationDetailsActivity : AppCompatActivity() {
 
-    val dbref = FirebaseDatabase.getInstance().reference.child("Patients")
+    val dbref = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     var childCount = 0
 
 
@@ -35,7 +36,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
             val newdbref = dbref.child(userID)
             val patientInfo: MutableMap<String, Any> = mutableMapOf()
             patientInfo.put("first_name", first_name_registration.text.toString())
-            patientInfo.put("second_name", last_name_registration.text.toString())
+            patientInfo.put("last_name", last_name_registration.text.toString())
             patientInfo.put("phone", intent.extras.get("phone"))
             patientInfo.put("age", age_registration.text.toString())
             newdbref.updateChildren(patientInfo)
@@ -49,7 +50,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
     }
 
     private fun countChild() {
-        dbref.child("PatientID").addListenerForSingleValueEvent(object : ValueEventListener {
+        dbref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
 
             }

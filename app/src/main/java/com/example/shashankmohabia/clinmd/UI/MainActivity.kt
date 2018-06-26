@@ -9,21 +9,29 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.shashankmohabia.clinmd.Authentication.LoginActivity
+import com.example.shashankmohabia.clinmd.Data.Patient
 import com.example.shashankmohabia.clinmd.R
 import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import org.jetbrains.anko.toast
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.ChildEventListener
+import com.google.firebase.database.DatabaseError
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
+    lateinit var phone: String
+    var familyList = ArrayList<Patient>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
@@ -35,7 +43,59 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+
+        loadPatientDetails()
+        displayPatientDetails()
+
+
     }
+
+
+    private fun displayPatientDetails() {
+
+    }
+
+    private fun loadPatientDetails() {
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            phone = FirebaseAuth.getInstance().currentUser?.phoneNumber.toString()
+            dbRef.orderByChild("phone").equalTo(phone).addChildEventListener(object : ChildEventListener {
+                override fun onCancelled(p0: DatabaseError) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onChildMoved(p0: DataSnapshot, p1: String?) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onChildChanged(p0: DataSnapshot, p1: String?) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onChildRemoved(p0: DataSnapshot) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onChildAdded(dataSnapshot: DataSnapshot, prevChildKey: String?) {
+                    val map = dataSnapshot.value as Map<*, *>?
+                    familyList.add(
+                            Patient(
+                                    map!!["first_name"].toString(),
+                                    map["last_name"].toString(),
+                                    map["phone"].toString(),
+                                    map["age"].toString()
+                            )
+                    )
+                    toast("size = " + familyList.size)
+                    toast(dataSnapshot.value.toString())
+                }
+
+            })
+        } else {
+            toast("Problem Loading Data")
+        }
+    }
+
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
