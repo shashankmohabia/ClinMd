@@ -9,7 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.shashankmohabia.clinmd.Data.Patient
+import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -24,9 +24,9 @@ import com.google.firebase.database.DatabaseError
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
+    val dbRef = FirebaseDatabase.getInstance().reference.child("PatientModal").child("PatientID")
     lateinit var phone: String
-    var familyList = ArrayList<Patient>()
+    var familyList = ArrayList<PatientModal>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 override fun onChildAdded(dataSnapshot: DataSnapshot, prevChildKey: String?) {
                     val map = dataSnapshot.value as Map<*, *>?
                     familyList.add(
-                            Patient(
+                            PatientModal(
                                     map!!["first_name"].toString(),
                                     map["last_name"].toString(),
                                     map["phone"].toString(),

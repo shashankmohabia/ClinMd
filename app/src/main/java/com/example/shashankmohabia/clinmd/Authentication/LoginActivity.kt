@@ -9,6 +9,7 @@ import java.util.*
 import com.firebase.ui.auth.ErrorCodes
 import android.app.Activity
 import android.util.Log
+import com.example.shashankmohabia.clinmd.Authentication.Pin.PinActivity
 import com.example.shashankmohabia.clinmd.UI.*
 import com.firebase.ui.auth.IdpResponse
 import org.jetbrains.anko.toast
@@ -22,21 +23,16 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (Auth.currentUser != null) {
-            //Already Logged In condition
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        } else {
-            startActivityForResult(
-                    AuthUI.getInstance()
-                            .createSignInIntentBuilder()
-                            .setAvailableProviders(Arrays.asList(
-                                    AuthUI.IdpConfig.PhoneBuilder()
-                                            .setDefaultCountryIso("in")
-                                            .build()))
-                            .build(),
-                    LOGIN_CODE)
-        }
+
+        startActivityForResult(
+                AuthUI.getInstance()
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(Arrays.asList(
+                                AuthUI.IdpConfig.PhoneBuilder()
+                                        .setDefaultCountryIso("in")
+                                        .build()))
+                        .build(),
+                LOGIN_CODE)
     }
 
 
@@ -57,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     } else {
                         // This is an existing user, show them a welcome back screen.
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, PinActivity::class.java).putExtra("type", "Set"))
                         finish()
                     }
                 }

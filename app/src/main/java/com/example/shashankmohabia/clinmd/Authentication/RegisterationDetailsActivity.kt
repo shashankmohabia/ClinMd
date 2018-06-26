@@ -2,6 +2,7 @@ package com.example.shashankmohabia.clinmd.Authentication
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.shashankmohabia.clinmd.Authentication.Pin.PinActivity
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.UI.MainActivity
 import com.google.firebase.database.DataSnapshot
@@ -13,7 +14,7 @@ import org.jetbrains.anko.toast
 
 class RegisterationDetailsActivity : AppCompatActivity() {
 
-    val dbref = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
+    val dbref = FirebaseDatabase.getInstance().reference.child("PatientModal").child("PatientID")
     var childCount = 0
 
 
@@ -41,7 +42,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
             patientInfo.put("age", age_registration.text.toString())
             newdbref.updateChildren(patientInfo)
             toast("$userID added")
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, PinActivity::class.java).putExtra("type", "Set"))
         }
         else{
             test_registration.text = "Fill all the details"

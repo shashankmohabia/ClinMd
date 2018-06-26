@@ -27,10 +27,10 @@
             android:name=".UI.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".UI.SetPinActivity" />
-        <activity android:name=".UI.EnterPinActivity" />
+        <activity android:name=".Authentication.Pin.SetPinActivity" />
+        <activity android:name=".Authentication.Pin.PinActivity" />
         <activity android:name=".Authentication.RegisterationDetailsActivity" />
-
+        <activity android:name=".Authentication.Pin.ConfirmPinActivity"></activity>
     </application>
 
 </manifest>
