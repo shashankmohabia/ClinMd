@@ -8,7 +8,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.shashankmohabia.clinmd"
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 27
         resConfigs "en"
         versionCode 1
@@ -54,6 +54,9 @@ dependencies {
 
     //Bottom navbar library
     implementation 'com.roughike:bottom-bar:2.3.1'
+
+    //Floating options library
+    implementation 'com.ogaclejapan.arclayout:library:1.1.0@aar'
 
     //Test Libraries
     testImplementation 'junit:junit:4.12'

@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
+import android.view.View
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -20,6 +21,8 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
+import com.roughike.bottombar.OnTabSelectListener
+import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -55,6 +58,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun bottomNavCustom() {
+        folding_button1.setOnClickListener {
+            toast("done")
+        }
+        bottomNavBar.setOnTabSelectListener { tabId ->
+            when(tabId){
+                R.id.tab_plus->{
+                    folding_menu.visibility = View.VISIBLE
+                }
+            }
+        }
     }
 
 
