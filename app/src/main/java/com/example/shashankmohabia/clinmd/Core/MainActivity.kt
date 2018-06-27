@@ -21,6 +21,7 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
+import com.roughike.bottombar.OnTabReselectListener
 import com.roughike.bottombar.OnTabSelectListener
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -36,17 +37,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        /*fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-*/
+
+
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+
 
 
         loadPatientDetails()
@@ -58,13 +58,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun bottomNavCustom() {
-        folding_button1.setOnClickListener {
-            toast("done")
-        }
         bottomNavBar.setOnTabSelectListener { tabId ->
             when(tabId){
                 R.id.tab_plus->{
-                    folding_menu.visibility = View.VISIBLE
+                    if(folding_menu.visibility == View.VISIBLE){
+                        folding_menu.visibility = View.INVISIBLE
+                    }
+                    else{
+                        folding_menu.visibility = View.VISIBLE
+                    }
+                }
+            }
+        }
+
+        bottomNavBar.setOnTabReselectListener { tabId ->
+            when(tabId){
+                R.id.tab_plus->{
+                    if(folding_menu.visibility == View.VISIBLE){
+                        folding_menu.visibility = View.INVISIBLE
+                    } else{
+                        folding_menu.visibility = View.VISIBLE
+                    }
                 }
             }
         }
