@@ -157,6 +157,7 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-api-phone-15.0.1" level="project" />
     <orderEntry type="library" name="me.zhanghai.android.materialprogressbar:library-1.4.2" level="project" />
     <orderEntry type="library" name="com.andrognito.pinlockview:pinlockview-2.1.0" level="project" />
+    <orderEntry type="library" name="com.roughike:bottom-bar-2.3.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-basement-15.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-1.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />

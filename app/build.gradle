@@ -8,7 +8,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.shashankmohabia.clinmd"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 27
         resConfigs "en"
         versionCode 1
@@ -51,6 +51,9 @@ dependencies {
 
     //Pin View Library
     implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
+
+    //Bottom navbar library
+    implementation 'com.roughike:bottom-bar:2.3.1'
 
     //Test Libraries
     testImplementation 'junit:junit:4.12'
