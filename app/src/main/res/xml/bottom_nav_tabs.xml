@@ -3,15 +3,23 @@
     <tabs>
         <tab
             icon="@drawable/ic_menu_camera"
-            id="@+id/tab_favorites"
-            title="Favorites" />
+            id="@+id/tab_home"
+            title="Home" />
         <tab
             icon="@drawable/ic_menu_camera"
-            id="@+id/tab_nearby"
-            title="Nearby" />
+            id="@+id/tab_feeds"
+            title="Feeds" />
         <tab
             icon="@drawable/ic_menu_camera"
-            id="@+id/tab_friends"
-            title="Friends" />
+            id="@+id/tab_plus"
+            title="Plus" />
+        <tab
+            icon="@drawable/ic_menu_camera"
+            id="@+id/tab_calender"
+            title="Calender" />
+        <tab
+            icon="@drawable/ic_menu_camera"
+            id="@+id/tab_settings"
+            title="Setting" />
     </tabs>
 </PreferenceScreen>
