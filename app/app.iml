@@ -183,6 +183,7 @@
     <orderEntry type="library" scope="TEST" name="junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sdk25:0.10.4@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.4@jar" level="project" />
+    <orderEntry type="library" name="com.miguelcatalan:materialsearchview-1.4.0" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sqlite:0.10.4@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-commons:0.10.4@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-core-3.0.2" level="project" />

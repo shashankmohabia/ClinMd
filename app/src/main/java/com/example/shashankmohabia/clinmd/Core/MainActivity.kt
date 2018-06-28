@@ -30,9 +30,6 @@ import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ItemFragment.OnListFragmentInteractionListener {
-    override fun onListFragmentInteraction(item: DummyContent.DummyItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
@@ -73,15 +70,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val adapter = Adapter(supportFragmentManager)
 
         val f1 = ItemFragment()
-        adapter.addFragment(f1, "TAB 1")
+        adapter.addFragment(f1, "Blog")
 
         val f2 = BlankFragment()
-        adapter.addFragment(f2, "TAB 2")
+        adapter.addFragment(f2, "Feed")
 
         pager?.adapter = adapter
-
-
     }
+
+    override fun onListFragmentInteraction(item: DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
 
 
@@ -172,8 +172,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
+        createSearchView(menu.findItem(R.id.action_search))
         return true
     }
+
+    private fun createSearchView(item: MenuItem?) {
+        search_view.setMenuItem(item)
+        search_view.setVoiceSearch(true)
+        search_view.setSuggestions(getResources().getStringArray(R.array.query_suggestions))
+    }
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
