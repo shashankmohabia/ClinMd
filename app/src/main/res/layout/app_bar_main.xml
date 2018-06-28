@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shashankmohabia.clinmd.Core.MainActivity">
+    tools:context="com.example.shashankmohabia.clinmd.Core.Main.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -14,8 +14,8 @@
         <FrameLayout
             android:id="@+id/toolbar_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways">
+            android:layout_height="wrap_content">
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
 
 
             <android.support.v7.widget.Toolbar
@@ -39,7 +39,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include
+        layout="@layout/content_main" />
 
 
 </android.support.design.widget.CoordinatorLayout>

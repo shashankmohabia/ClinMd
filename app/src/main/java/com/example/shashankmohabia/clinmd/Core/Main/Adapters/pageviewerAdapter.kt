@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.Adapters
+package com.example.shashankmohabia.clinmd.Core.Main.Adapters
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

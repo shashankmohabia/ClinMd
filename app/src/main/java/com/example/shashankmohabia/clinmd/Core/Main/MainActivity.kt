@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core
+package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
-import com.example.shashankmohabia.clinmd.Core.Adapters.Adapter
+import com.example.shashankmohabia.clinmd.Core.Main.Adapters.Adapter
 import com.example.shashankmohabia.clinmd.Core.Fragments.BlankFragment
 import com.example.shashankmohabia.clinmd.Core.Fragments.ItemFragment
 import com.example.shashankmohabia.clinmd.Core.Fragments.dummy.DummyContent

@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.View
 import com.example.shashankmohabia.clinmd.R
 import com.andrognito.pinlockview.PinLockListener
-import com.example.shashankmohabia.clinmd.Core.MainActivity
+import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import kotlinx.android.synthetic.main.activity_pin.*
 
 

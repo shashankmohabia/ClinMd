@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.jetbrains.anko.toast
 
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Core.Fragments.dummy.DummyContent
@@ -82,7 +83,9 @@ class ItemFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem)
+        fun onListFragmentInteraction(item: DummyItem){
+
+        }
     }
 
     companion object {
