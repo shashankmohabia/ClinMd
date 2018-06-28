@@ -58,7 +58,11 @@ dependencies {
     //Floating options library
     implementation 'com.ogaclejapan.arclayout:library:1.1.0@aar'
 
+    //folding cards library
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.2'
+
     //Test Libraries
+    implementation 'com.android.support:recyclerview-v7:27.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

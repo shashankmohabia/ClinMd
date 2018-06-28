@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
+import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
@@ -11,6 +12,9 @@ import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
+import com.example.shashankmohabia.clinmd.Core.Adapters.Adapter
+import com.example.shashankmohabia.clinmd.Core.Fragments.BlankFragment
+import com.example.shashankmohabia.clinmd.Core.Fragments.ItemFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -21,8 +25,6 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
-import com.roughike.bottombar.OnTabReselectListener
-import com.roughike.bottombar.OnTabSelectListener
 import kotlinx.android.synthetic.main.content_main.*
 
 
@@ -36,8 +38,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -54,17 +54,44 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         bottomNavCustom()
 
+        slidingtabs()
+
+        folding_cards()
+
+    }
+
+    private fun slidingtabs() {
+        setupViewPager(pager)
+        tabs.setupWithViewPager(pager)
+    }
+
+    private fun setupViewPager(pager: ViewPager?) {
+        val adapter = Adapter(supportFragmentManager)
+
+        val f1 = BlankFragment()
+        adapter.addFragment(f1, "TAB 1")
+
+        val f2 = BlankFragment()
+        adapter.addFragment(f2, "TAB 2")
+
+        pager?.adapter = adapter
+
+
+    }
+
+
+
+    private fun folding_cards() {
 
     }
 
     private fun bottomNavCustom() {
         bottomNavBar.setOnTabSelectListener { tabId ->
-            when(tabId){
-                R.id.tab_plus->{
-                    if(folding_menu.visibility == View.VISIBLE){
+            when (tabId) {
+                R.id.tab_plus -> {
+                    if (folding_menu.visibility == View.VISIBLE) {
                         folding_menu.visibility = View.INVISIBLE
-                    }
-                    else{
+                    } else {
                         folding_menu.visibility = View.VISIBLE
                     }
                 }
@@ -72,11 +99,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         bottomNavBar.setOnTabReselectListener { tabId ->
-            when(tabId){
-                R.id.tab_plus->{
-                    if(folding_menu.visibility == View.VISIBLE){
+            when (tabId) {
+                R.id.tab_plus -> {
+                    if (folding_menu.visibility == View.VISIBLE) {
                         folding_menu.visibility = View.INVISIBLE
-                    } else{
+                    } else {
                         folding_menu.visibility = View.VISIBLE
                     }
                 }

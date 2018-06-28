@@ -30,7 +30,8 @@
         <activity android:name=".Authentication.Pin.SetPinActivity" />
         <activity android:name=".Authentication.PinActivity" />
         <activity android:name=".Authentication.RegisterationDetailsActivity" />
-        <activity android:name=".Authentication.Pin.ConfirmPinActivity"></activity>
+        <activity android:name=".Authentication.Pin.ConfirmPinActivity" />
+        <activity android:name=".Sample.SampleActivity"></activity>
     </application>
 
 </manifest>
