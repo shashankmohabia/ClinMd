@@ -38,7 +38,7 @@ class MyItemRecyclerViewAdapter(private val mValues: List<DummyItem>, private va
     }
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView
+        val mIdView : TextView
         val mContentView: TextView
         var mItem: DummyItem? = null
 

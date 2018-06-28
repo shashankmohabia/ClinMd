@@ -15,6 +15,7 @@ import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Adapters.Adapter
 import com.example.shashankmohabia.clinmd.Core.Fragments.BlankFragment
 import com.example.shashankmohabia.clinmd.Core.Fragments.ItemFragment
+import com.example.shashankmohabia.clinmd.Core.Fragments.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +29,10 @@ import com.google.firebase.database.DatabaseError
 import kotlinx.android.synthetic.main.content_main.*
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ItemFragment.OnListFragmentInteractionListener {
+    override fun onListFragmentInteraction(item: DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
@@ -68,7 +72,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun setupViewPager(pager: ViewPager?) {
         val adapter = Adapter(supportFragmentManager)
 
-        val f1 = BlankFragment()
+        val f1 = ItemFragment()
         adapter.addFragment(f1, "TAB 1")
 
         val f2 = BlankFragment()
