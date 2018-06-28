@@ -13,9 +13,9 @@ import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Main.Adapters.Adapter
-import com.example.shashankmohabia.clinmd.Core.Fragments.BlankFragment
-import com.example.shashankmohabia.clinmd.Core.Fragments.ItemFragment
-import com.example.shashankmohabia.clinmd.Core.Fragments.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.BlogFragment
+import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Core.PatientFeed.FeedFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -29,7 +29,9 @@ import com.google.firebase.database.DatabaseError
 import kotlinx.android.synthetic.main.content_main.*
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ItemFragment.OnListFragmentInteractionListener {
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, BlogFragment.BlogFragmentInteractionListener, FeedFragment.FeedFragmentInteractionListener {
+
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
@@ -69,20 +71,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun setupViewPager(pager: ViewPager?) {
         val adapter = Adapter(supportFragmentManager)
 
-        val f1 = ItemFragment()
+        val f1 = BlogFragment()
         adapter.addFragment(f1, "Blog")
 
-        val f2 = BlankFragment()
+        val f2 = FeedFragment()
         adapter.addFragment(f2, "Feed")
 
         pager?.adapter = adapter
     }
 
-    override fun onListFragmentInteraction(item: DummyContent.DummyItem) {
+    override fun blogFragmentInteraction(item: DummyContent.DummyItem) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    override fun feedFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent.DummyItem) {
 
+    }
 
 
     private fun folding_cards() {
@@ -90,6 +94,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun bottomNavCustom() {
+
+
+
         bottomNavBar.setOnTabSelectListener { tabId ->
             when (tabId) {
                 R.id.tab_plus -> {
@@ -114,6 +121,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
     }
+
+
 
 
     private fun displayPatientDetails() {

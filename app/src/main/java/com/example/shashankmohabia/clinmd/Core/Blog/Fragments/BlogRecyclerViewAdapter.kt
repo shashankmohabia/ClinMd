@@ -1,28 +1,27 @@
-package com.example.shashankmohabia.clinmd.Core.Fragments
+package com.example.shashankmohabia.clinmd.Core.Blog.Fragments
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 
-import com.example.shashankmohabia.clinmd.Core.Fragments.ItemFragment.OnListFragmentInteractionListener
-import com.example.shashankmohabia.clinmd.Core.Fragments.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.BlogFragment.BlogFragmentInteractionListener
+import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent.DummyItem
 import com.example.shashankmohabia.clinmd.R
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [OnListFragmentInteractionListener].
+ * specified [BlogFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
-class MyItemRecyclerViewAdapter(
+class BlogRecyclerViewAdapter(
         private val mValues: List<DummyItem>,
-        private val mListener: OnListFragmentInteractionListener?)
-    : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
+        private val mListener: BlogFragmentInteractionListener?)
+    : RecyclerView.Adapter<BlogRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.fragment_item, parent, false)
+                .inflate(R.layout.blog_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -32,7 +31,7 @@ class MyItemRecyclerViewAdapter(
         holder.mContentView.text = mValues[position].content
 */
        /* holder.mView.setOnClickListener {
-            mListener?.onListFragmentInteraction(holder.mItem!!)
+            mListener?.feedFragmentInteraction(holder.mItem!!)
         }*/
     }
 
