@@ -36,7 +36,11 @@ class FeedFragment : Fragment() {
         if (arguments != null) {
             mColumnCount = arguments!!.getInt(ARG_COLUMN_COUNT)
         }
+
+
+
     }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -53,6 +57,7 @@ class FeedFragment : Fragment() {
             }
             view.adapter = FeedRecyclerViewAdapter(DummyContent.ITEMS, mListener)
         }
+
         return view
     }
 

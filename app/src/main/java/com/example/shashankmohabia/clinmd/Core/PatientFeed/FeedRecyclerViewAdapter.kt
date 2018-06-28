@@ -25,7 +25,7 @@ class FeedRecyclerViewAdapter(private val mValues: List<DummyItem>, private val 
 
     public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.mItem = mValues.get(position)
-        holder.mIdView.setText(mValues.get(position).id)
+        holder.mtitleView.setText(mValues.get(position).title)
         holder.mContentView.setText(mValues.get(position).content)
 
         holder.mView.setOnClickListener(object : View.OnClickListener {
@@ -39,21 +39,21 @@ class FeedRecyclerViewAdapter(private val mValues: List<DummyItem>, private val 
         })
     }
 
-    public override fun getItemCount(): Int {
+    override fun getItemCount(): Int {
         return mValues.size
     }
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView
+        val mtitleView: TextView
         val mContentView: TextView
         var mItem: DummyItem? = null
 
         init {
-            mIdView = mView.findViewById(R.id.id) as TextView
+            mtitleView = mView.findViewById(R.id.title) as TextView
             mContentView = mView.findViewById(R.id.content) as TextView
         }
 
-        public override fun toString(): String {
+        override fun toString(): String {
             return super.toString() + " '" + mContentView.getText() + "'"
         }
     }

@@ -26,11 +26,13 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
+import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.content_main.*
-
+import kotlinx.android.synthetic.main.feed_item.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, BlogFragment.BlogFragmentInteractionListener, FeedFragment.FeedFragmentInteractionListener {
+
 
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
@@ -85,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun feedFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent.DummyItem) {
-
+        toast(item.content)
     }
 
 
