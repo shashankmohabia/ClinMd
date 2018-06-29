@@ -72,28 +72,13 @@ class MainActivity :
 
         bottomNavCustom()
 
-        slidingtabs()
+
 
         folding_cards()
 
     }
 
-    private fun slidingtabs() {
-        setupViewPager(pager)
-        //tabs.setupWithViewPager(pager)
-    }
 
-    private fun setupViewPager(pager: ViewPager?) {
-        val adapter = Adapter(supportFragmentManager)
-
-        val f1 = BlogListFragment()
-        adapter.addFragment(f1, "Blog")
-
-        val f2 = NewsFeedListFragment()
-        adapter.addFragment(f2, "Feed")
-
-        pager?.adapter = adapter
-    }
 
     override fun blogFragmentInteraction(item: DummyContent.DummyItem) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -126,7 +111,8 @@ class MainActivity :
 
     private fun bottomNavCustom() {
 
-
+        bottomNavBar.selectTabWithId(R.id.tab_home)
+        startFragmentTransaction(HomeFragment())
         bottomNavBar.setOnTabSelectListener { tabId ->
             when (tabId) {
                 R.id.tab_plus -> {
