@@ -2,23 +2,23 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <tabs>
         <tab
-            icon="@drawable/ic_menu_camera"
-            id="@+id/tab_home"
+            icon="@drawable/ic_home_black"
+            id="@+id/tab_h"
             title="Home" />
         <tab
-            icon="@drawable/ic_menu_camera"
+            icon="@drawable/ic_assignment_black"
             id="@+id/tab_feeds"
             title="Feeds" />
         <tab
-            icon="@drawable/ic_menu_camera"
+            icon="@drawable/ic_add_circle_black"
             id="@+id/tab_plus"
             title="Plus" />
         <tab
-            icon="@drawable/ic_menu_camera"
+            icon="@drawable/ic_calender_black"
             id="@+id/tab_calender"
             title="Calender" />
         <tab
-            icon="@drawable/ic_menu_camera"
+            icon="@drawable/ic_settings_black"
             id="@+id/tab_settings"
             title="Setting" />
     </tabs>

@@ -16,6 +16,7 @@ import com.example.shashankmohabia.clinmd.Core.Main.Adapters.Adapter
 import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.BlogFragment
 import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.PatientFeed.FeedFragment
+import com.example.shashankmohabia.clinmd.Core.PatientFeed.FeedRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -26,13 +27,10 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
-import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.feed_item.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, BlogFragment.BlogFragmentInteractionListener, FeedFragment.FeedFragmentInteractionListener {
-
 
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
@@ -86,8 +84,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun feedFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent.DummyItem) {
-        toast(item.content)
+    override fun feedFragmentInteraction(item: FeedRecyclerViewAdapter.ViewHolder) {
+        toast(item.mContentView.text)
     }
 
 
@@ -96,7 +94,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun bottomNavCustom() {
-
 
 
         bottomNavBar.setOnTabSelectListener { tabId ->
@@ -123,8 +120,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
     }
-
-
 
 
     private fun displayPatientDetails() {
@@ -194,14 +189,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
+           /* R.id.action_settings -> return true*/
+            R.id.action_chat -> {
+                toast("Chat with your doctor")
+                return true
+            }
+            else -> return true
+
         }
     }
 

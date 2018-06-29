@@ -9,6 +9,7 @@ import android.widget.TextView
 import com.example.shashankmohabia.clinmd.Core.PatientFeed.FeedFragment.FeedFragmentInteractionListener
 import com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent.DummyItem
 import com.example.shashankmohabia.clinmd.R
+import com.ramotion.foldingcell.FoldingCell
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
@@ -33,7 +34,7 @@ class FeedRecyclerViewAdapter(private val mValues: List<DummyItem>, private val 
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener!!.feedFragmentInteraction(holder.mItem!!)
+                    mListener!!.feedFragmentInteraction(holder)
                 }
             }
         })
@@ -47,10 +48,12 @@ class FeedRecyclerViewAdapter(private val mValues: List<DummyItem>, private val 
         val mtitleView: TextView
         val mContentView: TextView
         var mItem: DummyItem? = null
+        val cell: FoldingCell
 
         init {
             mtitleView = mView.findViewById(R.id.title) as TextView
             mContentView = mView.findViewById(R.id.content) as TextView
+            cell = mView.findViewById(R.id.folding_cell) as FoldingCell
         }
 
         override fun toString(): String {

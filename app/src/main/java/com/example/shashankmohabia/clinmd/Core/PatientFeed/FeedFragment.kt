@@ -12,7 +12,6 @@ import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent
-import com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy.DummyContent.DummyItem
 
 /**
  * A fragment representing a list of Items.
@@ -87,7 +86,7 @@ class FeedFragment : Fragment() {
      */
     interface FeedFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun feedFragmentInteraction(item: DummyItem)
+        fun feedFragmentInteraction(item: FeedRecyclerViewAdapter.ViewHolder)
     }
 
     companion object {

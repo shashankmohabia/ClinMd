@@ -22,4 +22,5 @@
     <color name="blue">#4757c1</color>
     <color name="green">#4d993e</color>
     <color name="yellow">#dab908</color>
+    <color name="accent_material_light_1">#ffffff</color>
 </resources>
