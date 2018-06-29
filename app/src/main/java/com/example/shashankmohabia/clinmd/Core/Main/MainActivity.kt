@@ -27,6 +27,7 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.main_content.*
 
 
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun slidingtabs() {
         setupViewPager(pager)
-        tabs.setupWithViewPager(pager)
+        //tabs.setupWithViewPager(pager)
     }
 
     private fun setupViewPager(pager: ViewPager?) {

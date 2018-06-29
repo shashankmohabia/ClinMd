@@ -9,15 +9,12 @@
     tools:context="com.example.shashankmohabia.clinmd.Core.Main.MainActivity"
     tools:showIn="@layout/main_app_bar">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+    <FrameLayout
+        android:id="@+id/mainFrame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 
 
     <com.roughike.bottombar.BottomBar
