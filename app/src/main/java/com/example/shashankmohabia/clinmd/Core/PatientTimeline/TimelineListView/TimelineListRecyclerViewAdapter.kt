@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.PatientTimeline.PatientTimelineListView
+package com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-import com.example.shashankmohabia.clinmd.Core.PatientTimeline.PatientTimelineListView.TimelineListFragment.OnListFragmentInteractionListener
+import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment.TimelineListFragmentInteractionListener
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent.DummyItem
 import com.example.shashankmohabia.clinmd.R
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [OnListFragmentInteractionListener].
+ * specified [TimelineListFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
-class timelineListRecyclerViewAdapter(private val mValues: List<DummyItem>, private val mListener: OnListFragmentInteractionListener?) : RecyclerView.Adapter<timelineListRecyclerViewAdapter.ViewHolder>() {
+class TimelineListRecyclerViewAdapter(private val mValues: List<DummyItem>, private val mListener: TimelineListFragmentInteractionListener?) : RecyclerView.Adapter<TimelineListRecyclerViewAdapter.ViewHolder>() {
 
     public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.getContext())
@@ -33,7 +33,7 @@ class timelineListRecyclerViewAdapter(private val mValues: List<DummyItem>, priv
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener!!.onListFragmentInteraction(holder.mItem!!)
+                    mListener!!.onTimelineListFragmentInteraction(holder.mItem!!)
                 }
             }
         })

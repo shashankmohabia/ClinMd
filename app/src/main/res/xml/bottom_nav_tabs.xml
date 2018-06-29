@@ -3,7 +3,7 @@
     <tabs>
         <tab
             icon="@drawable/ic_home_black"
-            id="@+id/tab_h"
+            id="@+id/tab_home"
             title="Home" />
         <tab
             icon="@drawable/ic_assignment_black"
@@ -20,6 +20,6 @@
         <tab
             icon="@drawable/ic_settings_black"
             id="@+id/tab_settings"
-            title="Setting" />
+            title="Settings" />
     </tabs>
 </PreferenceScreen>

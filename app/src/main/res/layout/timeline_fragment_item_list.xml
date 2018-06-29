@@ -9,5 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.PatientTimelineListView.TimelineListFragment"
+    tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment"
     tools:listitem="@layout/timeline_fragment_item" />

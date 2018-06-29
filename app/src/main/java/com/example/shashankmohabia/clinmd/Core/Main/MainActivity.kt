@@ -1,8 +1,10 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
@@ -12,11 +14,15 @@ import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
+import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Main.Adapters.Adapter
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsFeedListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsFeedListRecyclerViewAdapter
+import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
+import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -31,7 +37,15 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.main_content.*
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, BlogListFragment.BlogFragmentInteractionListener, NewsFeedListFragment.FeedFragmentInteractionListener {
+class MainActivity :
+        AppCompatActivity(),
+        NavigationView.OnNavigationItemSelectedListener,
+        BlogListFragment.BlogFragmentInteractionListener,
+        NewsFeedListFragment.FeedFragmentInteractionListener,
+        CalenderFragment.CalenderFragmentInteractionListener,
+        HomeFragment.HomeFragmentInteractionListener,
+        TimelineListFragment.TimelineListFragmentInteractionListener,
+        SettingsFragment.SettingsFragmentInteractionListener {
 
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
@@ -89,6 +103,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toast(item.mContentView.text)
     }
 
+    override fun onHomeFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onCalenderFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onSettingsFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onTimelineListFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
     private fun folding_cards() {
 
@@ -106,7 +136,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         folding_menu.visibility = View.VISIBLE
                     }
                 }
+                R.id.tab_home ->{
+                    startFragmentTransaction(HomeFragment())
+                }
+                R.id.tab_timeline ->{
+                    startFragmentTransaction(TimelineListFragment())
+                }
+                R.id.tab_calender ->{
+                    startFragmentTransaction(CalenderFragment())
+                }
+                R.id.tab_settings ->{
+                    startFragmentTransaction(SettingsFragment())
+                }
             }
+
         }
 
         bottomNavBar.setOnTabReselectListener { tabId ->
@@ -118,10 +161,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         folding_menu.visibility = View.VISIBLE
                     }
                 }
+
+
             }
         }
     }
 
+    private fun startFragmentTransaction(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.mainFrame, fragment)
+                .commit()
+    }
 
     private fun displayPatientDetails() {
 

@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.PatientTimeline.PatientTimelineListView
+package com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView
 
 import android.content.Context
 import android.os.Bundle
@@ -28,7 +28,7 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyConten
 class TimelineListFragment : Fragment() {
     // TODO: Customize parameters
     private var mColumnCount = 1
-    private var mListener: OnListFragmentInteractionListener? = null
+    private var mListener: TimelineListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +51,7 @@ class TimelineListFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            view.adapter = timelineListRecyclerViewAdapter(DummyContent.ITEMS, mListener)
+            view.adapter = TimelineListRecyclerViewAdapter(DummyContent.ITEMS, mListener)
         }
         return view
     }
@@ -59,10 +59,10 @@ class TimelineListFragment : Fragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context is OnListFragmentInteractionListener) {
+        if (context is TimelineListFragmentInteractionListener) {
             mListener = context
         } else {
-            throw RuntimeException(context!!.toString() + " must implement OnListFragmentInteractionListener")
+            throw RuntimeException(context!!.toString() + " must implement TimelineListFragmentInteractionListener")
         }
     }
 
@@ -80,9 +80,9 @@ class TimelineListFragment : Fragment() {
      *
      * See the Android Training lesson [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html) for more information.
      */
-    interface OnListFragmentInteractionListener {
+    interface TimelineListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem)
+        fun onTimelineListFragmentInteraction(item: DummyItem)
     }
 
     companion object {
