@@ -13,7 +13,8 @@
         android:icon="@drawable/ic_chat_black"
         android:orderInCategory="100"
         android:title="Chat"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
+
     <!--<item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

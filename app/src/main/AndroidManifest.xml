@@ -29,7 +29,9 @@
             android:name=".Core.Main.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Authentication.PinActivity" />
+        <activity
+            android:name=".Authentication.PinActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Authentication.RegisterationDetailsActivity" />
     </application>
 
