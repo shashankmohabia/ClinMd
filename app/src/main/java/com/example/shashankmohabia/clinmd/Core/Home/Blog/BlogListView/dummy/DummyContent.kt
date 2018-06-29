@@ -4,7 +4,7 @@ import java.util.ArrayList
 import java.util.HashMap
 
 /**
- * Helper class for providing sample content for user interfaces created by
+ * Helper class for providing sample title for user interfaces created by
  * Android template wizards.
  *
  *
@@ -50,7 +50,7 @@ object DummyContent {
     }
 
     /**
-     * A dummy item representing a piece of content.
+     * A dummy item representing a piece of title.
      */
     class DummyItem(val id: String, val content: String, val details: String) {
 

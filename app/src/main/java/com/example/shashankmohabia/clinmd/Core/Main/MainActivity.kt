@@ -17,8 +17,7 @@ import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsFeedListFragment
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsFeedListRecyclerViewAdapter
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
@@ -38,11 +37,14 @@ class MainActivity :
         AppCompatActivity(),
         NavigationView.OnNavigationItemSelectedListener,
         BlogListFragment.BlogFragmentInteractionListener,
-        NewsFeedListFragment.FeedFragmentInteractionListener,
+        NewsListFragment.OnListFragmentInteractionListener,
         CalenderFragment.CalenderFragmentInteractionListener,
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
         SettingsFragment.SettingsFragmentInteractionListener {
+    override fun onListFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
@@ -81,9 +83,6 @@ class MainActivity :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun feedFragmentInteraction(item: NewsFeedListRecyclerViewAdapter.ViewHolder) {
-        toast(item.mContentView.text)
-    }
 
     override fun onHomeFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

@@ -3,16 +3,17 @@ package com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ListView
 
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent.DummyItem
+import com.ramotion.foldingcell.FoldingCell
+import kotlinx.android.synthetic.main.timeline_fragment_item_list.view.*
 
 /**
  * A fragment representing a list of Items.
@@ -43,15 +44,20 @@ class TimelineListFragment : Fragment() {
         val view = inflater.inflate(R.layout.timeline_fragment_item_list, container, false)
 
         // Set the adapter
-        if (view is RecyclerView) {
+        if (view is ListView) {
             val context = view.getContext()
-            val recyclerView = view
-            if (mColumnCount <= 1) {
-                view.layoutManager = LinearLayoutManager(context)
-            } else {
-                view.layoutManager = GridLayoutManager(context, mColumnCount)
+            val adapter = FoldingCellListAdapter(context, DummyContent.ITEMS)
+
+            // set elements to adapter
+            view.mainListView.setAdapter(adapter)
+
+            // set on click event listener to list view
+            view.mainListView.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, pos, l ->
+                // toggle clicked cell state
+                (view as FoldingCell).toggle(false)
+                // register in adapter that state for selected cell is toggled
+                adapter.registerToggle(pos)
             }
-            view.adapter = TimelineListRecyclerViewAdapter(DummyContent.ITEMS, mListener)
         }
         return view
     }

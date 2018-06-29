@@ -27,8 +27,8 @@ class BlogListRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        /* holder.mItem = mValues[position]
-        holder.mIdView.text = mValues[position].id
-        holder.mContentView.text = mValues[position].content
+        holder.mTitleView.text = mValues[position].id
+        holder.mContentView.text = mValues[position].title
 */
        /* holder.mView.setOnClickListener {
             mListener?.feedFragmentInteraction(holder.mItem!!)
@@ -40,13 +40,13 @@ class BlogListRecyclerViewAdapter(
     }
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        /*val mIdView : TextView
+        /*val mTitleView : TextView
         val mContentView: TextView
         var mItem: DummyItem? = null
 
         init {
-            mIdView = mView.findViewById(R.id.id) as TextView
-            mContentView = mView.findViewById(R.id.content) as TextView
+            mTitleView = mView.findViewById(R.id.id) as TextView
+            mContentView = mView.findViewById(R.id.title) as TextView
         }
 
         override fun toString(): String {

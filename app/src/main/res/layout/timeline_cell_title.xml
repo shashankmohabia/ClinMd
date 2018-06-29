@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:background="@color/colorPrimary"
+    android:baselineAligned="false"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/cell_title_view"
@@ -12,10 +14,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/title"
+            android:id="@+id/cell_title"
             android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Title view" />
 
     </FrameLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
