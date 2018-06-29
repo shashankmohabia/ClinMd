@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.PatientFeed.dummy
+package com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.dummy
 
 import java.util.ArrayList
 import java.util.HashMap

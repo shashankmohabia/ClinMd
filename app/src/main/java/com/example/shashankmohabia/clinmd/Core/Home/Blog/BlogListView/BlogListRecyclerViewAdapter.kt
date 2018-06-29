@@ -1,12 +1,12 @@
-package com.example.shashankmohabia.clinmd.Core.Blog.Fragments
+package com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.BlogFragment.BlogFragmentInteractionListener
-import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment.BlogFragmentInteractionListener
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent.DummyItem
 import com.example.shashankmohabia.clinmd.R
 
 /**
@@ -14,10 +14,10 @@ import com.example.shashankmohabia.clinmd.R
  * specified [BlogFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
-class BlogRecyclerViewAdapter(
+class BlogListRecyclerViewAdapter(
         private val mValues: List<DummyItem>,
         private val mListener: BlogFragmentInteractionListener?)
-    : RecyclerView.Adapter<BlogRecyclerViewAdapter.ViewHolder>() {
+    : RecyclerView.Adapter<BlogListRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)

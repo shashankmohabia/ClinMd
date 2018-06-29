@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.Blog.Fragments
+package com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView
 
 import android.content.Context
 import android.os.Bundle
@@ -11,8 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.R
-import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent
-import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent.DummyItem
 
 /**
  * A fragment representing a list of Items.
@@ -25,7 +25,7 @@ import com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy.DummyContent
  * Mandatory empty constructor for the fragment manager to instantiate the
  * fragment (e.g. upon screen orientation changes).
  */
-class BlogFragment : Fragment() {
+class BlogListFragment : Fragment() {
     // TODO: Customize parameters
     private var mColumnCount = 1
     private var mListener: BlogFragmentInteractionListener? = null
@@ -51,7 +51,7 @@ class BlogFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            view.adapter = BlogRecyclerViewAdapter(DummyContent.ITEMS, mListener)
+            view.adapter = BlogListRecyclerViewAdapter(DummyContent.ITEMS, mListener)
         }
         return view
     }
@@ -93,8 +93,8 @@ class BlogFragment : Fragment() {
         private val ARG_COLUMN_COUNT = "column-count"
 
         // TODO: Customize parameter initialization
-        fun newInstance(columnCount: Int): BlogFragment {
-            val fragment = BlogFragment()
+        fun newInstance(columnCount: Int): BlogListFragment {
+            val fragment = BlogListFragment()
             val args = Bundle()
             args.putInt(ARG_COLUMN_COUNT, columnCount)
             fragment.arguments = args

@@ -7,8 +7,8 @@
             title="Home" />
         <tab
             icon="@drawable/ic_assignment_black"
-            id="@+id/tab_feeds"
-            title="Feeds" />
+            id="@+id/tab_timeline"
+            title="Timeline" />
         <tab
             icon="@drawable/ic_add_circle_black"
             id="@+id/tab_plus"

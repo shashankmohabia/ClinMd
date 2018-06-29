@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.Blog.Fragments.dummy
+package com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy
 
 import java.util.ArrayList
 import java.util.HashMap
