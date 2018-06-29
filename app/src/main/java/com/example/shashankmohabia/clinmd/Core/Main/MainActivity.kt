@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
-import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
@@ -15,7 +14,6 @@ import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
-import com.example.shashankmohabia.clinmd.Core.Main.Adapters.Adapter
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
@@ -33,7 +31,6 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.main_content.*
 
 
