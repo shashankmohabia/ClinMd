@@ -13,6 +13,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="doctor_address"> 177, Dronpuri, Gas Godown Road, Vaishali West, 200 Feet Heerapura Bypass, Ajmer Road Jaipur - 302021</string>
+    <string name="doctor_timing"> 10AM - 5PM (Mon - Fri) </string>
+    <string name="doctor_contact"> 8504939946  shashankmohabia27@gmail.com </string>
+    <string name="doctor_summary"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since ... </string>
+
+
     <string-array name="query_suggestions">
         <item>Android</item>
         <item>Apple</item>

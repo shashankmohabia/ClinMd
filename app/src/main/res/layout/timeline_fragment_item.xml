@@ -8,6 +8,7 @@
     android:id="@+id/cell"
     folding-cell:additionalFlipsCount="2"
     folding-cell:animationDuration="1300"
+    android:layout_margin="8dp"
     folding-cell:backSideColor="@color/colorPrimary"
     folding-cell:cameraHeight="30">
 

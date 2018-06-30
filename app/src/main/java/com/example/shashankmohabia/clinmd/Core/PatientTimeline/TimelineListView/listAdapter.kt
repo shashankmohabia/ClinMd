@@ -31,8 +31,8 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
             val vi = LayoutInflater.from(context)
             cell = vi.inflate(R.layout.timeline_fragment_item, parent, false) as FoldingCell
             // binding view parts to view holder
-            viewHolder.title = cell.findViewById(R.id.cell_title)
-            viewHolder.content = cell.findViewById(R.id.cell_content)
+            /*viewHolder.title = cell.findViewById(R.id.cell_title)
+            viewHolder.content = cell.findViewById(R.id.cell_content)*/
             cell.tag = viewHolder
         } else {
             // for existing cell set valid valid state(without animation)
@@ -48,8 +48,8 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
             return cell
 
         // bind data from selected element to view through view holder
-        viewHolder.title!!.text = item!!.title
-        viewHolder.content!!.text = item!!.details
+        /*viewHolder.title!!.text = item!!.title
+        viewHolder.content!!.text = item!!.details*/
 
         /*// set custom btn handler for list item from that item
         if (item!!.getRequestBtnClickListener() != null) {
