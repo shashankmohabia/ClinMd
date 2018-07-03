@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment.BlogFragmentInteractionListener
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.R
+import kotlinx.android.synthetic.main.blog_item.view.*
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
@@ -30,9 +31,9 @@ class BlogListRecyclerViewAdapter(
         holder.mTitleView.text = mValues[position].id
         holder.mContentView.text = mValues[position].title
 */
-       /* holder.mView.setOnClickListener {
-            mListener?.feedFragmentInteraction(holder.mItem!!)
-        }*/
+        holder.mView.read_more.setOnClickListener {
+            mListener?.blogFragmentInteraction(position)
+        }
     }
 
     override fun getItemCount(): Int {

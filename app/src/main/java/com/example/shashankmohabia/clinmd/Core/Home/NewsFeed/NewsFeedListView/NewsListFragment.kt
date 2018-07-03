@@ -48,7 +48,7 @@ class NewsListFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            val adapter= NewsFeedRecyclerViewAdapter(DummyContent.ITEMS, mListener)
+            val adapter = NewsFeedRecyclerViewAdapter(DummyContent.ITEMS, mListener)
             view.adapter = adapter
 
         }

@@ -14,11 +14,12 @@ import com.example.shashankmohabia.clinmd.Data.PatientModal
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
+import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
@@ -32,7 +33,6 @@ import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
-import kotlinx.android.synthetic.main.timeline_cell_title.view.*
 
 
 class MainActivity :
@@ -74,13 +74,9 @@ class MainActivity :
     }
 
     override fun NewsFeedFragmentInteraction(item: View) {
-        item.chatDoctor.setOnClickListener {
-            toast("chat Kar lo")
-        }
         (item as FoldingCell).toggle(false)
         toast("shashank")
     }
-
 
     override fun onHomeFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -94,16 +90,16 @@ class MainActivity :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onTimelineListFragmentInteraction(item: View) {
-        item.chatDoctor.setOnClickListener {
-            toast("chat Kar lo")
-        }
-        (item as FoldingCell).toggle(false)
+    override fun blogFragmentInteraction(item: Int) {
+        startActivity(Intent(this, BlogDetailActivity::class.java))
+    }
+
+    override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
+        (item.mView as FoldingCell).toggle(false)
         toast("shashank")
     }
 
     private fun bottomNavCustom() {
-
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
         bottomNavBar.setOnTabSelectListener { tabId ->

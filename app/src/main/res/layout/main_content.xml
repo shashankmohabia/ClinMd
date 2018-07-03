@@ -47,7 +47,7 @@
         app:arc_color="@color/colorPrimary"
         app:arc_freeAngle="false"
         app:arc_origin="bottom"
-        app:arc_radius="120dp"
+        app:arc_radius="100dp"
         app:arc_reverseAngle="false"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,13 +61,6 @@
             android:background="#03A9F4"
             android:gravity="center"
             android:text="A"
-            android:textColor="@color/white" />
-
-        <Button
-            style="@style/Item.Small"
-            android:background="#00BCD4"
-            android:gravity="center"
-            android:text="B"
             android:textColor="@color/white" />
 
         <Button

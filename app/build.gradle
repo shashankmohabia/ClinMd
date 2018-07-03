@@ -64,6 +64,9 @@ dependencies {
     //Search View Library
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
 
+    //Image Card Slider Library
+    implementation 'com.ramotion.cardslider:card-slider:0.2.0'
+
     //Test Libraries
     implementation 'com.android.support:recyclerview-v7:27.+'
     testImplementation 'junit:junit:4.12'

@@ -80,7 +80,7 @@ class TimelineListFragment : Fragment() {
      */
     interface TimelineListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onTimelineListFragmentInteraction(item: View)
+        fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder)
     }
 
     companion object {

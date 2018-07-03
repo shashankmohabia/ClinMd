@@ -80,8 +80,7 @@ class BlogListFragment : Fragment() {
      * See the Android Training lesson [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html) for more information.
      */
     interface BlogFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun blogFragmentInteraction(item: DummyContent.DummyItem){
+        fun blogFragmentInteraction(item: Int){
 
         }
     }

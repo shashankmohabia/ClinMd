@@ -33,6 +33,10 @@
             android:name=".Authentication.PinActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Authentication.RegisterationDetailsActivity" />
+        <activity
+            android:name=".Core.Home.Blog.BlogDetailView.BlogDetailActivity"
+            android:label="@string/title_activity_blog_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
