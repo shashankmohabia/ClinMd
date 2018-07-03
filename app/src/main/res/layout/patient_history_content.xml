@@ -4,34 +4,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="50dp"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:weightSum="10">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/historyList"
         android:name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsListView.NewsListFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="18dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="8"
         android:clipChildren="false"
         android:overScrollMode="never"
         app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
         tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment"
-        tools:listitem="@layout/patient_history_item"
-        android:layout_marginLeft="20dp" />
+        tools:listitem="@layout/patient_history_item" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
         android:text="Doctor's name"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:textColor="@color/black" />
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="Date:28 Mar 2018"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 </LinearLayout>
