@@ -1,5 +1,6 @@
 package com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -31,6 +32,6 @@ class PatientHistoryActivity :
     }
 
     override fun onItemClick(position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        startActivity(Intent(this, PatientHistoryDetailActivity::class.java))
     }
 }

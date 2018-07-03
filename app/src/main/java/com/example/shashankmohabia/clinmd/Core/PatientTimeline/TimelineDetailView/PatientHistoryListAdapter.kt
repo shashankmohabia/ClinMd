@@ -24,7 +24,6 @@ class SimpleAdapter(context: Context, listener: OnRecyclerItemClickListener) : G
 
 class DemoViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : BaseViewHolder<String, OnRecyclerItemClickListener>(itemView, listener) {
 
-    private val nameTv: TextView? = itemView.test
 
     init {
         listener?.let {
@@ -33,6 +32,5 @@ class DemoViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : B
     }
 
     override fun onBind(item: String) {
-        nameTv?.text = item
     }
 }

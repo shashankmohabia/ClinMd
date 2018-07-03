@@ -119,4 +119,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_patient_history">PatientHistoryActivity</string>
+    <string name="title_activity_patient_history_detail">PatientHistoryDetailActivity</string>
 </resources>

@@ -40,6 +40,10 @@
         <activity
             android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity"
             android:label="@string/title_activity_patient_history"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryDetailActivity"
+            android:label="@string/title_activity_patient_history_detail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
