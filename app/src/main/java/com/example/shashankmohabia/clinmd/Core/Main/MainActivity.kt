@@ -18,8 +18,8 @@ import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDeta
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
+import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
-import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
@@ -33,6 +33,7 @@ import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
+import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 
 
 class MainActivity :
@@ -94,8 +95,11 @@ class MainActivity :
         startActivity(Intent(this, BlogDetailActivity::class.java))
     }
 
-    override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
-        (item.mView as FoldingCell).toggle(false)
+    override fun onTimelineListFragmentInteraction(item: View) {
+        item.patient_history.setOnClickListener {
+            startActivity(Intent(this, PatientHistoryActivity::class.java))
+        }
+        (item as FoldingCell).toggle(false)
         toast("shashank")
     }
 

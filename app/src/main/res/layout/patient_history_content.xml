@@ -2,7 +2,7 @@
 <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list"
+    android:id="@+id/historyList"
     android:name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsListView.NewsListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +12,8 @@
     android:clipToPadding="false"
     android:divider="@android:color/transparent"
     android:dividerHeight="10dp"
-    app:layoutManager="LinearLayoutManager"
+    android:overScrollMode="never"
+    app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
+    android:background="@color/colorPrimary"
     tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment"
-    tools:listitem="@layout/timeline_fragment_item" />
+    tools:listitem="@layout/patient_history_item" />

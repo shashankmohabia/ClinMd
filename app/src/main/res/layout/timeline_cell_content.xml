@@ -256,6 +256,7 @@
 
             <ImageView
                 android:layout_width="25dp"
+                android:id="@+id/patient_history"
                 android:layout_height="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/ic_content_paste_black" />

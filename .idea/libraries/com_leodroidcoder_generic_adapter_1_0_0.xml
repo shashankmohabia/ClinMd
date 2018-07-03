@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.leodroidcoder:generic-adapter-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/generic-adapter-1.0.0.aar/0ac56673f0c49c1523a1c8e84589253a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/generic-adapter-1.0.0.aar/0ac56673f0c49c1523a1c8e84589253a/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.leodroidcoder/generic-adapter/1.0.0/5ccd6ea042b058b71cbc82d8c20006a0f4b739a0/generic-adapter-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

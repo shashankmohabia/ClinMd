@@ -195,6 +195,7 @@
     <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.41@jar" level="project" />
     <orderEntry type="library" name="android.arch.core:common:1.1.1@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-auth-interop-16.0.0" level="project" />
+    <orderEntry type="library" name="com.leodroidcoder:generic-adapter-1.0.0" level="project" />
     <orderEntry type="library" name="com.android.support:customtabs-27.1.1" level="project" />
     <orderEntry type="library" name="com.android.support.constraint:constraint-layout-1.1.2" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-support-v4:0.10.4@jar" level="project" />

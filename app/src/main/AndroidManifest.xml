@@ -36,6 +36,10 @@
         <activity
             android:name=".Core.Home.Blog.BlogDetailView.BlogDetailActivity"
             android:label="@string/title_activity_blog_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity"
+            android:label="@string/title_activity_patient_history"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
