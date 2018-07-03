@@ -15,9 +15,9 @@ import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
-import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
@@ -30,21 +30,20 @@ import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DatabaseError
+import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
+import kotlinx.android.synthetic.main.timeline_cell_title.view.*
 
 
 class MainActivity :
         AppCompatActivity(),
+        NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
         BlogListFragment.BlogFragmentInteractionListener,
-        NewsListFragment.OnListFragmentInteractionListener,
         CalenderFragment.CalenderFragmentInteractionListener,
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
         SettingsFragment.SettingsFragmentInteractionListener {
-    override fun onListFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent.DummyItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
@@ -72,15 +71,14 @@ class MainActivity :
         bottomNavCustom()
 
 
-
-        folding_cards()
-
     }
 
-
-
-    override fun blogFragmentInteraction(item: DummyContent.DummyItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun NewsFeedFragmentInteraction(item: View) {
+        item.chatDoctor.setOnClickListener {
+            toast("chat Kar lo")
+        }
+        (item as FoldingCell).toggle(false)
+        toast("shashank")
     }
 
 
@@ -96,13 +94,12 @@ class MainActivity :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onTimelineListFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent.DummyItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-
-    private fun folding_cards() {
-
+    override fun onTimelineListFragmentInteraction(item: View) {
+        item.chatDoctor.setOnClickListener {
+            toast("chat Kar lo")
+        }
+        (item as FoldingCell).toggle(false)
+        toast("shashank")
     }
 
     private fun bottomNavCustom() {
@@ -118,16 +115,16 @@ class MainActivity :
                         folding_menu.visibility = View.VISIBLE
                     }
                 }
-                R.id.tab_home ->{
+                R.id.tab_home -> {
                     startFragmentTransaction(HomeFragment())
                 }
-                R.id.tab_timeline ->{
+                R.id.tab_timeline -> {
                     startFragmentTransaction(TimelineListFragment())
                 }
-                R.id.tab_calender ->{
+                R.id.tab_calender -> {
                     startFragmentTransaction(CalenderFragment())
                 }
-                R.id.tab_settings ->{
+                R.id.tab_settings -> {
                     startFragmentTransaction(SettingsFragment())
                 }
             }
@@ -227,7 +224,7 @@ class MainActivity :
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-           /* R.id.action_settings -> return true*/
+        /* R.id.action_settings -> return true*/
             R.id.action_chat -> {
                 toast("Chat with your doctor")
                 return true

@@ -11,8 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.R
-import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent
-import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 
 /**
  * A fragment representing a list of Items.
@@ -82,7 +81,7 @@ class BlogListFragment : Fragment() {
      */
     interface BlogFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun blogFragmentInteraction(item: DummyItem){
+        fun blogFragmentInteraction(item: DummyContent.DummyItem){
 
         }
     }

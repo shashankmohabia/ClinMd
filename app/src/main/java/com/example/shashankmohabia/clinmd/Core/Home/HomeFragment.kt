@@ -11,20 +11,12 @@ import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Utils.Adapters.PageViewerAdapter
-
 import com.example.shashankmohabia.clinmd.R
-import com.example.shashankmohabia.clinmd.R.id.toolbar_container
 import kotlinx.android.synthetic.main.fragment_home.*
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [HomeFragment.HomeFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HomeFragment : Fragment() {
+
+class HomeFragment : Fragment(){
+
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -49,7 +41,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         slidingtabs()
-        toolbar_container
     }
     private fun slidingtabs() {
         setupViewPager(pager)
@@ -68,19 +59,13 @@ class HomeFragment : Fragment() {
         pager?.adapter = adapter
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        if (mListener != null) {
-            mListener!!.onHomeFragmentInteraction(uri)
-        }
-    }
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         if (context is HomeFragmentInteractionListener) {
             mListener = context
         } else {
-            throw RuntimeException(context!!.toString() + " must implement CalenderFragmentInteractionListener")
+            throw RuntimeException(context!!.toString() + " must implement HomeFragmentInteractionListener")
         }
     }
 

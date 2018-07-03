@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.example.shashankmohabia.clinmd.Core.PatientTimeline.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.R
 import com.ramotion.foldingcell.FoldingCell
 import java.util.HashSet
@@ -30,9 +30,9 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
             viewHolder = ViewHolder()
             val vi = LayoutInflater.from(context)
             cell = vi.inflate(R.layout.timeline_fragment_item, parent, false) as FoldingCell
-            // binding view parts to view holder
-            /*viewHolder.title = cell.findViewById(R.id.cell_title)
-            viewHolder.content = cell.findViewById(R.id.cell_content)*/
+
+            bindViewHolder(cell, viewHolder)
+
             cell.tag = viewHolder
         } else {
             // for existing cell set valid valid state(without animation)
@@ -47,6 +47,13 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
         if (null == item)
             return cell
 
+        bindDataToHolder(viewHolder, item)
+
+
+        return cell
+    }
+
+    private fun bindDataToHolder(viewHolder: ViewHolder, item: DummyContent.DummyItem?) {
         // bind data from selected element to view through view holder
         /*viewHolder.title!!.text = item!!.title
         viewHolder.content!!.text = item!!.details*/
@@ -58,9 +65,14 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
             // (optionally) add "default" handler if no handler found in item
             viewHolder.contentRequestBtn!!.setOnClickListener(defaultRequestBtnClickListener)
         }*/
-
-        return cell
     }
+
+    private fun bindViewHolder(cell: FoldingCell, viewHolder: FoldingCellListAdapter.ViewHolder) {
+        // binding view parts to view holder
+        /*viewHolder.title = cell.findViewById(R.id.cell_title)
+        viewHolder.content = cell.findViewById(R.id.cell_content)*/
+    }
+
 
     // simple methods for register cell state changes
     fun registerToggle(position: Int) {
@@ -80,7 +92,7 @@ class FoldingCellListAdapter(context: Context, objects: List<DummyContent.DummyI
 
     // View lookup cache
     private class ViewHolder {
-        internal var title: TextView? = null
-        internal var content: TextView? = null
+        /*internal var title: TextView? = null
+        internal var content: TextView? = null*/
     }
 }

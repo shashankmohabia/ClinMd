@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment.BlogFragmentInteractionListener
-import com.example.shashankmohabia.clinmd.Core.Home.Blog.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.R
 
 /**
@@ -15,7 +15,7 @@ import com.example.shashankmohabia.clinmd.R
  * TODO: Replace the implementation with code for your data type.
  */
 class BlogListRecyclerViewAdapter(
-        private val mValues: List<DummyItem>,
+        private val mValues: MutableList<DummyContent.DummyItem>,
         private val mListener: BlogFragmentInteractionListener?)
     : RecyclerView.Adapter<BlogListRecyclerViewAdapter.ViewHolder>() {
 

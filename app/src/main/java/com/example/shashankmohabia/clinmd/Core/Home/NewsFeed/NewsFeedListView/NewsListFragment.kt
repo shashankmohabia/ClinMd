@@ -9,10 +9,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent.DummyItem
+import com.example.shashankmohabia.clinmd.R
 
 /**
  * A fragment representing a list of Items.
@@ -28,7 +26,7 @@ import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.du
 class NewsListFragment : Fragment() {
     // TODO: Customize parameters
     private var mColumnCount = 1
-    private var mListener: OnListFragmentInteractionListener? = null
+    private var mListener: NewsFeedFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +48,9 @@ class NewsListFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            view.adapter = MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener)
+            val adapter= NewsFeedRecyclerViewAdapter(DummyContent.ITEMS, mListener)
+            view.adapter = adapter
+
         }
         return view
     }
@@ -58,10 +58,10 @@ class NewsListFragment : Fragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context is OnListFragmentInteractionListener) {
+        if (context is NewsFeedFragmentInteractionListener) {
             mListener = context
         } else {
-            throw RuntimeException(context!!.toString() + " must implement OnListFragmentInteractionListener")
+            throw RuntimeException(context!!.toString() + " must implement NewsFeedFragmentInteractionListener")
         }
     }
 
@@ -79,9 +79,9 @@ class NewsListFragment : Fragment() {
      *
      * See the Android Training lesson [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html) for more information.
      */
-    interface OnListFragmentInteractionListener {
+    interface NewsFeedFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem)
+        fun NewsFeedFragmentInteraction(item: View)
     }
 
     companion object {
