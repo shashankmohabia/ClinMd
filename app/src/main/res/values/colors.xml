@@ -23,4 +23,13 @@
     <color name="green">#4d993e</color>
     <color name="yellow">#dab908</color>
     <color name="accent_material_light_1">#ffffff</color>
+
+
+    #rating dialogue colours
+    <color name="starColor">#45b9ad</color>
+    <color name="noteDescriptionTextColor">#45b9ad</color>
+    <color name="titleTextColor">#FFFFFF</color>
+    <color name="descriptionTextColor">#A6FFFFFF</color>
+    <color name="commentTextColor">#FFFFFF</color>
+    <color name="hintTextColor">#55000000</color>
 </resources>
