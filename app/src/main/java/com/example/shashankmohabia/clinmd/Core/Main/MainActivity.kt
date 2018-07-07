@@ -14,6 +14,7 @@ import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.BookAppointment.BookAppointmentActivity
+import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.Chat.ChatActivity
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
@@ -136,7 +137,9 @@ class MainActivity :
 
         item.mView.patient_call_button.setOnClickListener {  }
 
-        item.mView.patient_chat_button.setOnClickListener {  }
+        item.mView.patient_chat_button.setOnClickListener {
+            startActivity(Intent(this, ChatActivity::class.java))
+        }
 
         item.mView.patient_rating_button.setOnClickListener {  }
     }
@@ -264,7 +267,7 @@ class MainActivity :
         when (item.itemId) {
         /* R.id.action_settings -> return true*/
             R.id.action_chat -> {
-                toast("Chat with your doctor")
+                startActivity(Intent(this, ChatActivity::class.java))
                 return true
             }
             else -> return true
