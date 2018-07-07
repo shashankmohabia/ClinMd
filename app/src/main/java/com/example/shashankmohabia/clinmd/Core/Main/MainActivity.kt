@@ -13,6 +13,7 @@ import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
+import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.BookAppointment.BookAppointmentActivity
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
@@ -123,7 +124,11 @@ class MainActivity :
             }.show()
         }
 
-        item.mView.patient_appointment_button.setOnClickListener {  }
+        item.mView.patient_appointment_button.setOnClickListener {
+            startActivity(Intent(this, BookAppointmentActivity::class.java))
+        }
+
+        item.mView.patient_location_button.setOnClickListener {  }
 
         item.mView.patient_history_button.setOnClickListener {
             startActivity(Intent(this, PatientHistoryActivity::class.java))

@@ -148,4 +148,6 @@
     <string name="title_activity_patient_history">PatientHistoryActivity</string>
     <string name="title_activity_patient_history_detail">PatientHistoryDetailActivity</string>
     <string name="title_activity_news_feed_detail">NewsFeedDetailActivity</string>
+    <string name="title_activity_book_appointment">BookAppointmentActivity</string>
+    <string name="title_activity_chat">ChatActivity</string>
 </resources>

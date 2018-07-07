@@ -49,6 +49,14 @@
             android:name=".Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity"
             android:label="@string/title_activity_news_feed_detail"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Core.AdditionalOptions.BookAppointment.BookAppointmentActivity"
+            android:label="@string/title_activity_book_appointment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Core.AdditionalOptions.Chat.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
