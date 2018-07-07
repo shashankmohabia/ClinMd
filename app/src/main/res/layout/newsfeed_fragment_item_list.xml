@@ -8,6 +8,10 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="10dp"
     app:layoutManager="LinearLayoutManager"
     tools:context="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment"
-    tools:listitem="@layout/fragment_item" />
+    tools:listitem="@layout/newsfeed_fragment_item" />

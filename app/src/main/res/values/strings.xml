@@ -20,6 +20,13 @@
         Lorem Ipsum has been the industry standard dummy text ever since ... </string>
 
 
+    <string name="news_title"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="news_content"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since </string>
+
     <string-array name="query_suggestions">
         <item>Android</item>
         <item>Apple</item>
@@ -120,4 +127,5 @@
     </string>
     <string name="title_activity_patient_history">PatientHistoryActivity</string>
     <string name="title_activity_patient_history_detail">PatientHistoryDetailActivity</string>
+    <string name="title_activity_news_feed_detail">NewsFeedDetailActivity</string>
 </resources>

@@ -12,13 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df72f681-844f-4dce-b817-8e4ad1685bd0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Utils/Intents/ShareIntent.kt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/news_image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/card_border.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryListAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_item_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item_list.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,64 +120,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BlogListRecyclerViewAdapter.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding>
-                <element signature="e#72#523#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="182" column="50" lean-forward="false" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="94" column="67" lean-forward="true" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+            <state relative-caret-position="476">
+              <caret line="107" column="5" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="107" selection-end-column="5" />
               <folding>
-                <element signature="e#6324#6332#0" expanded="false" />
-                <element signature="e#6371#8214#0" expanded="false" />
-                <element signature="e#8250#8440#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogDetailActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
-              <folding>
-                <element signature="e#74#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogListFragment.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="38" />
-              <folding>
-                <element signature="e#72#548#0" expanded="true" />
+                <element signature="e#6429#6437#0" expanded="false" />
+                <element signature="e#6476#8319#0" expanded="false" />
+                <element signature="e#8355#8545#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -185,9 +140,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -2292,21 +2247,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/dummy/DummyContent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_item.xml" />
-        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/shashankmohabia/clinmd/R.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/HomeFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/dummy/DummyContent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/TimelineListFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/FoldingCellListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_patient_history.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/TimelineListRecyclerViewAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item_list.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_patient_history_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/patient_history_detail_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-v21/patient_history_item.xml" />
@@ -2338,11 +2280,24 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Utils/Intents/ShareIntent.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/drawables.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/card_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_cell_title.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_cell_content.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedDetailView/NewsFeedDetailActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_news_feed_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/news_feed_detail_content.xml" />
       </list>
     </option>
   </component>
@@ -2427,24 +2382,6 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
@@ -2480,28 +2417,6 @@
               <option name="myItemId" value="clinmd" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clinmd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2522,62 +2437,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clinmd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PatientTimeline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clinmd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PatientTimeline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TimelineDetailView" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2659,11 +2518,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
+              <option name="myItemId" value="NewsFeed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BlogListView" />
+              <option name="myItemId" value="NewsFeedListView" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2693,33 +2552,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
+              <option name="myItemId" value="NewsFeed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BlogDetailView" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClinMd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clinmd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Authentication" />
+              <option name="myItemId" value="NewsFeedDetailView" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2744,7 +2581,7 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="device.picker.selection" value="ZY322CX5RG" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/cardslider-android-master" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi" />
     <property name="VectorAssetImportPath" value="S:\DevD\Ongoing" />
   </component>
   <component name="RecentsManager">
@@ -2756,11 +2593,11 @@
       <recent name="com.example.shashankmohabia.clinmd.Core" />
     </key>
     <key name="android.template.packageName">
+      <recent name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedDetailView" />
       <recent name="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView" />
       <recent name="com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView" />
       <recent name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsListView" />
       <recent name="com.example.shashankmohabia.clinmd.Core.PatientTimeline" />
-      <recent name="com.example.shashankmohabia.clinmd.Core.PatientFeed" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="S:\DevD\Ongoing\ClinMd\app\src\main\java\Uils\Adapters" />
@@ -2773,9 +2610,9 @@
       <recent name="com.example.shashankmohabia.clinmd" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\DevD\Ongoing\ClinMd\app\src\main\res\mipmap-mdpi" />
       <recent name="S:\DevD\Ongoing\ClinMd\app\src\main\res\drawable-xxxhdpi" />
       <recent name="S:\DevD\Ongoing\ClinMd\app\src\main\java\com\example\shashankmohabia\clinmd" />
-      <recent name="S:\DevD\Ongoing\ClinMd\app\src\main\res\mipmap-mdpi" />
       <recent name="S:\DevD\Ongoing\ClinMd\app" />
     </key>
     <key name="android.template.parentActivityClass">
@@ -2937,7 +2774,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530995655425" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531001191392" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2985,7 +2822,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530995655425" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531001191392" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3205,7 +3042,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530995655429" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531001191395" />
       </method>
     </configuration>
     <list size="5">
@@ -3582,7 +3419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530988395604</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Sharing intent added in Blog List Activity">
+      <created>1530995668745</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1530995668745</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3661,7 +3505,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Blog List added" />
     <MESSAGE value="Blog layout modified" />
     <MESSAGE value="Patient Feed Fragment added" />
     <MESSAGE value="Test class added for folding cards" />
@@ -3686,7 +3529,8 @@
     <MESSAGE value="Toolbar items added in blog detail activity" />
     <MESSAGE value="Toolbar theme changed in Blog Detail Activity" />
     <MESSAGE value="Sharing intent added in Blog Detail Activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sharing intent added in Blog Detail Activity" />
+    <MESSAGE value="Sharing intent added in Blog List Activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sharing intent added in Blog List Activity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3695,120 +3539,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/TimelineListRecyclerViewAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="74" lean-forward="false" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/TimelineListFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="27" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/LoginActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v21/patient_history_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/widget/Toolbar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="140" column="13" lean-forward="false" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-4.0.1.aar/0bf8820a679bd9d5bc444f5a4c402d00/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_information.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="75" column="39" lean-forward="false" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="16" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registeration_details.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-638">
@@ -3825,52 +3555,6 @@
         <state relative-caret-position="-170">
           <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_title.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_content.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="e#2764#2980#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3916,17 +3600,6 @@
           <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/DataModals/Patient.kt">
@@ -4123,23 +3796,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="182" column="50" lean-forward="false" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
           <folding>
-            <element signature="e#72#523#0" expanded="true" />
+            <element signature="e#74#444#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4149,29 +3811,227 @@
         <state relative-caret-position="255">
           <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="38" />
           <folding>
-            <element signature="e#72#548#0" expanded="true" />
+            <element signature="e#72#548#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding>
-            <element signature="e#74#444#0" expanded="true" />
+            <element signature="e#72#523#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/TimelineListRecyclerViewAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="72" lean-forward="false" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="179" column="22" lean-forward="true" selection-start-line="179" selection-start-column="22" selection-end-line="179" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="83" column="12" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_content.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="e#2764#2980#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/card_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/newsfeed_cell_title.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_title.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/newsfeed_cell_content.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="45" column="73" lean-forward="true" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+          <folding>
+            <element signature="e#1300#1320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedDetailView/NewsFeedDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="79" lean-forward="false" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_news_feed_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/news_feed_detail_content.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="e#796#816#0" expanded="true" />
+            <element signature="e#1253#1275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="94" column="67" lean-forward="true" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+        <state relative-caret-position="476">
+          <caret line="107" column="5" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="107" selection-end-column="5" />
           <folding>
-            <element signature="e#6324#6332#0" expanded="false" />
-            <element signature="e#6371#8214#0" expanded="false" />
-            <element signature="e#8250#8440#0" expanded="false" />
+            <element signature="e#6429#6437#0" expanded="false" />
+            <element signature="e#6476#8319#0" expanded="false" />
+            <element signature="e#8355#8545#0" expanded="false" />
           </folding>
         </state>
       </provider>

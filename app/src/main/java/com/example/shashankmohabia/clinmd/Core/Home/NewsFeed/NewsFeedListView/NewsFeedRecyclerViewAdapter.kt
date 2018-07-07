@@ -22,7 +22,7 @@ class NewsFeedRecyclerViewAdapter(private val mValues: MutableList<DummyItem>, p
     private val unfoldedIndexes = HashSet<Int>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.fragment_item, parent, false)
+                .inflate(R.layout.newsfeed_fragment_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -42,21 +42,6 @@ class NewsFeedRecyclerViewAdapter(private val mValues: MutableList<DummyItem>, p
 
     override fun getItemCount(): Int {
         return mValues.size
-    }
-    // simple methods for register cell state changes
-    fun registerToggle(position: Int) {
-        if (unfoldedIndexes.contains(position))
-            registerFold(position)
-        else
-            registerUnfold(position)
-    }
-
-    fun registerFold(position: Int) {
-        unfoldedIndexes.remove(position)
-    }
-
-    fun registerUnfold(position: Int) {
-        unfoldedIndexes.add(position)
     }
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {

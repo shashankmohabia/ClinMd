@@ -44,7 +44,11 @@
         <activity
             android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryDetailActivity"
             android:label="@string/title_activity_patient_history_detail"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity"
+            android:label="@string/title_activity_news_feed_detail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

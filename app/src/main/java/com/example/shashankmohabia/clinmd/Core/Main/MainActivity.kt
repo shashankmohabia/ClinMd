@@ -17,6 +17,7 @@ import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
@@ -75,8 +76,7 @@ class MainActivity :
     }
 
     override fun NewsFeedFragmentInteraction(item: View) {
-        (item as FoldingCell).toggle(false)
-        toast("shashank")
+        startActivity(Intent(this, NewsFeedDetailActivity::class.java))
     }
 
     override fun onHomeFragmentInteraction(uri: Uri) {
