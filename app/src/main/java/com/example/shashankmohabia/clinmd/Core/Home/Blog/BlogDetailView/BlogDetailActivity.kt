@@ -1,5 +1,7 @@
 package com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -29,9 +31,17 @@ class BlogDetailActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
             R.id.share -> {
-                toast("Share this Blog")
+                getShareIntent()
             }
         }
         return true
+    }
+
+    private fun getShareIntent() {
+        val intent = Intent(android.content.Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
+        startActivity(Intent.createChooser(intent, "Share via"))
     }
 }
