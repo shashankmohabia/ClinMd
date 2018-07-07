@@ -36,6 +36,9 @@ import com.google.firebase.database.DatabaseError
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.noButton
+import org.jetbrains.anko.yesButton
 
 
 class MainActivity :
@@ -112,7 +115,13 @@ class MainActivity :
 
         (item.mView as FoldingCell).toggle(false)
 
-        item.mView.patient_read_more_button.setOnClickListener {  }
+        item.mView.patient_read_more_button.setOnClickListener {
+            val msg = getString(R.string.doctor_complete_summary)
+            alert(msg) {
+                title = "Complete Prescription Summary"
+                positiveButton("Cool") { }
+            }.show()
+        }
 
         item.mView.patient_appointment_button.setOnClickListener {  }
 
