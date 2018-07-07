@@ -12,29 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df72f681-844f-4dce-b817-8e4ad1685bd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/SharedPreferences/PatientPrefs.kt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark_border.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/PinActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/PinActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_chat_black.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_chat_black.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_history.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_history.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_history_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_history_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pin.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_content.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/patient_history_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/patient_history_content.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/patient_history_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/patient_history_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_content.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_title.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_title.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/SharedPrefs.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/SharedPreferences/PinPrefs.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/PatientModal.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/DataModals/Patient.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_blog_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_blog_detail.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,39 +116,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_app_bar.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_app_bar.xml">
+      <file leaf-file-name="BlogDetailActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+              <folding>
+                <element signature="e#74#383#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_blog_detail.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_blog_detail.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="67" column="69" lean-forward="false" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -2281,10 +2254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/news_feed_item_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/news_feed_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedListRecyclerViewAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/MyItemRecyclerViewAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/listAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/dummy/DummyContent.kt" />
@@ -2296,7 +2265,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineListView/FoldingCellListAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsListFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt" />
@@ -2316,7 +2284,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pin.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/timeline_cell_title.xml" />
@@ -2332,6 +2299,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Authentication/PinActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_chat_black.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_blog_detail.xml" />
       </list>
     </option>
   </component>
@@ -2447,6 +2420,150 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinmd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinmd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinmd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinmd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clinmd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogDetailView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClinMd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -2460,7 +2577,7 @@
     <property name="device.picker.selection" value="94438183445888" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/cardslider-android-master" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
-    <property name="VectorAssetImportPath" value="S:\" />
+    <property name="VectorAssetImportPath" value="S:\DevD\Ongoing" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2649,7 +2766,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530984162735" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530985887012" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2697,7 +2814,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530984162736" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530985887012" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2742,6 +2859,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2896,7 +3034,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530984162739" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530985887015" />
       </method>
     </configuration>
     <list size="5">
@@ -3245,7 +3383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530638500245</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="App bar icon colour changed to white">
+      <created>1530984206621</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1530984206621</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3266,7 +3411,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23373677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23373677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.748366" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3324,7 +3469,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tabs and ViewPager Added" />
     <MESSAGE value="Added ListFragment in tab 1" />
     <MESSAGE value="Action Bar modified to scrollable" />
     <MESSAGE value="Search bar added in app bar" />
@@ -3349,7 +3493,8 @@
     <MESSAGE value="Horizontal Recycler view added in Patient History Activity" />
     <MESSAGE value="Images cards added in history list view and history detail view added" />
     <MESSAGE value="Patient History View Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Patient History View Modified" />
+    <MESSAGE value="App bar icon colour changed to white" />
+    <option name="LAST_COMMIT_MESSAGE" value="App bar icon colour changed to white" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3358,59 +3503,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_add_document.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_add_family_member.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogListView/BlogListRecyclerViewAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding>
-            <element signature="e#72#523#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/83b7a33b93e160503da4272b8173af68/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="139" column="46" lean-forward="true" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3418,6 +3515,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3453,6 +3551,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3501,19 +3600,6 @@
           <caret line="18" column="87" lean-forward="false" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
           <folding>
             <element signature="e#84#500#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2217">
-          <caret line="207" column="37" lean-forward="false" selection-start-line="207" selection-start-column="37" selection-end-line="207" selection-end-column="37" />
-          <folding>
-            <element signature="e#54#1901#0" expanded="false" />
-            <element signature="e#5867#5875#0" expanded="false" />
-            <element signature="e#5914#7757#0" expanded="false" />
-            <element signature="e#7793#7983#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3571,40 +3657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-638">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#74#297#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_content_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#354#394#0" expanded="false" />
-            <element signature="e#724#744#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3715,6 +3767,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3760,7 +3813,7 @@
         <state relative-caret-position="1479">
           <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
           <folding>
-            <element signature="e#59#496#0" expanded="true" />
+            <element signature="e#59#496#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3771,17 +3824,6 @@
           <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_app_bar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black.xml">
@@ -3800,17 +3842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_voice_black.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -3821,10 +3852,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="67" column="69" lean-forward="false" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
+        <state relative-caret-position="331">
+          <caret line="70" column="72" lean-forward="true" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_content_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_bookmark_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_app_bar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_blog_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <element signature="e#1881#1900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="221" column="56" lean-forward="false" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+          <folding>
+            <element signature="e#5867#5875#0" expanded="false" />
+            <element signature="e#5914#7757#0" expanded="false" />
+            <element signature="e#7793#7983#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/Blog/BlogDetailView/BlogDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <element signature="e#74#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/share.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_blog_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
