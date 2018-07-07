@@ -13,17 +13,8 @@ import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 
-/**
- * A fragment representing a list of Items.
- *
- *
- * Activities containing this fragment MUST implement the [OnListFragmentInteractionListener]
- * interface.
- */
-/**
- * Mandatory empty constructor for the fragment manager to instantiate the
- * fragment (e.g. upon screen orientation changes).
- */
+
+
 class BlogListFragment : Fragment() {
     // TODO: Customize parameters
     private var mColumnCount = 1
@@ -80,9 +71,11 @@ class BlogListFragment : Fragment() {
      * See the Android Training lesson [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html) for more information.
      */
     interface BlogFragmentInteractionListener {
-        fun blogFragmentInteraction(item: Int){
+        fun blogReadMoreInteraction(item: Int){
 
         }
+
+        fun blogShareButtonInteraction(position: Int) {}
     }
 
     companion object {

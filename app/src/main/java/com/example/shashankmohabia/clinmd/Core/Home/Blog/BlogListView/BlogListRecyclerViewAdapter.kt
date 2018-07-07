@@ -10,11 +10,8 @@ import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.du
 import com.example.shashankmohabia.clinmd.R
 import kotlinx.android.synthetic.main.blog_item.view.*
 
-/**
- * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [BlogFragmentInteractionListener].
- * TODO: Replace the implementation with code for your data type.
- */
+
+
 class BlogListRecyclerViewAdapter(
         private val mValues: MutableList<DummyContent.DummyItem>,
         private val mListener: BlogFragmentInteractionListener?)
@@ -32,7 +29,11 @@ class BlogListRecyclerViewAdapter(
         holder.mContentView.text = mValues[position].title
 */
         holder.mView.read_more.setOnClickListener {
-            mListener?.blogFragmentInteraction(position)
+            mListener?.blogReadMoreInteraction(position)
+        }
+
+        holder.mView.blog_share_button.setOnClickListener {
+            mListener?.blogShareButtonInteraction(position)
         }
     }
 

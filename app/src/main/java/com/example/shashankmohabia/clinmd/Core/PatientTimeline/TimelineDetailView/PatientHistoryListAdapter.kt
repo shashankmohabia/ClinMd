@@ -14,7 +14,8 @@ import kotlinx.android.synthetic.main.patient_history_item.view.*
  * Created by Shashank Mohabia on 7/3/2018.
  */
 
-class SimpleAdapter(context: Context, listener: OnRecyclerItemClickListener) : GenericRecyclerViewAdapter<String, OnRecyclerItemClickListener, DemoViewHolder>(context, listener) {
+class SimpleAdapter(context: Context, listener: OnRecyclerItemClickListener) :
+        GenericRecyclerViewAdapter<String, OnRecyclerItemClickListener, DemoViewHolder>(context, listener) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DemoViewHolder {
         return DemoViewHolder(inflate(R.layout.patient_history_item, parent), listener)

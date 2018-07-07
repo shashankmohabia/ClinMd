@@ -91,8 +91,20 @@ class MainActivity :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun blogFragmentInteraction(item: Int) {
+    override fun blogReadMoreInteraction(item: Int) {
         startActivity(Intent(this, BlogDetailActivity::class.java))
+    }
+
+    override fun blogShareButtonInteraction(position: Int) {
+        getShareIntent()
+    }
+
+    private fun getShareIntent() {
+        val intent = Intent(android.content.Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
+        startActivity(Intent.createChooser(intent, "Share via"))
     }
 
     override fun onTimelineListFragmentInteraction(item: View) {

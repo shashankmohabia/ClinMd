@@ -180,6 +180,7 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:id="@+id/blog_share_button"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:src="@mipmap/share" />
