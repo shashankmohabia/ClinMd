@@ -11,7 +11,7 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0.0px"
     android:elevation="8dp"
-    android:visibility="gone"
+    android:visibility="visible"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp"
@@ -37,7 +37,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 app:srcCompat="@mipmap/circular_photo" />
 
             <LinearLayout
@@ -65,11 +65,6 @@
                     android:numStars="5"
                     android:stepSize="1" />
             </LinearLayout>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:src="@drawable/ic_chat_black" />
 
         </LinearLayout>
 
@@ -99,9 +94,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="Last Visited" />
+                    android:text="Last Visited"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -121,9 +116,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="Next Appointment" />
+                    android:text="Next Appointment"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -153,9 +148,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Address - " />
+                    android:text="Address - "
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -172,8 +167,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Timings - " />
+                    android:text="Timings - "
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -191,8 +186,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Contact - " />
+                    android:text="Contact - "
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -203,10 +198,11 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="Summary" />
+                android:layout_marginTop="10dp"
+                android:text="Summary"
+                android:textColor="@color/black" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -214,20 +210,21 @@
 
 
             <LinearLayout
+                android:id="@+id/patient_read_more_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
                 android:gravity="right|center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="Read More" />
+                    android:text="Read More"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="15dp"
@@ -250,30 +247,34 @@
 
             <ImageView
                 android:layout_width="25dp"
+                android:id="@+id/patient_appointment_button"
                 android:layout_height="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/ic_appointment_black" />
 
             <ImageView
+                android:id="@+id/patient_history_button"
                 android:layout_width="25dp"
-                android:id="@+id/patient_history"
                 android:layout_height="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/ic_content_paste_black" />
 
             <ImageView
+                android:id="@+id/patient_call_button"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/ic_call_black" />
 
             <ImageView
+                android:id="@+id/patient_chat_button"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
                 android:src="@drawable/ic_chat_black" />
 
             <ImageView
+                android:id="@+id/patient_rating_button"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"

@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/action_chat"
-        android:icon="@drawable/ic_chat_black"
+        android:icon="@drawable/ic_chat_white"
         android:orderInCategory="100"
         android:title="Chat"
         app:showAsAction="always" />

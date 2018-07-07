@@ -21,6 +21,7 @@ import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedDetailView.
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
+import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
@@ -107,12 +108,23 @@ class MainActivity :
         startActivity(Intent.createChooser(intent, "Share via"))
     }
 
-    override fun onTimelineListFragmentInteraction(item: View) {
-        item.patient_history.setOnClickListener {
+    override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
+
+        (item.mView as FoldingCell).toggle(false)
+
+        item.mView.patient_read_more_button.setOnClickListener {  }
+
+        item.mView.patient_appointment_button.setOnClickListener {  }
+
+        item.mView.patient_history_button.setOnClickListener {
             startActivity(Intent(this, PatientHistoryActivity::class.java))
         }
-        (item as FoldingCell).toggle(false)
-        toast("shashank")
+
+        item.mView.patient_call_button.setOnClickListener {  }
+
+        item.mView.patient_chat_button.setOnClickListener {  }
+
+        item.mView.patient_rating_button.setOnClickListener {  }
     }
 
     private fun bottomNavCustom() {

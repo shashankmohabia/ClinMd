@@ -9,6 +9,7 @@
     folding-cell:additionalFlipsCount="2"
     folding-cell:animationDuration="1300"
     android:layout_margin="8dp"
+    android:background="@color/white"
     folding-cell:cameraHeight="30">
 
     <!-- CONTENT (UNFOLDED) LAYOUT (MUST BE AT LEAST 2x times BIGGER ttitletent layout bellow)-->
