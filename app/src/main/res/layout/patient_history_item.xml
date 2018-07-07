@@ -5,14 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginRight="10dp"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:elevation="8dp"
-    app:cardCornerRadius="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/demo_potrait"
+    app:cardCornerRadius="20dp"
     app:cardElevation="10dp"
-    app:cardPreventCornerOverlap="false"
-    android:layout_marginEnd="10dp">
+    app:cardPreventCornerOverlap="false">
 
     <ImageView
         android:id="@+id/image"

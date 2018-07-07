@@ -8,20 +8,21 @@ import android.view.View
 import com.example.shashankmohabia.clinmd.R
 import com.andrognito.pinlockview.PinLockListener
 import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
+import com.example.shashankmohabia.clinmd.Data.SharedPreferences.PinPrefs
 import kotlinx.android.synthetic.main.activity_pin.*
 
 
 class PinActivity : AppCompatActivity() {
 
     lateinit var type: String
-    lateinit var prefs: Prefs
+    lateinit var pinPrefs: PinPrefs
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pin)
 
         type = intent.extras.get("type").toString()
-        prefs = Prefs(this)
+        pinPrefs = PinPrefs(this)
 
         profile_name.text = type.toString() + " Pin"
 
@@ -41,10 +42,10 @@ class PinActivity : AppCompatActivity() {
 
     private val mPinLockListener = object : PinLockListener {
         override fun onComplete(pin: String) {
-            Log.d("pin", "Pin complete: $pin")
+            Log.d("patient", "Pin complete: $pin")
             when (type) {
                 "Enter" -> {
-                    if (pin == prefs.pin) {
+                    if (pin == pinPrefs.pin) {
                         startActivity(Intent(this@PinActivity, MainActivity::class.java))
                         finish()
                     }
@@ -52,7 +53,7 @@ class PinActivity : AppCompatActivity() {
                         startActivity(
                                 Intent(this@PinActivity, this@PinActivity::class.java)
                                         .putExtra("type", "Enter")
-                                        .putExtra("error", "Incorrect pin")
+                                        .putExtra("error", "Incorrect Pin")
                         )
                         finish()
                     }
@@ -70,7 +71,7 @@ class PinActivity : AppCompatActivity() {
                 "Confirm" -> {
                     val lastpin = intent.extras.get("lastPin").toString()
                     if (pin == lastpin) {
-                        prefs.pin = pin
+                        pinPrefs.pin = pin
                         startActivity(
                                 Intent(this@PinActivity, MainActivity::class.java)
                         )
@@ -90,12 +91,11 @@ class PinActivity : AppCompatActivity() {
         }
 
         override fun onEmpty() {
-            Log.d("pin", "Pin empty")
-
+            Log.d("patient", "Pin empty")
         }
 
         override fun onPinChange(pinLength: Int, intermediatePin: String) {
-            Log.d("pin", "Pin changed, new length $pinLength with intermediate pin $intermediatePin")
+            Log.d("patient", "Pin changed, new length $pinLength with intermediate patient $intermediatePin")
         }
     }
 }

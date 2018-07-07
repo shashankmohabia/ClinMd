@@ -5,44 +5,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
     android:orientation="vertical"
+    android:layout_marginBottom="20dp"
     android:weightSum="10">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/historyList"
-        android:name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsListView.NewsListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="18dp"
-        android:layout_weight="8"
-        android:clipChildren="false"
-        android:overScrollMode="never"
-        app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
-        tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment"
-        tools:listitem="@layout/patient_history_item" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center_vertical"
         android:paddingLeft="30dp"
         android:text="Doctor's name"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/historyList"
+        android:name="com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsListView.NewsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="6"
+        android:clipChildren="false"
+        android:overScrollMode="never"
+        app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
+        tools:context="com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment"
+        tools:listitem="@layout/patient_history_item" />
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
         android:paddingLeft="30dp"
-        android:text="Date:28 Mar 2018"
+        android:text="Date : 28 Mar 2018"
         android:textColor="@color/black"
         android:textSize="18sp" />
 </LinearLayout>

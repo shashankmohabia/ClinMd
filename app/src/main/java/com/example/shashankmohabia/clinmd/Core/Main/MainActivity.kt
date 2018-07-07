@@ -10,7 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.shashankmohabia.clinmd.Data.PatientModal
+import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
@@ -49,7 +49,7 @@ class MainActivity :
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
-    var familyList = ArrayList<PatientModal>()
+    var familyList = ArrayList<Patient>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -179,7 +179,7 @@ class MainActivity :
                 override fun onChildAdded(dataSnapshot: DataSnapshot, prevChildKey: String?) {
                     val map = dataSnapshot.value as Map<*, *>?
                     familyList.add(
-                            PatientModal(
+                            Patient(
                                     map!!["first_name"].toString(),
                                     map["last_name"].toString(),
                                     map["phone"].toString(),

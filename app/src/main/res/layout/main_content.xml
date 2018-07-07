@@ -27,7 +27,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        app:bb_activeTabColor="@color/colorAccent"
+        app:bb_activeTabColor="@color/black"
         app:bb_tabXmlResource="@xml/bottom_nav_tabs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +43,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:visibility="invisible"
-        app:arc_axisRadius="80dp"
-        app:arc_color="@color/colorPrimary"
+        app:arc_axisRadius="60dp"
+        app:arc_color="@color/white"
         app:arc_freeAngle="false"
         app:arc_origin="bottom"
         app:arc_radius="100dp"
@@ -58,14 +58,14 @@
         <Button
             android:id="@+id/folding_button1"
             style="@style/Item.Small"
-            android:background="#03A9F4"
+            android:background="#000000"
             android:gravity="center"
             android:text="A"
             android:textColor="@color/white" />
 
         <Button
             style="@style/Item.Small"
-            android:background="#009688"
+            android:background="#000000"
             android:gravity="center"
             android:text="C"
             android:textColor="@color/white" />
