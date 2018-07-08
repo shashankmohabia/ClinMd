@@ -1,7 +1,6 @@
 package com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddFamilyMember
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.R
+import kotlinx.android.synthetic.main.add_family_member_fragment.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -37,11 +37,15 @@ class AddFamilyMemberFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.add_family_member_fragment, container, false)
+        val view = inflater.inflate(R.layout.add_family_member_fragment, container, false)
+        view.add_family_member_submit.setOnClickListener {
+            onButtonPressed(view.add_family_member_submit.id)
+        }
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
+    fun onButtonPressed(uri: Int) {
         if (mListener != null) {
             mListener!!.onAddFamilyMemberFragmentInteraction(uri)
         }
@@ -72,7 +76,7 @@ class AddFamilyMemberFragment : Fragment() {
      */
     interface AddFamilyMemberFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onAddFamilyMemberFragmentInteraction(uri: Uri)
+        fun onAddFamilyMemberFragmentInteraction(uri: Int)
     }
 
     companion object {

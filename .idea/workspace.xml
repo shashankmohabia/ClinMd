@@ -13,7 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="df72f681-844f-4dce-b817-8e4ad1685bd0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_family_member_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_family_member_fragment.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,15 +113,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="224" column="43" lean-forward="false" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
+            <state relative-caret-position="1360">
+              <caret line="140" column="24" lean-forward="true" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
               <folding>
-                <element signature="e#11458#11466#0" expanded="false" />
-                <element signature="e#11505#13348#0" expanded="false" />
-                <element signature="e#13384#13574#0" expanded="false" />
+                <element signature="e#12133#12141#0" expanded="false" />
+                <element signature="e#12180#14023#0" expanded="false" />
+                <element signature="e#14059#14249#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,9 +130,11 @@
       <file leaf-file-name="AddFamilyMemberFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="-383">
+              <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+              <folding>
+                <element signature="e#83#384#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,21 +145,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="345">
+              <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -2274,7 +2265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/PatientTimeline/TimelineDetailView/PatientHistoryActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/patient_history_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_patient_history.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Data/DataModals/PatientModal.kt" />
@@ -2319,12 +2309,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/timeline_fragment_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_group_add.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_note_add.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_document.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddDocument/AddDocumentFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/add_family_member_fragment.xml" />
       </list>
     </option>
   </component>
@@ -2568,7 +2559,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531048487451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531050059167" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2616,7 +2607,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531048487451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531050059167" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2836,7 +2827,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531048487455" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531050059171" />
       </method>
     </configuration>
     <list size="5">
@@ -2883,13 +2874,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529484864560</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Pin Activity created and connected to all the required activities">
-      <created>1530032908887</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1530032908888</updated>
     </task>
     <task id="LOCAL-00014" summary="Pin creation and confirmation done and modules restructured">
       <created>1530036268692</created>
@@ -3227,7 +3211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531047936339</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="App icon changed">
+      <created>1531048505207</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1531048505207</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3306,7 +3297,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Folding cards added in timeline tab" />
     <MESSAGE value="Folding cards modified with content" />
     <MESSAGE value="Timeline List View converted to Recycler View" />
     <MESSAGE value="Blog Detail Activity added" />
@@ -3331,7 +3321,8 @@
     <MESSAGE value="Add Family and Document buttons added in folding menu" />
     <MESSAGE value="Gallery and Camera upload options provided in Add Document Activity" />
     <MESSAGE value="Layout files refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout files refactored" />
+    <MESSAGE value="App icon changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="App icon changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3722,28 +3713,8 @@
         <state relative-caret-position="238">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <element signature="e#79#375#0" expanded="true" />
+            <element signature="e#79#375#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="224" column="43" lean-forward="false" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
-          <folding>
-            <element signature="e#11458#11466#0" expanded="false" />
-            <element signature="e#11505#13348#0" expanded="false" />
-            <element signature="e#13384#13574#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3757,25 +3728,47 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_family_member_fragment.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_family_member_fragment.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/AdditionalOptions/AddFamilyMember/AddFamilyMemberFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383">
+          <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+          <folding>
+            <element signature="e#83#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="140" column="24" lean-forward="true" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
+          <folding>
+            <element signature="e#12133#12141#0" expanded="false" />
+            <element signature="e#12180#14023#0" expanded="false" />
+            <element signature="e#14059#14249#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,9 +1,11 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
@@ -45,6 +47,7 @@ import org.jetbrains.anko.alert
 import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
+import kotlinx.android.synthetic.main.add_family_member_fragment.*
 import java.util.*
 
 
@@ -103,8 +106,15 @@ class MainActivity :
         }
     }
 
-    override fun onAddFamilyMemberFragmentInteraction(uri: Uri) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onAddFamilyMemberFragmentInteraction(uri: Int) {
+        when(uri){
+            add_family_member_submit.id->{
+                val title = "Please Wait"
+                val msg = "Checking in our records"
+                val duration = 3000
+                showProgressDialog(title, msg, duration)
+            }
+        }
     }
 
     override fun NewsFeedFragmentInteraction(item: View) {
@@ -129,14 +139,6 @@ class MainActivity :
 
     override fun blogShareButtonInteraction(position: Int) {
         getShareIntent()
-    }
-
-    private fun getShareIntent() {
-        val intent = Intent(android.content.Intent.ACTION_SEND)
-        intent.type = "text/plain"
-        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
-        startActivity(Intent.createChooser(intent, "Share via"))
     }
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
@@ -204,6 +206,27 @@ class MainActivity :
                 .show()
     }
 
+    private fun getShareIntent() {
+        val intent = Intent(android.content.Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
+        startActivity(Intent.createChooser(intent, "Share via"))
+    }
+
+    fun showProgressDialog(title: String, msg: String, duration: Int) {
+
+        val progress = ProgressDialog(this)
+        progress.setTitle(title)
+        progress.setMessage(msg)
+        progress.show()
+
+        val progressRunnable = Runnable { progress.cancel() }
+
+        val pdCanceller = Handler()
+        pdCanceller.postDelayed(progressRunnable, duration.toLong())
+
+    }
     //functions for rating dialouge
     override fun onNegativeButtonClicked() {
 
