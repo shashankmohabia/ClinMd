@@ -135,7 +135,12 @@ class MainActivity :
             startActivity(Intent(this, BookAppointmentActivity::class.java))
         }
 
-        item.mView.patient_location_button.setOnClickListener { }
+        item.mView.patient_location_button.setOnClickListener {
+            val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.`package` = "com.google.android.apps.maps"
+            startActivity(mapIntent)
+        }
 
         item.mView.patient_history_button.setOnClickListener {
             startActivity(Intent(this, PatientHistoryActivity::class.java))
