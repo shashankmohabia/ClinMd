@@ -13,9 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="df72f681-844f-4dce-b817-8e4ad1685bd0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,15 +137,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="165" column="58" lean-forward="true" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
+            <state relative-caret-position="221">
+              <caret line="128" column="55" lean-forward="true" selection-start-line="128" selection-start-column="55" selection-end-line="128" selection-end-column="55" />
               <folding>
-                <element signature="e#9256#9264#0" expanded="false" />
-                <element signature="e#9303#11146#0" expanded="false" />
-                <element signature="e#11182#11372#0" expanded="false" />
+                <element signature="e#9404#9412#0" expanded="false" />
+                <element signature="e#9451#11294#0" expanded="false" />
+                <element signature="e#11330#11520#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#2139#2186#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2300,7 +2314,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_cell_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/newsfeed_fragment_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedListView/NewsFeedRecyclerViewAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedDetailView/NewsFeedDetailActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_news_feed_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/news_feed_detail_content.xml" />
@@ -2316,6 +2329,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -2591,7 +2605,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037083699" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037779052" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2639,7 +2653,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037083699" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037779052" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2838,7 +2852,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037083699" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1531037779052" />
       </method>
     </configuration>
     <list size="5">
@@ -2885,13 +2899,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529484864560</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Delete Account service added in MainActivity navigation drawer">
-      <created>1529869591115</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1529869591115</updated>
     </task>
     <task id="LOCAL-00007" summary="Information Screen added">
       <created>1529871301185</created>
@@ -3229,7 +3236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531005330519</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Rating dialogue box modified">
+      <created>1531037102814</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1531037102814</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3308,7 +3322,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="App theme changed to black and white" />
     <MESSAGE value="Bottom Navbar onselect tab color changed to black" />
     <MESSAGE value="Fragments Created for bottom bar tabs" />
     <MESSAGE value="label for the MainActivity Changed" />
@@ -3333,7 +3346,8 @@
     <MESSAGE value="Appointment and Chat Activity added" />
     <MESSAGE value="Rating dialogue library added" />
     <MESSAGE value="Rating dialogue box added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rating dialogue box added" />
+    <MESSAGE value="Rating dialogue box modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rating dialogue box modified" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3575,17 +3589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="45" column="73" lean-forward="true" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Home/NewsFeed/NewsFeedDetailView/NewsFeedDetailActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -3767,12 +3770,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/shashankmohabia/clinmd/Core/Main/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="165" column="58" lean-forward="true" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
+        <state relative-caret-position="221">
+          <caret line="128" column="55" lean-forward="true" selection-start-line="128" selection-start-column="55" selection-end-line="128" selection-end-column="55" />
           <folding>
-            <element signature="e#9256#9264#0" expanded="false" />
-            <element signature="e#9303#11146#0" expanded="false" />
-            <element signature="e#11182#11372#0" expanded="false" />
+            <element signature="e#9404#9412#0" expanded="false" />
+            <element signature="e#9451#11294#0" expanded="false" />
+            <element signature="e#11330#11520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#2139#2186#0" expanded="true" />
           </folding>
         </state>
       </provider>

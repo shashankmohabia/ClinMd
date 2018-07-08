@@ -141,7 +141,11 @@ class MainActivity :
             startActivity(Intent(this, PatientHistoryActivity::class.java))
         }
 
-        item.mView.patient_call_button.setOnClickListener { }
+        item.mView.patient_call_button.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:8504939946")
+            startActivity(intent)
+        }
 
         item.mView.patient_chat_button.setOnClickListener {
             startActivity(Intent(this, ChatActivity::class.java))
