@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:visibility="invisible"
         app:arc_axisRadius="60dp"
-        app:arc_color="@color/white"
+        app:arc_color="@color/black_overlay"
         app:arc_freeAngle="false"
         app:arc_origin="bottom"
         app:arc_radius="100dp"
@@ -55,20 +55,18 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+
+        <ImageView
+            android:id="@+id/add_family_member_button"
+            style="@style/Item.Small"
+            android:src="@drawable/ic_group_add"
+            android:gravity="center"/>
+
+        <ImageView
             android:id="@+id/folding_button1"
             style="@style/Item.Small"
-            android:background="#000000"
-            android:gravity="center"
-            android:text="A"
-            android:textColor="@color/white" />
-
-        <Button
-            style="@style/Item.Small"
-            android:background="#000000"
-            android:gravity="center"
-            android:text="C"
-            android:textColor="@color/white" />
+            android:src="@drawable/ic_note_add"
+            android:gravity="center"/>
 
     </com.ogaclejapan.arclayout.ArcLayout>
 
