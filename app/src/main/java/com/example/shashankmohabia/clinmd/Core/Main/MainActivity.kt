@@ -155,21 +155,20 @@ class MainActivity :
     private fun showDialog() {
         AppRatingDialog.Builder()
                 .setPositiveButtonText("Submit")
-                .setNegativeButtonText("Cancel")
-                .setNeutralButtonText("Later")
+                /*.setNegativeButtonText("Cancel")
+               *//* .setNeutralButtonText("Later")*/
                 .setNoteDescriptions(Arrays.asList("Very Bad", "Not good", "Quite ok", "Very Good", "Excellent !!!"))
                 .setDefaultRating(2)
                 .setTitle("Rate Your Doctor")
                 .setDescription("Please select some stars and give your feedback")
-                .setDefaultComment("")
                 .setStarColor(R.color.starColor)
-                .setNoteDescriptionTextColor(R.color.noteDescriptionTextColor)
+                .setNoteDescriptionTextColor(R.color.starColor)
                 .setTitleTextColor(R.color.titleTextColor)
                 .setDescriptionTextColor(R.color.black_overlay)
                 .setHint("Please write your comment here ...")
                 .setHintTextColor(R.color.hintTextColor)
                 .setCommentTextColor(R.color.commentTextColor)
-                .setCommentBackgroundColor(R.color.colorPrimaryDark)
+                .setCommentBackgroundColor(R.color.commentBackground)
                 .setWindowAnimation(R.style.MyDialogFadeAnimation)
                 .create(this@MainActivity)
                 .show()
@@ -177,15 +176,15 @@ class MainActivity :
 
     //functions for rating dialouge
     override fun onNegativeButtonClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onNeutralButtonClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onPositiveButtonClicked(rate: Int, comment: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        toast("Your Response Is Submitted")
     }
 
     private fun bottomNavCustom() {

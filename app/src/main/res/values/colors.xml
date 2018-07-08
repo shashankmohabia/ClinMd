@@ -26,10 +26,11 @@
 
 
     #rating dialogue colours
-    <color name="starColor">#45b9ad</color>
-    <color name="noteDescriptionTextColor">#45b9ad</color>
-    <color name="titleTextColor">#FFFFFF</color>
+    <color name="starColor">#fdc31a</color>
+    <color name="commentBackground">#2e367d</color>
+    <color name="noteDescriptionTextColor">#2d3799</color>
+    <color name="titleTextColor">#ffffff</color>
     <color name="descriptionTextColor">#A6FFFFFF</color>
     <color name="commentTextColor">#FFFFFF</color>
-    <color name="hintTextColor">#55000000</color>
+    <color name="hintTextColor">#A6FFFFFF</color>
 </resources>
