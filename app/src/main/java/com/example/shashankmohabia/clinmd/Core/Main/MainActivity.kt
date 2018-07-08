@@ -13,6 +13,8 @@ import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
+import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddDocument.AddDocumentFragment
+import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddFamilyMember.AddFamilyMemberFragment
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.BookAppointment.BookAppointmentActivity
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.Chat.ChatActivity
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
@@ -39,11 +41,9 @@ import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import org.jetbrains.anko.alert
-import org.jetbrains.anko.noButton
-import org.jetbrains.anko.yesButton
-import java.util.Arrays.asList
 import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
+import kotlinx.android.synthetic.main.fragment_add_document.*
 import java.util.*
 
 
@@ -56,9 +56,9 @@ class MainActivity :
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
         SettingsFragment.SettingsFragmentInteractionListener,
+        AddDocumentFragment.AddDocumentFragmentInteractionListener,
+        AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         RatingDialogListener {
-
-
 
     val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
     lateinit var phone: String
@@ -85,6 +85,38 @@ class MainActivity :
         bottomNavCustom()
 
 
+    }
+
+
+    override fun onAddDocumentFragmentInteraction(uri: Int) {
+        when (uri) {
+            upload_document.id -> {
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                intent.type = "image/*"
+                startActivityForResult(intent, 1)
+            }
+            new_document.id -> {
+                val intent = Intent("android.media.action.IMAGE_CAPTURE")
+                startActivityForResult(intent, 0)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        when (requestCode) {
+            0 -> {
+                if (data != null) {
+                    toast(data.toURI())
+                }
+            }
+            1 -> {
+                toast(data.toString())
+            }
+        }
+    }
+
+    override fun onAddFamilyMemberFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun NewsFeedFragmentInteraction(item: View) {
@@ -207,6 +239,12 @@ class MainActivity :
                         folding_menu.visibility = View.INVISIBLE
                     } else {
                         folding_menu.visibility = View.VISIBLE
+                        add_family_member_button.setOnClickListener {
+                            startFragmentTransaction(AddFamilyMemberFragment())
+                        }
+                        add_document_button.setOnClickListener {
+                            startFragmentTransaction(AddDocumentFragment())
+                        }
                     }
                 }
                 R.id.tab_home -> {

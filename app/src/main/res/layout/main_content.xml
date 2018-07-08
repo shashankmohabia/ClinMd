@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:visibility="invisible"
         app:arc_axisRadius="60dp"
-        app:arc_color="@color/black_overlay"
+        app:arc_color="@color/off_white"
         app:arc_freeAngle="false"
         app:arc_origin="bottom"
         app:arc_radius="100dp"
@@ -63,7 +63,7 @@
             android:gravity="center"/>
 
         <ImageView
-            android:id="@+id/folding_button1"
+            android:id="@+id/add_document_button"
             style="@style/Item.Small"
             android:src="@drawable/ic_note_add"
             android:gravity="center"/>
