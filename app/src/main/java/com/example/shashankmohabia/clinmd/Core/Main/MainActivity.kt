@@ -136,7 +136,8 @@ class MainActivity :
         }
 
         item.mView.patient_location_button.setOnClickListener {
-            val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
+            val address = "MNIT, Jaipur, Rajasthan"
+            val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
             val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
             mapIntent.`package` = "com.google.android.apps.maps"
             startActivity(mapIntent)

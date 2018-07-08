@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:baselineAligned="false"
-    android:layout_margin = "10dp"
+    android:layout_margin="4dp"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:divider="@android:color/transparent"
