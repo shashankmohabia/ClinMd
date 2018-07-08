@@ -37,7 +37,7 @@ class AddFamilyMemberFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_family_member, container, false)
+        return inflater.inflate(R.layout.add_family_member_fragment, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event

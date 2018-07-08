@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.shashankmohabia.clinmd.R
-import kotlinx.android.synthetic.main.fragment_add_document.view.*
+import kotlinx.android.synthetic.main.add_document_fragment.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -37,7 +37,7 @@ class AddDocumentFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_add_document, container, false)
+        val view = inflater.inflate(R.layout.add_document_fragment, container, false)
         view.upload_document.setOnClickListener {
             onButtonPressed(view.upload_document.id)
         }

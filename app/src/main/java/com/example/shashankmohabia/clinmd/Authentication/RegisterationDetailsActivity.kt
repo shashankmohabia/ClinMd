@@ -7,7 +7,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_registeration_details.*
+import kotlinx.android.synthetic.main.registeration_details_activity.*
 import org.jetbrains.anko.toast
 
 class RegisterationDetailsActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registeration_details)
+        setContentView(R.layout.registeration_details_activity)
 
         countChild()
 

@@ -12,7 +12,7 @@ import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFr
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Utils.Adapters.PageViewerAdapter
 import com.example.shashankmohabia.clinmd.R
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.home_fragment.*
 
 
 class HomeFragment : Fragment(){
@@ -35,7 +35,7 @@ class HomeFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.home_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

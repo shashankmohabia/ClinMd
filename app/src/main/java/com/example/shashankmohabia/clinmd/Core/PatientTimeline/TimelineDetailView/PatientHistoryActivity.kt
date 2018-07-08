@@ -6,7 +6,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import com.example.shashankmohabia.clinmd.R
 import com.leodroidcoder.genericadapter.OnRecyclerItemClickListener
-import kotlinx.android.synthetic.main.activity_patient_history.*
+import kotlinx.android.synthetic.main.patient_history_activity.*
 import kotlinx.android.synthetic.main.patient_history_content.*
 
 class PatientHistoryActivity :
@@ -15,7 +15,7 @@ class PatientHistoryActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_patient_history)
+        setContentView(R.layout.patient_history_activity)
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

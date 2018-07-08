@@ -5,21 +5,18 @@ import android.os.Bundle
 import com.example.shashankmohabia.clinmd.R
 import com.ramotion.paperonboarding.PaperOnboardingPage
 import android.graphics.Color
-import android.R.attr.key
 import android.content.Intent
-import android.support.design.R.id.add
 import android.view.View
 import com.example.shashankmohabia.clinmd.Authentication.LoginActivity
 import com.ramotion.paperonboarding.PaperOnboardingFragment
-import com.ramotion.paperonboarding.listeners.PaperOnboardingOnRightOutListener
-import kotlinx.android.synthetic.main.activity_information.*
+import kotlinx.android.synthetic.main.information_activity.*
 
 
 class InformationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_information)
+        setContentView(R.layout.information_activity)
 
         createSlider()
 

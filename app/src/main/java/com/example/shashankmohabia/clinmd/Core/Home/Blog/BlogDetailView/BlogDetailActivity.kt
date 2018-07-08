@@ -1,6 +1,5 @@
 package com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -8,14 +7,13 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.R
-import kotlinx.android.synthetic.main.activity_blog_detail.*
-import org.jetbrains.anko.toast
+import kotlinx.android.synthetic.main.blog_detail_activity.*
 
 class BlogDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blog_detail)
+        setContentView(R.layout.blog_detail_activity)
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Bookmark this blog", Snackbar.LENGTH_LONG)

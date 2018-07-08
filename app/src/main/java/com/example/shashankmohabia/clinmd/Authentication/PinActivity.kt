@@ -9,7 +9,7 @@ import com.example.shashankmohabia.clinmd.R
 import com.andrognito.pinlockview.PinLockListener
 import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.Data.SharedPreferences.PinPrefs
-import kotlinx.android.synthetic.main.activity_pin.*
+import kotlinx.android.synthetic.main.pin_activity.*
 
 
 class PinActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class PinActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pin)
+        setContentView(R.layout.pin_activity)
 
         type = intent.extras.get("type").toString()
         pinPrefs = PinPrefs(this)

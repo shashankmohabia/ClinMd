@@ -1,5 +1,6 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -31,7 +32,7 @@ import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
 import org.jetbrains.anko.toast
 import com.google.firebase.database.DataSnapshot
@@ -43,7 +44,7 @@ import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import org.jetbrains.anko.alert
 import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
-import kotlinx.android.synthetic.main.fragment_add_document.*
+import kotlinx.android.synthetic.main.add_document_fragment.*
 import java.util.*
 
 
@@ -66,7 +67,7 @@ class MainActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
@@ -98,19 +99,6 @@ class MainActivity :
             new_document.id -> {
                 val intent = Intent("android.media.action.IMAGE_CAPTURE")
                 startActivityForResult(intent, 0)
-            }
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        when (requestCode) {
-            0 -> {
-                if (data != null) {
-                    toast(data.toURI())
-                }
-            }
-            1 -> {
-                toast(data.toString())
             }
         }
     }
@@ -227,6 +215,21 @@ class MainActivity :
 
     override fun onPositiveButtonClicked(rate: Int, comment: String) {
         toast("Your Response Is Submitted")
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                0 -> {
+                    if (data != null) {
+                        toast(data.toURI())
+                    }
+                }
+                1 -> {
+                    toast(data.toString())
+                }
+            }
+        }
     }
 
     private fun bottomNavCustom() {

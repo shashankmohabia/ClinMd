@@ -5,13 +5,13 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import com.example.shashankmohabia.clinmd.R
 
-import kotlinx.android.synthetic.main.activity_patient_history_detail.*
+import kotlinx.android.synthetic.main.patient_history_detail_activity.*
 
 class PatientHistoryDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_patient_history_detail)
+        setContentView(R.layout.patient_history_detail_activity)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
