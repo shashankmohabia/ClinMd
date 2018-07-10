@@ -58,9 +58,5 @@ object Utils :
                 .show()
     }
 
-    fun createSearchView(item: MenuItem?) {
-        search_view.setMenuItem(item)
-        search_view.setVoiceSearch(true)
-        search_view.setSuggestions(resources.getStringArray(R.array.query_suggestions))
-    }
+
 }

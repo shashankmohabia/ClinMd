@@ -27,11 +27,8 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailVie
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
-import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
-import com.example.shashankmohabia.clinmd.Utils.Utils
-import com.example.shashankmohabia.clinmd.Utils.Utils.createSearchView
 import com.example.shashankmohabia.clinmd.Utils.Utils.showProgressDialog
 import com.example.shashankmohabia.clinmd.Utils.Utils.showRatingDialog
 import com.firebase.ui.auth.AuthUI
@@ -45,7 +42,6 @@ import org.jetbrains.anko.alert
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-
 
 class MainActivity :
         AppCompatActivity(),
@@ -281,7 +277,11 @@ class MainActivity :
         createSearchView(menu.findItem(R.id.action_search))
         return true
     }
-
+    private fun createSearchView(item: MenuItem?) {
+        search_view.setMenuItem(item)
+        search_view.setVoiceSearch(true)
+        search_view.setSuggestions(resources.getStringArray(R.array.query_suggestions))
+    }
 
 
 
