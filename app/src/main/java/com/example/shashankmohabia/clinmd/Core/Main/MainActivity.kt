@@ -28,8 +28,12 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
+import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.Utils
+import com.example.shashankmohabia.clinmd.Utils.Utils.createSearchView
+import com.example.shashankmohabia.clinmd.Utils.Utils.showProgressDialog
+import com.example.shashankmohabia.clinmd.Utils.Utils.showRatingDialog
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
@@ -69,7 +73,7 @@ class MainActivity :
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        LoadPatientData.loadPatientDetails()
+        loadPatientDetails()
 
         bottomNavCustom()
 
@@ -97,7 +101,7 @@ class MainActivity :
                 val title = "Please Wait"
                 val msg = "Checking in our records"
                 val duration = 3000
-                Utils.showProgressDialog(this, title, msg, duration)
+                showProgressDialog(this, title, msg, duration)
             }
         }
     }
@@ -165,7 +169,7 @@ class MainActivity :
         }
 
         item.mView.patient_rating_button.setOnClickListener {
-            Utils.showRatingDialog(this@MainActivity)
+            showRatingDialog(this@MainActivity)
         }
     }
 
@@ -278,11 +282,7 @@ class MainActivity :
         return true
     }
 
-    private fun createSearchView(item: MenuItem?) {
-        search_view.setMenuItem(item)
-        search_view.setVoiceSearch(true)
-        search_view.setSuggestions(getResources().getStringArray(R.array.query_suggestions))
-    }
+
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

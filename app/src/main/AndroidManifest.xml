@@ -16,6 +16,7 @@
         <activity
             android:name=".UI.BootActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,39 +26,50 @@
         </activity>
         <activity
             android:name=".UI.InformationActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Authentication.LoginActivity" />
         <activity
             android:name=".Core.Main.MainActivity"
             android:label="ClinMd"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Authentication.PinActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Authentication.RegisterationDetailsActivity" />
+        <activity
+            android:name=".Authentication.RegisterationDetailsActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Core.Home.Blog.BlogDetailView.BlogDetailActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_blog_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity"
             android:label="@string/title_activity_patient_history"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryDetailActivity"
             android:label="@string/title_activity_patient_history_detail"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity"
             android:label="@string/title_activity_news_feed_detail"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Core.AdditionalOptions.BookAppointment.BookAppointmentActivity"
             android:label="@string/title_activity_book_appointment"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Core.AdditionalOptions.Chat.ChatActivity"
             android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

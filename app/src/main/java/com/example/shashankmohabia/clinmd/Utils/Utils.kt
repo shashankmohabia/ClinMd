@@ -5,17 +5,22 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.os.Handler
 import android.support.v4.app.FragmentActivity
+import android.view.MenuItem
 import android.widget.Toast
 import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.R
 import com.stepstone.apprating.AppRatingDialog
+import com.stepstone.apprating.listener.RatingDialogListener
+import kotlinx.android.synthetic.main.main_app_bar.*
+import org.jetbrains.anko.toast
 import java.util.*
 
 
 /**
  * Created by Shashank Mohabia on 7/10/2018.
  */
-object Utils {
+object Utils :
+        Activity() {
 
     fun showProgressDialog(context: Context, title: String, msg: String, duration: Int) {
 
@@ -31,7 +36,7 @@ object Utils {
 
     }
 
-    fun showRatingDialog(activity:FragmentActivity) {
+    fun showRatingDialog(activity: FragmentActivity) {
         AppRatingDialog.Builder()
                 .setPositiveButtonText("Submit")
                 /*.setNegativeButtonText("Cancel")
@@ -51,5 +56,11 @@ object Utils {
                 .setWindowAnimation(R.style.MyDialogFadeAnimation)
                 .create(activity)
                 .show()
+    }
+
+    fun createSearchView(item: MenuItem?) {
+        search_view.setMenuItem(item)
+        search_view.setVoiceSearch(true)
+        search_view.setSuggestions(resources.getStringArray(R.array.query_suggestions))
     }
 }
