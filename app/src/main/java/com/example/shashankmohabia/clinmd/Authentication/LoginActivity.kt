@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
                         .createSignInIntentBuilder()
                         .setAvailableProviders(Arrays.asList(
                                 AuthUI.IdpConfig.PhoneBuilder()
-                                        .setDefaultCountryIso("in")
+                                        //.setDefaultCountryIso("in")
                                         .build()))
                         .build(),
                 LOGIN_CODE)

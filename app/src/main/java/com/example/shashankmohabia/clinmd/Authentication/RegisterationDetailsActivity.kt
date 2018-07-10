@@ -12,7 +12,7 @@ import org.jetbrains.anko.toast
 
 class RegisterationDetailsActivity : AppCompatActivity() {
 
-    val dbref = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
+    val dbref = FirebaseDatabase.getInstance().reference.child("Patients").child("Patient Id")
     var childCount = 0
 
 
@@ -30,14 +30,16 @@ class RegisterationDetailsActivity : AppCompatActivity() {
 
     private fun createUserDatabase() {
         if (first_name_registration.text.isNotEmpty() and last_name_registration.text.isNotEmpty() and age_registration.text.isNotEmpty()){
-            val userID = "ClinMD" + (childCount+1).toString()
+            val userID = "ClinMd" + (childCount+1).toString()
             test_registration.text = userID
             val newdbref = dbref.child(userID)
             val patientInfo: MutableMap<String, Any> = mutableMapOf()
-            patientInfo.put("first_name", first_name_registration.text.toString())
-            patientInfo.put("last_name", last_name_registration.text.toString())
-            patientInfo.put("phone", intent.extras.get("phone"))
-            patientInfo.put("age", age_registration.text.toString())
+            patientInfo["ID"] = userID
+            patientInfo["firstName"] = first_name_registration.text.toString()
+            patientInfo["lastName"] = last_name_registration.text.toString()
+            patientInfo["mobile"] = intent.extras.get("phone")
+            patientInfo["gender"] = "Male"
+            patientInfo["age"] = age_registration.text.toString()
             newdbref.updateChildren(patientInfo)
             toast("$userID added")
             startActivity(Intent(this, PinActivity::class.java).putExtra("type", "Set"))
