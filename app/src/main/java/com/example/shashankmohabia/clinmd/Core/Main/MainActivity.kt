@@ -1,11 +1,9 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
-import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
@@ -13,7 +11,6 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddDocument.AddDocumentFragment
@@ -30,25 +27,20 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailVie
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
+import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
+import com.example.shashankmohabia.clinmd.Utils.Utils
 import com.firebase.ui.auth.AuthUI
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
 import org.jetbrains.anko.toast
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DatabaseError
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import org.jetbrains.anko.alert
-import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import java.util.*
 
 
 class MainActivity :
@@ -64,9 +56,6 @@ class MainActivity :
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         RatingDialogListener {
 
-    val dbRef = FirebaseDatabase.getInstance().reference.child("Patient").child("PatientID")
-    lateinit var phone: String
-    var familyList = ArrayList<Patient>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,11 +69,7 @@ class MainActivity :
 
         nav_view.setNavigationItemSelectedListener(this)
 
-
-
-
-        loadPatientDetails()
-        displayPatientDetails()
+        LoadPatientData.loadPatientDetails()
 
         bottomNavCustom()
 
@@ -107,12 +92,12 @@ class MainActivity :
     }
 
     override fun onAddFamilyMemberFragmentInteraction(uri: Int) {
-        when(uri){
-            add_family_member_submit.id->{
+        when (uri) {
+            add_family_member_submit.id -> {
                 val title = "Please Wait"
                 val msg = "Checking in our records"
                 val duration = 3000
-                showProgressDialog(title, msg, duration)
+                Utils.showProgressDialog(this, title, msg, duration)
             }
         }
     }
@@ -180,31 +165,11 @@ class MainActivity :
         }
 
         item.mView.patient_rating_button.setOnClickListener {
-            showDialog()
+            Utils.showRatingDialog(this@MainActivity)
         }
     }
 
-    private fun showDialog() {
-        AppRatingDialog.Builder()
-                .setPositiveButtonText("Submit")
-                /*.setNegativeButtonText("Cancel")
-               *//* .setNeutralButtonText("Later")*/
-                .setNoteDescriptions(Arrays.asList("Very Bad", "Not good", "Quite ok", "Very Good", "Excellent !!!"))
-                .setDefaultRating(2)
-                .setTitle("Rate Your Doctor")
-                .setDescription("Please select some stars and give your feedback")
-                .setStarColor(R.color.starColor)
-                .setNoteDescriptionTextColor(R.color.starColor)
-                .setTitleTextColor(R.color.titleTextColor)
-                .setDescriptionTextColor(R.color.black_overlay)
-                .setHint("Please write your comment here ...")
-                .setHintTextColor(R.color.hintTextColor)
-                .setCommentTextColor(R.color.commentTextColor)
-                .setCommentBackgroundColor(R.color.commentBackground)
-                .setWindowAnimation(R.style.MyDialogFadeAnimation)
-                .create(this@MainActivity)
-                .show()
-    }
+
 
     private fun getShareIntent() {
         val intent = Intent(android.content.Intent.ACTION_SEND)
@@ -214,19 +179,7 @@ class MainActivity :
         startActivity(Intent.createChooser(intent, "Share via"))
     }
 
-    fun showProgressDialog(title: String, msg: String, duration: Int) {
 
-        val progress = ProgressDialog(this)
-        progress.setTitle(title)
-        progress.setMessage(msg)
-        progress.show()
-
-        val progressRunnable = Runnable { progress.cancel() }
-
-        val pdCanceller = Handler()
-        pdCanceller.postDelayed(progressRunnable, duration.toLong())
-
-    }
     //functions for rating dialouge
     override fun onNegativeButtonClicked() {
 
@@ -309,51 +262,6 @@ class MainActivity :
                 .replace(R.id.mainFrame, fragment)
                 .commit()
     }
-
-    private fun displayPatientDetails() {
-
-    }
-
-    private fun loadPatientDetails() {
-        if (FirebaseAuth.getInstance().currentUser != null) {
-            phone = FirebaseAuth.getInstance().currentUser?.phoneNumber.toString()
-            dbRef.orderByChild("phone").equalTo(phone).addChildEventListener(object : ChildEventListener {
-                override fun onCancelled(p0: DatabaseError) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-
-                override fun onChildMoved(p0: DataSnapshot, p1: String?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-
-                override fun onChildChanged(p0: DataSnapshot, p1: String?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-
-                override fun onChildRemoved(p0: DataSnapshot) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-
-                override fun onChildAdded(dataSnapshot: DataSnapshot, prevChildKey: String?) {
-                    val map = dataSnapshot.value as Map<*, *>?
-                    familyList.add(
-                            Patient(
-                                    map!!["first_name"].toString(),
-                                    map["last_name"].toString(),
-                                    map["phone"].toString(),
-                                    map["age"].toString()
-                            )
-                    )
-                    toast("size = " + familyList.size)
-                    toast(dataSnapshot.value.toString())
-                }
-
-            })
-        } else {
-            toast("Problem Loading Data")
-        }
-    }
-
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
