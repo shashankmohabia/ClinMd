@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:visibility="invisible"
         app:arc_axisRadius="60dp"
-        app:arc_color="@color/off_white"
+        app:arc_color="@color/white"
         app:arc_freeAngle="false"
         app:arc_origin="bottom"
         app:arc_radius="100dp"

@@ -280,7 +280,7 @@
                 android:src="@drawable/ic_chat_black" />
 
             <ImageView
-                android:id="@+id/patient_rating_button"
+                android:id="@+id/patient_all_share_button"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"

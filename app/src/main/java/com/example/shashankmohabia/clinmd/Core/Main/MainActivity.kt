@@ -29,8 +29,9 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.
 import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
-import com.example.shashankmohabia.clinmd.Utils.Utils.showProgressDialog
-import com.example.shashankmohabia.clinmd.Utils.Utils.showRatingDialog
+import com.example.shashankmohabia.clinmd.Utils.UI.BlurredBackgroundFragment
+import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
+import com.example.shashankmohabia.clinmd.Utils.UI.MenuUtils
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
@@ -164,11 +165,10 @@ class MainActivity :
             startActivity(Intent(this, ChatActivity::class.java))
         }
 
-        item.mView.patient_rating_button.setOnClickListener {
-            showRatingDialog(this@MainActivity)
+        item.mView.patient_all_share_button.setOnClickListener {
+            getShareIntent()
         }
     }
-
 
 
     private fun getShareIntent() {
@@ -208,6 +208,10 @@ class MainActivity :
         }
     }
 
+    private fun makeFoldingMenuInVisible() {
+        folding_menu.visibility = View.INVISIBLE
+    }
+
     private fun bottomNavCustom() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
@@ -215,9 +219,10 @@ class MainActivity :
             when (tabId) {
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
-                        folding_menu.visibility = View.INVISIBLE
+                        makeFoldingMenuInVisible()
                     } else {
                         folding_menu.visibility = View.VISIBLE
+                        startFragmentTransaction(BlurredBackgroundFragment())
                         add_family_member_button.setOnClickListener {
                             startFragmentTransaction(AddFamilyMemberFragment())
                         }
@@ -227,22 +232,26 @@ class MainActivity :
                     }
                 }
                 R.id.tab_home -> {
+                    makeFoldingMenuInVisible()
                     startFragmentTransaction(HomeFragment())
                 }
                 R.id.tab_timeline -> {
+                    makeFoldingMenuInVisible()
                     startFragmentTransaction(TimelineListFragment())
                 }
                 R.id.tab_calender -> {
+                    makeFoldingMenuInVisible()
                     startFragmentTransaction(CalenderFragment())
                 }
                 R.id.tab_analytics -> {
+                    makeFoldingMenuInVisible()
                     startFragmentTransaction(AnalyticsFragment())
                 }
             }
 
         }
 
-        bottomNavBar.setOnTabReselectListener { tabId ->
+        /*bottomNavBar.setOnTabReselectListener { tabId ->
             when (tabId) {
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
@@ -254,7 +263,7 @@ class MainActivity :
 
 
             }
-        }
+        }*/
     }
 
     private fun startFragmentTransaction(fragment: Fragment) {
@@ -277,6 +286,7 @@ class MainActivity :
         createSearchView(menu.findItem(R.id.action_search))
         return true
     }
+
     private fun createSearchView(item: MenuItem?) {
         search_view.setMenuItem(item)
         search_view.setVoiceSearch(true)

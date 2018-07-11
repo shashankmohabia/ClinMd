@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Utils
+package com.example.shashankmohabia.clinmd.Utils.UI
 
 import android.app.Activity
 import android.app.ProgressDialog
@@ -19,7 +19,7 @@ import java.util.*
 /**
  * Created by Shashank Mohabia on 7/10/2018.
  */
-object Utils :
+object Dialogs :
         Activity() {
 
     fun showProgressDialog(context: Context, title: String, msg: String, duration: Int) {
