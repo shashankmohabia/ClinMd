@@ -73,6 +73,9 @@ dependencies {
     //Rating dialouge libarary
     implementation 'com.stepstone.apprating:app-rating:2.2.0'
 
+    //Zoom library
+    implementation 'com.jsibbold:zoomage:1.1.0'
+
     //Test Libraries
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     testImplementation 'junit:junit:4.12'

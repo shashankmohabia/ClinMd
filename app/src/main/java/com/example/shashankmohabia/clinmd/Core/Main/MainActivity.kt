@@ -41,6 +41,9 @@ import org.jetbrains.anko.alert
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
+import android.widget.Toast
+
+
 
 class MainActivity :
         AppCompatActivity(),
@@ -162,7 +165,19 @@ class MainActivity :
         }
 
         item.mView.patient_chat_button.setOnClickListener {
-            startActivity(Intent(this, ChatActivity::class.java))
+            val smsNumber = "918504939946" //without '+'
+            try {
+                val sendIntent = Intent("android.intent.action.MAIN")
+                sendIntent.action = Intent.ACTION_SEND
+                sendIntent.type = "text/plain"
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                sendIntent.putExtra("jid", "$smsNumber@s.whatsapp.net")
+                sendIntent.`package` = "com.whatsapp"
+                startActivity(sendIntent)
+            } catch (e: Exception) {
+                Toast.makeText(this, "Error\n" + e.toString(), Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         item.mView.patient_all_share_button.setOnClickListener {

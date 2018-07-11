@@ -10,6 +10,7 @@
     <color name="off_white">#efeaea</color>
     <color name="black_overlay">#9f9898</color>
     <color name="black">#000000</color>
+    <color name="light_black">#0e0e0e</color>
     <color name="logoColor">#2ee8c8</color>
     <color name="transparent">#80000000</color>
     <color name="primaryDark">#292b3d</color>
