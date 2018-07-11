@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Core.Settings
+package com.example.shashankmohabia.clinmd.Core.Analytics
 
 import android.content.Context
 import android.net.Uri
@@ -13,12 +13,12 @@ import com.example.shashankmohabia.clinmd.R
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [SettingsFragment.SettingsFragmentInteractionListener] interface
+ * [AnalyticsFragment.SettingsFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [SettingsFragment.newInstance] factory method to
+ * Use the [AnalyticsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SettingsFragment : Fragment() {
+class AnalyticsFragment : Fragment() {
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -37,7 +37,7 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.settings_fragment, container, false)
+        return inflater.inflate(R.layout.analytics_fragment, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -87,11 +87,11 @@ class SettingsFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SettingsFragment.
+         * @return A new instance of fragment AnalyticsFragment.
          */
         // TODO: Rename and change types and number of parameters
-        fun newInstance(param1: String, param2: String): SettingsFragment {
-            val fragment = SettingsFragment()
+        fun newInstance(param1: String, param2: String): AnalyticsFragment {
+            val fragment = AnalyticsFragment()
             val args = Bundle()
             args.putString(ARG_PARAM1, param1)
             args.putString(ARG_PARAM2, param2)

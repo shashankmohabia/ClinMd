@@ -26,7 +26,7 @@ import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.Ne
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
-import com.example.shashankmohabia.clinmd.Core.Settings.SettingsFragment
+import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.Utils.showProgressDialog
@@ -51,7 +51,7 @@ class MainActivity :
         CalenderFragment.CalenderFragmentInteractionListener,
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
-        SettingsFragment.SettingsFragmentInteractionListener,
+        AnalyticsFragment.SettingsFragmentInteractionListener,
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         RatingDialogListener {
@@ -235,8 +235,8 @@ class MainActivity :
                 R.id.tab_calender -> {
                     startFragmentTransaction(CalenderFragment())
                 }
-                R.id.tab_settings -> {
-                    startFragmentTransaction(SettingsFragment())
+                R.id.tab_analytics -> {
+                    startFragmentTransaction(AnalyticsFragment())
                 }
             }
 

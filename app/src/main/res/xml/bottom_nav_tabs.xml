@@ -18,8 +18,8 @@
             id="@+id/tab_calender"
             title="Calender" />
         <tab
-            icon="@drawable/ic_settings_black"
-            id="@+id/tab_settings"
-            title="Settings" />
+            icon="@drawable/ic_show_chart_black"
+            id="@+id/tab_analytics"
+            title="Analytics" />
     </tabs>
 </PreferenceScreen>
