@@ -29,9 +29,7 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.
 import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
-import com.example.shashankmohabia.clinmd.Utils.UI.BlurredBackgroundFragment
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
-import com.example.shashankmohabia.clinmd.Utils.UI.MenuUtils
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
@@ -62,6 +60,8 @@ class MainActivity :
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
+
+        mainFrame.foreground.alpha = 0
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -212,6 +212,14 @@ class MainActivity :
         folding_menu.visibility = View.INVISIBLE
     }
 
+    fun makeBackgroundBlur(){
+        mainFrame.foreground.alpha = 220
+    }
+
+    fun removeBackgroundBlur(){
+        mainFrame.foreground.alpha = 0
+    }
+
     private fun bottomNavCustom() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
@@ -222,7 +230,7 @@ class MainActivity :
                         makeFoldingMenuInVisible()
                     } else {
                         folding_menu.visibility = View.VISIBLE
-                        startFragmentTransaction(BlurredBackgroundFragment())
+                        makeBackgroundBlur()
                         add_family_member_button.setOnClickListener {
                             startFragmentTransaction(AddFamilyMemberFragment())
                         }
@@ -233,37 +241,43 @@ class MainActivity :
                 }
                 R.id.tab_home -> {
                     makeFoldingMenuInVisible()
+                    removeBackgroundBlur()
                     startFragmentTransaction(HomeFragment())
                 }
                 R.id.tab_timeline -> {
                     makeFoldingMenuInVisible()
+                    removeBackgroundBlur()
                     startFragmentTransaction(TimelineListFragment())
                 }
                 R.id.tab_calender -> {
                     makeFoldingMenuInVisible()
+                    removeBackgroundBlur()
                     startFragmentTransaction(CalenderFragment())
                 }
                 R.id.tab_analytics -> {
                     makeFoldingMenuInVisible()
+                    removeBackgroundBlur()
                     startFragmentTransaction(AnalyticsFragment())
                 }
             }
 
         }
 
-        /*bottomNavBar.setOnTabReselectListener { tabId ->
+        bottomNavBar.setOnTabReselectListener { tabId ->
             when (tabId) {
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
+                        removeBackgroundBlur()
                         folding_menu.visibility = View.INVISIBLE
                     } else {
+                        makeBackgroundBlur()
                         folding_menu.visibility = View.VISIBLE
                     }
                 }
 
 
             }
-        }*/
+        }
     }
 
     private fun startFragmentTransaction(fragment: Fragment) {

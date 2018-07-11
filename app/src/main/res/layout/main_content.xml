@@ -16,6 +16,7 @@
         android:layout_marginBottom="60dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+            android:foreground="@color/black_overlay"
         tools:layout_editor_absoluteY="0dp">
 
     </FrameLayout>
