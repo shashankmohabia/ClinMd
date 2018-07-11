@@ -10,7 +10,7 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0.0px"
     android:elevation="8dp"
-    android:visibility="gone"
+    android:visibility="visible"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp"
@@ -284,7 +284,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_star_half_black" />
+                android:src="@drawable/ic_share_black_" />
 
         </LinearLayout>
 
