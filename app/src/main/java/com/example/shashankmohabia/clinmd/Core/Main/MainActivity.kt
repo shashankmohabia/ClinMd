@@ -15,7 +15,6 @@ import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddDocument.AddDocumentFragment
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddFamilyMember.AddFamilyMemberFragment
-import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.BookAppointment.BookAppointmentActivity
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.Chat.ChatActivity
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
@@ -23,27 +22,21 @@ import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFr
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
-import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
-import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData.loadPatientDetails
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
+import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
+import com.example.shashankmohabia.clinmd.Utils.Intents.Intents
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
 import org.jetbrains.anko.toast
-import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.main_content.*
-import kotlinx.android.synthetic.main.timeline_cell_content.view.*
-import org.jetbrains.anko.alert
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.doescontactExists
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getWhatsappIntent
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getSaveContactIntent
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 
 
@@ -66,7 +59,7 @@ class MainActivity :
         setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
 
-        mainFrame.foreground.alpha = 0
+        removeBackgroundBlur()
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -75,9 +68,7 @@ class MainActivity :
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        loadPatientDetails()
-
-        bottomNavCustom()
+        setBottomNavBar()
 
 
     }
@@ -88,7 +79,7 @@ class MainActivity :
             upload_document.id -> {
                 val intent = Intent(Intent.ACTION_GET_CONTENT)
                 intent.type = "image/*"
-                startActivityForResult(intent, 1)
+                Intents.startActivityForResult(intent, 1)
             }
             new_document.id -> {
                 val intent = Intent("android.media.action.IMAGE_CAPTURE")
@@ -133,65 +124,8 @@ class MainActivity :
     }
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
-
-        (item.mView as FoldingCell).toggle(false)
-
-        item.mView.patient_read_more_button.setOnClickListener {
-            val msg = getString(R.string.doctor_complete_summary)
-            alert(msg) {
-                title = "Complete Prescription Summary"
-                positiveButton("Cool") { }
-            }.show()
-        }
-
-        item.mView.patient_appointment_button.setOnClickListener {
-            startActivity(Intent(this, BookAppointmentActivity::class.java))
-        }
-
-        item.mView.patient_location_button.setOnClickListener {
-            val address = "MNIT, Jaipur, Rajasthan"
-            val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
-            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-            mapIntent.`package` = "com.google.android.apps.maps"
-            startActivity(mapIntent)
-        }
-
-        item.mView.patient_history_button.setOnClickListener {
-            startActivity(Intent(this, PatientHistoryActivity::class.java))
-        }
-
-        item.mView.patient_call_button.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:8504939946")
-            startActivity(intent)
-        }
-
-        item.mView.patient_chat_button.setOnClickListener {
-            //number must be on whatsapp
-            val number = "+919413022668"                             //919461388766
-            if (doescontactExists(this, number)) {           //919694169864
-                getWhatsappIntent(this,number.substringAfterLast('+'))
-            } else {
-                alert("You have to save this number to chat with your Doctor") {
-                    title = "Number Not Found"
-                    positiveButton("Save this number") {
-                        val name = "Doctor"
-                        val email = "doc@gmail.com"
-                        getSaveContactIntent(this@MainActivity, name, number, email)
-                    }
-                    negativeButton("I'll do it later") {}
-                }.show()
-            }
-        }
-
-        item.mView.patient_all_share_button.setOnClickListener {
-            getShareIntent(this)
-        }
+        setTimelineFragmentInteractions(this, item)
     }
-
-
-
-
 
 
     //functions for rating dialouge
@@ -234,7 +168,7 @@ class MainActivity :
         mainFrame.foreground.alpha = 0
     }
 
-    fun bottomNavCustom() {
+    fun setBottomNavBar() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
         bottomNavBar.setOnTabSelectListener { tabId ->
@@ -246,9 +180,13 @@ class MainActivity :
                         folding_menu.visibility = View.VISIBLE
                         makeBackgroundBlur()
                         add_family_member_button.setOnClickListener {
+                            removeBackgroundBlur()
+                            makeFoldingMenuInVisible()
                             startFragmentTransaction(AddFamilyMemberFragment())
                         }
                         add_document_button.setOnClickListener {
+                            removeBackgroundBlur()
+                            makeFoldingMenuInVisible()
                             startFragmentTransaction(AddDocumentFragment())
                         }
                     }

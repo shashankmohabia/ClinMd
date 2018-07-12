@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.ContactsContract
 import android.support.v4.app.Fragment
+import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.R
 import org.jetbrains.anko.toast
 
@@ -13,6 +14,31 @@ import org.jetbrains.anko.toast
  * Created by Shashank Mohabia on 7/12/2018.
  */
 object Intents:Activity() {
+
+    /*fun getGalleryIntent(context: Context){
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image*//*"
+        startActivityForResult(intent, 1)
+    }*/
+
+    /*fun startFragmentTransaction(context: Context,fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.mainFrame, fragment)
+                .commit()
+    }*/
+
+    fun getDialerIntent(context: Context, number:String){
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse("tel:8504939946")
+        context.startActivity(intent)
+    }
+
+    fun getMapIntent(context: Context, address:String){
+        val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.`package` = "com.google.android.apps.maps"
+        context.startActivity(mapIntent)
+    }
 
     fun getShareIntent(context: Context) {
         val intent = Intent(android.content.Intent.ACTION_SEND)
@@ -22,14 +48,13 @@ object Intents:Activity() {
         context.startActivity(Intent.createChooser(intent, "Share via"))
     }
 
-    fun getWhatsappIntent(context: Context, number: String) {
-        val smsNumber = number //without '+'
+    fun getWhatsAppIntent(context: Context, number: String) {
         try {
             val sendIntent = Intent("android.intent.action.MAIN")
             sendIntent.action = Intent.ACTION_SEND
             sendIntent.type = "text/plain"
             sendIntent.putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
-            sendIntent.putExtra("jid", "$smsNumber@s.whatsapp.net")
+            sendIntent.putExtra("jid", "$number@s.whatsapp.net")
             sendIntent.`package` = "com.whatsapp"
             context.startActivity(sendIntent)
         } catch (e: Exception) {
@@ -37,7 +62,7 @@ object Intents:Activity() {
         }
     }
 
-    fun doescontactExists(context: Context, number: String): Boolean {
+    fun doesContactExists(context: Context, number: String): Boolean {
         /// number is the phone number
         val lookupUri = Uri.withAppendedPath(
                 ContactsContract.PhoneLookup.CONTENT_FILTER_URI,

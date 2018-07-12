@@ -32,6 +32,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
         }
 
     }
+
     fun createUserDatabase(dbref: DatabaseReference) {
         val userID = "ClinMd" + (ChildCount.childCount + 1).toString()
         test_registration.text = userID
