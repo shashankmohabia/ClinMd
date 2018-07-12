@@ -1,7 +1,6 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -42,8 +41,10 @@ import org.jetbrains.anko.alert
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import android.provider.ContactsContract.PhoneLookup
-import android.provider.ContactsContract
+import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.doescontactExists
+import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getWhatsappIntent
+import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getSaveContactIntent
+import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 
 
 class MainActivity :
@@ -128,7 +129,7 @@ class MainActivity :
     }
 
     override fun blogShareButtonInteraction(position: Int) {
-        getShareIntent()
+        getShareIntent(this)
     }
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
@@ -169,14 +170,14 @@ class MainActivity :
             //number must be on whatsapp
             val number = "+919413022668"                             //919461388766
             if (doescontactExists(this, number)) {           //919694169864
-                getWhatsappIntent(number.substringAfterLast('+'))
+                getWhatsappIntent(this,number.substringAfterLast('+'))
             } else {
                 alert("You have to save this number to chat with your Doctor") {
                     title = "Number Not Found"
                     positiveButton("Save this number") {
                         val name = "Doctor"
                         val email = "doc@gmail.com"
-                        saveContact(this@MainActivity, name, number, email)
+                        getSaveContactIntent(this@MainActivity, name, number, email)
                     }
                     negativeButton("I'll do it later") {}
                 }.show()
@@ -184,58 +185,13 @@ class MainActivity :
         }
 
         item.mView.patient_all_share_button.setOnClickListener {
-            getShareIntent()
+            getShareIntent(this)
         }
     }
 
-    fun getWhatsappIntent(number: String) {
-        val smsNumber = number //without '+'
-        try {
-            val sendIntent = Intent("android.intent.action.MAIN")
-            sendIntent.action = Intent.ACTION_SEND
-            sendIntent.type = "text/plain"
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
-            sendIntent.putExtra("jid", "$smsNumber@s.whatsapp.net")
-            sendIntent.`package` = "com.whatsapp"
-            startActivity(sendIntent)
-        } catch (e: Exception) {
-            toast(e.toString())
-        }
-    }
 
-    fun doescontactExists(context: Context, number: String): Boolean {
-        /// number is the phone number
-        val lookupUri = Uri.withAppendedPath(
-                PhoneLookup.CONTENT_FILTER_URI,
-                Uri.encode(number))
-        val mPhoneNumberProjection = arrayOf(PhoneLookup._ID, PhoneLookup.NUMBER, PhoneLookup.DISPLAY_NAME)
-        val cur = context.contentResolver.query(lookupUri, mPhoneNumberProjection, null, null, null)
-        cur.use { cur ->
-            if (cur!!.moveToFirst()) {
-                return true
-            }
-        }
-        return false
-    }
 
-    fun saveContact(context: Context, name: String, number: String, email: String) {
-        val intent = Intent(Intent.ACTION_INSERT)
-        intent.type = ContactsContract.Contacts.CONTENT_TYPE
 
-        intent.putExtra(ContactsContract.Intents.Insert.NAME, name)
-        intent.putExtra(ContactsContract.Intents.Insert.PHONE, number)
-        intent.putExtra(ContactsContract.Intents.Insert.EMAIL, email)
-
-        context.startActivity(intent)
-    }
-
-    private fun getShareIntent() {
-        val intent = Intent(android.content.Intent.ACTION_SEND)
-        intent.type = "text/plain"
-        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
-        startActivity(Intent.createChooser(intent, "Share via"))
-    }
 
 
     //functions for rating dialouge
