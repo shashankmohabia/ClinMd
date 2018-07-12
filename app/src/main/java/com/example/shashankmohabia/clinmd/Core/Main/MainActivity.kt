@@ -43,8 +43,7 @@ import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
 import android.provider.ContactsContract.PhoneLookup
-
-
+import android.provider.ContactsContract
 
 
 class MainActivity :
@@ -167,7 +166,21 @@ class MainActivity :
         }
 
         item.mView.patient_chat_button.setOnClickListener {
-            doescontactExists(this, "919694169864")
+            //number must be on whatsapp
+            val number = "+919413022668"                             //919461388766
+            if (doescontactExists(this, number)) {           //919694169864
+                getWhatsappIntent(number.substringAfterLast('+'))
+            } else {
+                alert("You have to save this number to chat with your Doctor") {
+                    title = "Number Not Found"
+                    positiveButton("Save this number") {
+                        val name = "Doctor"
+                        val email = "doc@gmail.com"
+                        saveContact(this@MainActivity, name, number, email)
+                    }
+                    negativeButton("I'll do it later") {}
+                }.show()
+            }
         }
 
         item.mView.patient_all_share_button.setOnClickListener {
@@ -175,7 +188,7 @@ class MainActivity :
         }
     }
 
-    fun getWhatsappIntent(number:String){
+    fun getWhatsappIntent(number: String) {
         val smsNumber = number //without '+'
         try {
             val sendIntent = Intent("android.intent.action.MAIN")
@@ -199,12 +212,21 @@ class MainActivity :
         val cur = context.contentResolver.query(lookupUri, mPhoneNumberProjection, null, null, null)
         cur.use { cur ->
             if (cur!!.moveToFirst()) {
-                getWhatsappIntent(number)
                 return true
             }
         }
-        toast("Number does not exist")
         return false
+    }
+
+    fun saveContact(context: Context, name: String, number: String, email: String) {
+        val intent = Intent(Intent.ACTION_INSERT)
+        intent.type = ContactsContract.Contacts.CONTENT_TYPE
+
+        intent.putExtra(ContactsContract.Intents.Insert.NAME, name)
+        intent.putExtra(ContactsContract.Intents.Insert.PHONE, number)
+        intent.putExtra(ContactsContract.Intents.Insert.EMAIL, email)
+
+        context.startActivity(intent)
     }
 
     private fun getShareIntent() {
@@ -248,11 +270,11 @@ class MainActivity :
         folding_menu.visibility = View.INVISIBLE
     }
 
-    fun makeBackgroundBlur(){
+    fun makeBackgroundBlur() {
         mainFrame.foreground.alpha = 220
     }
 
-    fun removeBackgroundBlur(){
+    fun removeBackgroundBlur() {
         mainFrame.foreground.alpha = 0
     }
 
