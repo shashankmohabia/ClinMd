@@ -26,7 +26,7 @@ class RegisterationDetailsActivity : AppCompatActivity() {
             if (first_name_registration.text.isNotEmpty() and last_name_registration.text.isNotEmpty() and age_registration.text.isNotEmpty()) {
                 createUserDatabase(dbref)
             } else {
-                test_registration.text = "Fill all the details"
+                registration_error.text = "Fill all the details"
             }
 
         }
@@ -35,7 +35,6 @@ class RegisterationDetailsActivity : AppCompatActivity() {
 
     fun createUserDatabase(dbref: DatabaseReference) {
         val userID = "ClinMd" + (ChildCount.childCount + 1).toString()
-        test_registration.text = userID
         val newdbref = dbref.child(userID)
         val patientInfo: MutableMap<String, Any> = mutableMapOf()
         patientInfo["ID"] = userID

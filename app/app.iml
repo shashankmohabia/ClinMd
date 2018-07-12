@@ -22,7 +22,7 @@
       </configuration>
     </facet>
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
         <implements>debug</implements>
         <compilerSettings />
         <compilerArguments>
@@ -30,7 +30,6 @@
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="app_debug" />
-          <option name="jvmTarget" value="1.8" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
           <option name="languageVersion" value="1.2" />
@@ -144,6 +143,7 @@
     <orderEntry type="library" name="com.android.support:design-27.1.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-storage-common-16.0.1" level="project" />
     <orderEntry type="library" name="org.jetbrains.kotlinx:kotlinx-coroutines-android:0.15@jar" level="project" />
+    <orderEntry type="library" name="de.hdodenhof:circleimageview-2.2.0" level="project" />
     <orderEntry type="library" name="com.android.support:transition-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sdk25-coroutines:0.10.4@jar" level="project" />
