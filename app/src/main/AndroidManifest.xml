@@ -3,6 +3,8 @@
     package="com.example.shashankmohabia.clinmd">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
         android:allowBackup="true"

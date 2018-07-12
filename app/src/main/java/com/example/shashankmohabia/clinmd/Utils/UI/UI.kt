@@ -8,10 +8,14 @@ import org.jetbrains.anko.toast
 /**
  * Created by Shashank Mohabia on 7/11/2018.
  */
-object MenuUtils:
+object UI:
         Activity() {
 
-    /*fun makeFoldingMenuInVisible() {
-        toast("hiiiiiii")
+    /*fun makeBackgroundBlur(){
+        mainFrame.foreground.alpha = 220
+    }
+
+    fun removeBackgroundBlur(){
+        mainFrame.foreground.alpha = 0
     }*/
 }

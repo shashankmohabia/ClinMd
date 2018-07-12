@@ -1,6 +1,7 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -41,7 +42,8 @@ import org.jetbrains.anko.alert
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import android.widget.Toast
+import android.provider.ContactsContract.PhoneLookup
+
 
 
 
@@ -165,19 +167,7 @@ class MainActivity :
         }
 
         item.mView.patient_chat_button.setOnClickListener {
-            val smsNumber = "918504939946" //without '+'
-            try {
-                val sendIntent = Intent("android.intent.action.MAIN")
-                sendIntent.action = Intent.ACTION_SEND
-                sendIntent.type = "text/plain"
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
-                sendIntent.putExtra("jid", "$smsNumber@s.whatsapp.net")
-                sendIntent.`package` = "com.whatsapp"
-                startActivity(sendIntent)
-            } catch (e: Exception) {
-                Toast.makeText(this, "Error\n" + e.toString(), Toast.LENGTH_SHORT).show()
-            }
-
+            doescontactExists(this, "919694169864")
         }
 
         item.mView.patient_all_share_button.setOnClickListener {
@@ -185,6 +175,37 @@ class MainActivity :
         }
     }
 
+    fun getWhatsappIntent(number:String){
+        val smsNumber = number //without '+'
+        try {
+            val sendIntent = Intent("android.intent.action.MAIN")
+            sendIntent.action = Intent.ACTION_SEND
+            sendIntent.type = "text/plain"
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
+            sendIntent.putExtra("jid", "$smsNumber@s.whatsapp.net")
+            sendIntent.`package` = "com.whatsapp"
+            startActivity(sendIntent)
+        } catch (e: Exception) {
+            toast(e.toString())
+        }
+    }
+
+    fun doescontactExists(context: Context, number: String): Boolean {
+        /// number is the phone number
+        val lookupUri = Uri.withAppendedPath(
+                PhoneLookup.CONTENT_FILTER_URI,
+                Uri.encode(number))
+        val mPhoneNumberProjection = arrayOf(PhoneLookup._ID, PhoneLookup.NUMBER, PhoneLookup.DISPLAY_NAME)
+        val cur = context.contentResolver.query(lookupUri, mPhoneNumberProjection, null, null, null)
+        cur.use { cur ->
+            if (cur!!.moveToFirst()) {
+                getWhatsappIntent(number)
+                return true
+            }
+        }
+        toast("Number does not exist")
+        return false
+    }
 
     private fun getShareIntent() {
         val intent = Intent(android.content.Intent.ACTION_SEND)
@@ -223,7 +244,7 @@ class MainActivity :
         }
     }
 
-    private fun makeFoldingMenuInVisible() {
+    fun makeFoldingMenuInVisible() {
         folding_menu.visibility = View.INVISIBLE
     }
 
@@ -235,7 +256,7 @@ class MainActivity :
         mainFrame.foreground.alpha = 0
     }
 
-    private fun bottomNavCustom() {
+    fun bottomNavCustom() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
         bottomNavBar.setOnTabSelectListener { tabId ->
@@ -295,7 +316,7 @@ class MainActivity :
         }
     }
 
-    private fun startFragmentTransaction(fragment: Fragment) {
+    fun startFragmentTransaction(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.mainFrame, fragment)
                 .commit()

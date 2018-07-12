@@ -6,12 +6,14 @@ import android.content.Context
 import android.os.Handler
 import android.support.v4.app.FragmentActivity
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.R
 import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.main_app_bar.*
+import kotlinx.android.synthetic.main.main_content.*
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -58,5 +60,8 @@ object Dialogs :
                 .show()
     }
 
+    /*fun makeFoldingMenuInVisible() {
+        folding_menu.visibility = View.INVISIBLE
+    }*/
 
 }
