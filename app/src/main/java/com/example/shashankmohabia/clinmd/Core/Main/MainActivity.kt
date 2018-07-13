@@ -15,7 +15,7 @@ import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddDocument.AddDocumentFragment
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddFamilyMember.AddFamilyMemberFragment
-import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
+import com.example.shashankmohabia.clinmd.Core.Reminder.ReminderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.HomeFragment
@@ -24,8 +24,10 @@ import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.Ne
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
+import com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.AppointmentReminderListFragment
+import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListFragment
+import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
-import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
@@ -38,8 +40,6 @@ import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
-import kotlinx.android.synthetic.main.timeline_cell_content.view.*
-import org.jetbrains.anko.alert
 
 
 class MainActivity :
@@ -47,12 +47,14 @@ class MainActivity :
         NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
         BlogListFragment.BlogFragmentInteractionListener,
-        CalenderFragment.CalenderFragmentInteractionListener,
+        ReminderFragment.CalenderFragmentInteractionListener,
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
         AnalyticsFragment.SettingsFragmentInteractionListener,
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
+        AppointmentReminderListFragment.AppointmentReminderFragmentInteractionListener,
+        PillsReminderListFragment.PillsReminderListFragmentInteractionListener,
         RatingDialogListener {
 
 
@@ -101,6 +103,14 @@ class MainActivity :
         }
     }
 
+    override fun onPillsReminderFragmentInteraction(item: DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onAppointmentReminderFragmentInteraction(item: com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.dummy.DummyContent.DummyItem) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun NewsFeedFragmentInteraction(item: View) {
         startActivity(Intent(this, NewsFeedDetailActivity::class.java))
     }
@@ -127,16 +137,6 @@ class MainActivity :
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
         setTimelineFragmentInteractions(this, item)
-
-        /*item.mView.patient_read_more_button.setOnClickListener {
-            val msg = getString(R.string.doctor_complete_summary)
-            alert(msg) {
-                title = "Complete Prescription Summary"
-                positiveButton("Cool") { }
-            }.show()
-        }*/
-
-
     }
 
 
@@ -151,21 +151,6 @@ class MainActivity :
 
     override fun onPositiveButtonClicked(rate: Int, comment: String) {
         toast("Your Response Is Submitted")
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode == Activity.RESULT_OK) {
-            when (requestCode) {
-                0 -> {
-                    if (data != null) {
-                        toast(data.toURI())
-                    }
-                }
-                1 -> {
-                    toast(data.toString())
-                }
-            }
-        }
     }
 
     fun makeFoldingMenuInVisible() {
@@ -216,7 +201,7 @@ class MainActivity :
                 R.id.tab_calender -> {
                     makeFoldingMenuInVisible()
                     removeBackgroundBlur()
-                    startFragmentTransaction(CalenderFragment())
+                    startFragmentTransaction(ReminderFragment())
                 }
                 R.id.tab_analytics -> {
                     makeFoldingMenuInVisible()
@@ -258,17 +243,33 @@ class MainActivity :
         }
     }
 
+    private fun createSearchView(item: MenuItem?) {
+        search_view.setMenuItem(item)
+        search_view.setVoiceSearch(true)
+        search_view.setSuggestions(resources.getStringArray(R.array.query_suggestions))
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                0 -> {
+                    if (data != null) {
+                        toast(data.toURI())
+                    }
+                }
+                1 -> {
+                    toast(data.toString())
+                }
+            }
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         createSearchView(menu.findItem(R.id.action_search))
         return true
-    }
-
-    private fun createSearchView(item: MenuItem?) {
-        search_view.setMenuItem(item)
-        search_view.setVoiceSearch(true)
-        search_view.setSuggestions(resources.getStringArray(R.array.query_suggestions))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
