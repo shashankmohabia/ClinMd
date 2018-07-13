@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Utils.Adapters
+package com.example.shashankmohabia.clinmd.Utils.PageViewers
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

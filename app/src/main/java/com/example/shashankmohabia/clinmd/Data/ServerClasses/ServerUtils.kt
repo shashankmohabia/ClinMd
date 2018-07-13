@@ -6,7 +6,7 @@ import com.google.firebase.database.*
 /**
  * Created by Shashank Mohabia on 7/10/2018.
  */
-object ChildCount {
+object ServerUtils {
     var childCount = 0
     fun countChild(dbref: DatabaseReference) {
         dbref.addListenerForSingleValueEvent(object : ValueEventListener {

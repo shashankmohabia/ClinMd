@@ -10,12 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
-import com.example.shashankmohabia.clinmd.Utils.Adapters.PageViewerAdapter
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
-class HomeFragment : Fragment(){
+class HomeFragment : Fragment() {
 
 
     // TODO: Rename and change types of parameters
@@ -42,9 +42,10 @@ class HomeFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
         slidingtabs()
     }
+
     private fun slidingtabs() {
-        setupViewPager(pager)
-        tabs.setupWithViewPager(pager)
+        setupViewPager(pager_home)
+        tabs_home.setupWithViewPager(pager_home)
     }
 
     private fun setupViewPager(pager: ViewPager?) {

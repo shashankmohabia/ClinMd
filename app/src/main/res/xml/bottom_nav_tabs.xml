@@ -16,7 +16,7 @@
         <tab
             icon="@drawable/ic_calender_black"
             id="@+id/tab_calender"
-            title="Calender" />
+            title="Reminders" />
         <tab
             icon="@drawable/ic_show_chart_black"
             id="@+id/tab_analytics"

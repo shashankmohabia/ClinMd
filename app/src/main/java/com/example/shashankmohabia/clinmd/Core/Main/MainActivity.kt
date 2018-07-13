@@ -15,7 +15,6 @@ import com.example.shashankmohabia.clinmd.R
 import android.view.View
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddDocument.AddDocumentFragment
 import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.AddFamilyMember.AddFamilyMemberFragment
-import com.example.shashankmohabia.clinmd.Core.AdditionalOptions.Chat.ChatActivity
 import com.example.shashankmohabia.clinmd.Core.Calender.CalenderFragment
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogDetailView.BlogDetailActivity
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
@@ -26,6 +25,7 @@ import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
+import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
@@ -38,6 +38,8 @@ import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
+import kotlinx.android.synthetic.main.timeline_cell_content.view.*
+import org.jetbrains.anko.alert
 
 
 class MainActivity :
@@ -125,6 +127,16 @@ class MainActivity :
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
         setTimelineFragmentInteractions(this, item)
+
+        item.mView.patient_read_more_button.setOnClickListener {
+            val msg = getString(R.string.doctor_complete_summary)
+            alert(msg) {
+                title = "Complete Prescription Summary"
+                positiveButton("Cool") { }
+            }.show()
+        }
+
+
     }
 
 
@@ -266,7 +278,6 @@ class MainActivity :
         when (item.itemId) {
         /* R.id.action_settings -> return true*/
             R.id.action_chat -> {
-                startActivity(Intent(this, ChatActivity::class.java))
                 return true
             }
             else -> return true

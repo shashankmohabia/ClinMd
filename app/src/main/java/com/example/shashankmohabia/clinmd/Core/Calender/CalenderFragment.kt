@@ -4,11 +4,17 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
+import kotlinx.android.synthetic.main.calender_fragment.*
+import kotlinx.android.synthetic.main.home_fragment.*
 
 /**
  * A simple [Fragment] subclass.
@@ -39,6 +45,29 @@ class CalenderFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.calender_fragment, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        slidingtabs()
+    }
+
+    private fun slidingtabs() {
+        setupViewPager(pager_reminder)
+        tabs_reminder.setupWithViewPager(pager_reminder)
+    }
+
+    private fun setupViewPager(pager: ViewPager?) {
+        val adapter = PageViewerAdapter(childFragmentManager)
+
+        val f1 = BlogListFragment()
+        adapter.addFragment(f1, "Appointments")
+
+        val f2 = NewsListFragment()
+        adapter.addFragment(f2, "Pills")
+
+        pager?.adapter = adapter
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
