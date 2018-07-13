@@ -43,6 +43,8 @@ import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import java.util.*
 import android.app.TimePickerDialog
+import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
+import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
 
 
 class MainActivity :
@@ -149,14 +151,17 @@ class MainActivity :
         val datePickerDialog = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                    toast("year = $year, month = $monthOfYear, day = $dayOfMonth")
+                    toast(getDate(year, monthOfYear, dayOfMonth))
                     getTimePickerIntent()
                 },
                 calender.get(Calendar.YEAR),
                 calender.get(Calendar.MONTH),
                 calender.get(Calendar.DAY_OF_MONTH)
-        )
-        datePickerDialog.show()
+        ).apply {
+            setButton(DatePickerDialog.BUTTON_POSITIVE, "Continue", this)
+            setTitle("Choose date")
+            show()
+        }
     }
 
     fun getTimePickerIntent() {
@@ -167,13 +172,18 @@ class MainActivity :
         mTimePicker = TimePickerDialog(
                 this,
                 TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
-                    toast(selectedHour.toString() + ":" + selectedMinute)
+                    toast(getTime(selectedHour, selectedMinute))
                 },
                 currentHour,
                 currentMinute,
-                false)//Yes 24 currentHour time
-        mTimePicker.setTitle("Select Time")
-        mTimePicker.show()
+                false
+        ).apply {
+            setButton(TimePickerDialog.BUTTON_POSITIVE, "request appointment", this)
+            setButton(TimePickerDialog.BUTTON_NEGATIVE, "Change Date", this)
+            setTitle("Choose Time")
+            setOnCancelListener { getDatePickerIntent() }
+            show()
+        }
     }
 
     fun makeFoldingMenuInVisible() {
