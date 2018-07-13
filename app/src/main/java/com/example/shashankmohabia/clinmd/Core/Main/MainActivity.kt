@@ -1,6 +1,7 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -36,10 +37,12 @@ import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
 import org.jetbrains.anko.toast
 import kotlinx.android.synthetic.main.main_content.*
-import com.stepstone.apprating.listener.RatingDialogListener
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
 import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
+import kotlinx.android.synthetic.main.timeline_cell_content.view.*
+import java.util.*
+import android.app.TimePickerDialog
 
 
 class MainActivity :
@@ -54,8 +57,7 @@ class MainActivity :
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         AppointmentReminderListFragment.AppointmentReminderFragmentInteractionListener,
-        PillsReminderListFragment.PillsReminderListFragmentInteractionListener,
-        RatingDialogListener {
+        PillsReminderListFragment.PillsReminderListFragmentInteractionListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,20 +139,41 @@ class MainActivity :
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
         setTimelineFragmentInteractions(this, item)
+        item.mView.patient_appointment_button.setOnClickListener {
+            getDatePickerIntent()
+        }
     }
 
-
-    //functions for rating dialouge
-    override fun onNegativeButtonClicked() {
-
+    fun getDatePickerIntent() {
+        val calender = Calendar.getInstance()
+        val datePickerDialog = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                    toast("year = $year, month = $monthOfYear, day = $dayOfMonth")
+                    getTimePickerIntent()
+                },
+                calender.get(Calendar.YEAR),
+                calender.get(Calendar.MONTH),
+                calender.get(Calendar.DAY_OF_MONTH)
+        )
+        datePickerDialog.show()
     }
 
-    override fun onNeutralButtonClicked() {
-
-    }
-
-    override fun onPositiveButtonClicked(rate: Int, comment: String) {
-        toast("Your Response Is Submitted")
+    fun getTimePickerIntent() {
+        val calender = Calendar.getInstance()
+        val currentHour = calender.get(Calendar.HOUR_OF_DAY)
+        val currentMinute = calender.get(Calendar.MINUTE)
+        val mTimePicker: TimePickerDialog
+        mTimePicker = TimePickerDialog(
+                this,
+                TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
+                    toast(selectedHour.toString() + ":" + selectedMinute)
+                },
+                currentHour,
+                currentMinute,
+                false)//Yes 24 currentHour time
+        mTimePicker.setTitle("Select Time")
+        mTimePicker.show()
     }
 
     fun makeFoldingMenuInVisible() {

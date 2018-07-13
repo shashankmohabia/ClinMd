@@ -77,8 +77,10 @@ dependencies {
     implementation 'com.jsibbold:zoomage:1.1.0'
 
     //Circular ImageView Library
-
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Date and time picker library
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
 
     //Test Libraries
     implementation 'com.android.support:recyclerview-v7:27.1.1'

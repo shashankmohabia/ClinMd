@@ -5,15 +5,23 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.provider.ContactsContract
-import android.support.v4.app.Fragment
-import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
-import com.example.shashankmohabia.clinmd.R
 import org.jetbrains.anko.toast
+import android.support.v4.content.ContextCompat.startActivity
+import android.content.ContentUris
+import android.provider.CalendarContract
+import android.R.attr.startYear
+import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
+import android.app.DatePickerDialog
+import android.app.FragmentTransaction
+import android.widget.DatePicker
+import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners
+import java.util.*
+
 
 /**
  * Created by Shashank Mohabia on 7/12/2018.
  */
-object Intents:Activity() {
+object Intents : Activity() {
 
     /*fun getGalleryIntent(context: Context){
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -27,13 +35,28 @@ object Intents:Activity() {
                 .commit()
     }*/
 
-    fun getDialerIntent(context: Context, number:String){
+    /*fun getDatePickerIntent(context: Context) {
+        val calender = Calendar.getInstance()
+        val datePickerDialog = DatePickerDialog(
+                context,
+                DatePickerDialog.OnDateSetListener {
+                    view, year, monthOfYear, dayOfMonth ->
+                    toast("year = $year, month = $monthOfYear, day = $dayOfMonth")
+                },
+                calender.get(Calendar.YEAR),
+                calender.get(Calendar.MONTH),
+                calender.get(Calendar.DAY_OF_MONTH)
+        )
+        datePickerDialog.show()
+    }*/
+
+    fun getDialerIntent(context: Context, number: String) {
         val intent = Intent(Intent.ACTION_DIAL)
         intent.data = Uri.parse("tel:8504939946")
         context.startActivity(intent)
     }
 
-    fun getMapIntent(context: Context, address:String){
+    fun getMapIntent(context: Context, address: String) {
         val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.`package` = "com.google.android.apps.maps"
