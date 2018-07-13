@@ -45,6 +45,7 @@ import java.util.*
 import android.app.TimePickerDialog
 import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
 import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
+import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showAppointmentRequestSentAlert
 
 
 class MainActivity :
@@ -148,11 +149,11 @@ class MainActivity :
 
     fun getDatePickerIntent() {
         val calender = Calendar.getInstance()
-        val datePickerDialog = DatePickerDialog(
+        DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                    toast(getDate(year, monthOfYear, dayOfMonth))
-                    getTimePickerIntent()
+                    val date = getDate(year, monthOfYear, dayOfMonth)
+                    getTimePickerIntent(date)
                 },
                 calender.get(Calendar.YEAR),
                 calender.get(Calendar.MONTH),
@@ -164,15 +165,15 @@ class MainActivity :
         }
     }
 
-    fun getTimePickerIntent() {
+    fun getTimePickerIntent(date: String) {
         val calender = Calendar.getInstance()
         val currentHour = calender.get(Calendar.HOUR_OF_DAY)
         val currentMinute = calender.get(Calendar.MINUTE)
-        val mTimePicker: TimePickerDialog
-        mTimePicker = TimePickerDialog(
+        TimePickerDialog(
                 this,
                 TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
-                    toast(getTime(selectedHour, selectedMinute))
+                    val time = getTime(selectedHour, selectedMinute)
+                    showAppointmentRequestSentAlert(this,date, time)
                 },
                 currentHour,
                 currentMinute,

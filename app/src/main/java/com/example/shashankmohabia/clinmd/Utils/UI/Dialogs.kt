@@ -5,16 +5,9 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.os.Handler
 import android.support.v4.app.FragmentActivity
-import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
-import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.R
 import com.stepstone.apprating.AppRatingDialog
-import com.stepstone.apprating.listener.RatingDialogListener
-import kotlinx.android.synthetic.main.main_app_bar.*
-import kotlinx.android.synthetic.main.main_content.*
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.alert
 import java.util.*
 
 
@@ -23,6 +16,15 @@ import java.util.*
  */
 object Dialogs :
         Activity() {
+
+
+    fun showAppointmentRequestSentAlert(context: Context, date: String, time: String) {
+        val msg = "An appointment on $date at $time has been requested.\n You can see your confirmed appointments in your reminders"
+        context.alert(msg) {
+            title = "Appointment request sent"
+            positiveButton("ok"){}
+        }.show()
+    }
 
     fun showProgressDialog(context: Context, title: String, msg: String, duration: Int) {
 

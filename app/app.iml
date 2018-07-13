@@ -147,9 +147,7 @@
     <orderEntry type="library" name="com.android.support:transition-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sdk25-coroutines:0.10.4@jar" level="project" />
-    <orderEntry type="library" name="com.nineoldandroids:library:2.4.0@jar" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-base-15.0.1" level="project" />
-    <orderEntry type="library" name="com.code-troopers.betterpickers:library-3.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:monitor-1.0.2" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-16.0.1" level="project" />
