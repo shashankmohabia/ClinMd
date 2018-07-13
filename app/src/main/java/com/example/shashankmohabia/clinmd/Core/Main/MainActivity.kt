@@ -128,13 +128,13 @@ class MainActivity :
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
         setTimelineFragmentInteractions(this, item)
 
-        item.mView.patient_read_more_button.setOnClickListener {
+        /*item.mView.patient_read_more_button.setOnClickListener {
             val msg = getString(R.string.doctor_complete_summary)
             alert(msg) {
                 title = "Complete Prescription Summary"
                 positiveButton("Cool") { }
             }.show()
-        }
+        }*/
 
 
     }
