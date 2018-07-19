@@ -3,7 +3,7 @@ package com.example.shashankmohabia.clinmd.Utils.Extensions
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
-import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
+import com.example.shashankmohabia.clinmd.Utils.Adapters.PageViewerAdapter
 
 /**
  * Created by Shashank Mohabia on 7/20/2018.

@@ -9,7 +9,6 @@ import android.provider.ContactsContract
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.example.shashankmohabia.clinmd.R
-import com.example.shashankmohabia.clinmd.Utils.Formators
 import org.jetbrains.anko.makeCall
 import org.jetbrains.anko.toast
 import java.util.*
@@ -42,7 +41,7 @@ fun Context.getDatePickerIntent() {
     DatePickerDialog(
             this,
             DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                val date = Formators.getDate(year, monthOfYear, dayOfMonth)
+                val date = getDate(year, monthOfYear, dayOfMonth)
                 this.getTimePickerIntent(date)
             },
             calender.get(Calendar.YEAR),
@@ -62,7 +61,7 @@ fun Context.getTimePickerIntent(date: String) {
     TimePickerDialog(
             this,
             TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
-                val time = Formators.getTime(selectedHour, selectedMinute)
+                val time = getTime(selectedHour, selectedMinute)
                 showAppointmentRequestSentAlert(date, time)
             },
             currentHour,

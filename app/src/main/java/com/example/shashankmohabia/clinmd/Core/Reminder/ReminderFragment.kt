@@ -4,20 +4,14 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.AppointmentReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListFragment
 
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Utils.Extensions.setupViewPager
-import com.example.shashankmohabia.clinmd.Utils.Extensions.slidingtabs
-import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
-import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.reminder_fragment.*
 
 /**

@@ -1,7 +1,6 @@
-package com.example.shashankmohabia.clinmd.Utils
+package com.example.shashankmohabia.clinmd.Utils.Extensions
 
 import java.sql.Time
-import java.text.Format
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -9,7 +8,7 @@ import java.util.*
 /**
  * Created by Shashank Mohabia on 7/13/2018.
  */
-object Formators {
+
 
     fun getTime(hr: Int, min: Int): String {
         val tme = Time(hr, min, 0)//seconds by default set to zero
@@ -24,5 +23,5 @@ object Formators {
         val format = SimpleDateFormat("MM-dd-yyyy")
         return format.format(calendar.time)
     }
-}
+
 
