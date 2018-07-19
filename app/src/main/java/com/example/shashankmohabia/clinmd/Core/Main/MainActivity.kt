@@ -43,8 +43,13 @@ import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import java.util.*
 import android.app.TimePickerDialog
+import android.os.Build
+import android.support.annotation.RequiresApi
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
+import com.example.shashankmohabia.clinmd.Utils.Extensions.getInFocus
+import com.example.shashankmohabia.clinmd.Utils.Extensions.getOutOfFocus
 import com.example.shashankmohabia.clinmd.Utils.Extensions.makeInvisible
+import com.example.shashankmohabia.clinmd.Utils.Extensions.makeVisible
 import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
 import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showAppointmentRequestSentAlert
@@ -67,12 +72,13 @@ class MainActivity:
 {
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
 
-        removeBackgroundBlur()
+        mainFrame.getInFocus()
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -190,14 +196,9 @@ class MainActivity:
         }
     }
 
-    fun makeBackgroundBlur() {
-        mainFrame.foreground.alpha = 220
-    }
 
-    fun removeBackgroundBlur() {
-        mainFrame.foreground.alpha = 0
-    }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     fun setBottomNavBar() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
@@ -208,14 +209,14 @@ class MainActivity:
                         folding_menu.makeInvisible()
                     } else {
                         folding_menu.visibility = View.VISIBLE
-                        makeBackgroundBlur()
+                        mainFrame.getOutOfFocus()
                         add_family_member_button.setOnClickListener {
-                            removeBackgroundBlur()
+                            mainFrame.getInFocus()
                             folding_menu.makeInvisible()
                             startFragmentTransaction(AddFamilyMemberFragment())
                         }
                         add_document_button.setOnClickListener {
-                            removeBackgroundBlur()
+                            mainFrame.getInFocus()
                             folding_menu.makeInvisible()
                             startFragmentTransaction(AddDocumentFragment())
                         }
@@ -223,22 +224,22 @@ class MainActivity:
                 }
                 R.id.tab_home -> {
                     folding_menu.makeInvisible()
-                    removeBackgroundBlur()
+                    mainFrame.getInFocus()
                     startFragmentTransaction(HomeFragment())
                 }
                 R.id.tab_timeline -> {
                     folding_menu.makeInvisible()
-                    removeBackgroundBlur()
+                    mainFrame.getInFocus()
                     startFragmentTransaction(TimelineListFragment())
                 }
                 R.id.tab_calender -> {
                     folding_menu.makeInvisible()
-                    removeBackgroundBlur()
+                    mainFrame.getInFocus()
                     startFragmentTransaction(ReminderFragment())
                 }
                 R.id.tab_analytics -> {
                     folding_menu.makeInvisible()
-                    removeBackgroundBlur()
+                    mainFrame.getInFocus()
                     startFragmentTransaction(AnalyticsFragment())
                 }
             }
@@ -249,11 +250,11 @@ class MainActivity:
             when (tabId) {
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
-                        removeBackgroundBlur()
-                        folding_menu.visibility = View.INVISIBLE
+                        mainFrame.getInFocus()
+                        folding_menu.makeInvisible()
                     } else {
-                        makeBackgroundBlur()
-                        folding_menu.visibility = View.VISIBLE
+                        mainFrame.getOutOfFocus()
+                        folding_menu.makeVisible()
                     }
                 }
 
@@ -367,4 +368,7 @@ class MainActivity:
         return true
     }
 }
+
+
+
 
