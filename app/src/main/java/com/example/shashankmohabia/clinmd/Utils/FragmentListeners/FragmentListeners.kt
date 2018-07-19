@@ -44,7 +44,7 @@ object FragmentListeners :
         }
 
         item.mView.patient_call_button.setOnClickListener {
-            val number = "+918504939946"
+            val number = item.item!!.phone
             context.makeCall(number)
         }
 
