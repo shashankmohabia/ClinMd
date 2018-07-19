@@ -35,7 +35,6 @@ import org.jetbrains.anko.toast
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
 import com.example.shashankmohabia.clinmd.Utils.Extensions.*
 import org.jetbrains.anko.startActivity
@@ -61,8 +60,6 @@ class MainActivity:
         setContentView(R.layout.main_activity)
         setSupportActionBar(toolbar)
 
-        mainFrame.getInFocus()
-
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
@@ -70,6 +67,7 @@ class MainActivity:
 
         nav_view.setNavigationItemSelectedListener(this)
 
+        mainFrame.getInFocus()
         setBottomNavBar()
         LoadPatientData().loadPatientDetails(this)
     }
@@ -236,29 +234,26 @@ class MainActivity:
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_switch_user -> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
+            R.id.nav_complete_history -> {
 
             }
             R.id.nav_slideshow -> {
 
             }
-            R.id.nav_manage -> {
-
-            }
             R.id.nav_share -> {
 
             }
-            R.id.nav_send -> {
+            R.id.nav_setting -> {
 
             }
             R.id.nav_logout -> {
                 AuthUI.getInstance()
                         .signOut(this)
                         .addOnCompleteListener {
-                            startActivity(Intent(this@MainActivity, InformationActivity::class.java))
+                            startActivity<InformationActivity>()
                             finish()
                         }
             }
@@ -267,7 +262,7 @@ class MainActivity:
                         .delete(this)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                startActivity(Intent(this@MainActivity, InformationActivity::class.java))
+                                startActivity<InformationActivity>()
                                 finish()
 
                             } else {
