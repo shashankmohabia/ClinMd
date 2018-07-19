@@ -10,15 +10,17 @@ import com.example.shashankmohabia.clinmd.Utils.Extensions.*
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import org.jetbrains.anko.alert
+import org.jetbrains.anko.makeCall
+import org.jetbrains.anko.startActivity
 
 /**
  * Created by Shashank Mohabia on 7/12/2018.
  */
 
 object FragmentListeners :
-        Activity(){
+        Activity() {
 
-    fun setTimelineFragmentInteractions(context: Context,item: TimelineListRecyclerViewAdapter.ViewHolder){
+    fun setTimelineFragmentInteractions(context: Context, item: TimelineListRecyclerViewAdapter.ViewHolder) {
         (item.mView as FoldingCell).toggle(false)
 
         item.mView.patient_read_more_button.setOnClickListener {
@@ -37,12 +39,12 @@ object FragmentListeners :
         }
 
         item.mView.patient_history_button.setOnClickListener {
-            context.startActivity(Intent(context, PatientHistoryActivity::class.java))
+            context.startActivity<PatientHistoryActivity>()
         }
 
         item.mView.patient_call_button.setOnClickListener {
-            val number = "8504939946"
-           context.getDialerIntent("tel:$number")
+            val number = "+918504939946"
+            makeCall(number)
         }
 
         item.mView.patient_chat_button.setOnClickListener {

@@ -76,34 +76,32 @@ fun Context.getTimePickerIntent(date: String) {
     }
 }
 
-
-fun Context.getDialerIntent(number: String) {
-    makeCall(number)
-}
-
 fun Context.getMapIntent(address: String) {
     val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
-    val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-    mapIntent.`package` = "com.google.android.apps.maps"
+    val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri).apply { `package` = "com.google.android.apps.maps" }
     startActivity(mapIntent)
 }
 
 fun Context.getShareIntent() {
-    val intent = Intent(android.content.Intent.ACTION_SEND)
-    intent.type = "text/plain"
-    intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
-    intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
+    val intent = Intent(android.content.Intent.ACTION_SEND).
+            apply {
+                type = "text/plain"
+                putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
+                putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
+            }
     startActivity(Intent.createChooser(intent, "Share via"))
 }
 
 fun Context.getWhatsAppIntent(number: String) {
     try {
-        val sendIntent = Intent("android.intent.action.MAIN")
-        sendIntent.action = Intent.ACTION_SEND
-        sendIntent.type = "text/plain"
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
-        sendIntent.putExtra("jid", "$number@s.whatsapp.net")
-        sendIntent.`package` = "com.whatsapp"
+        val sendIntent = Intent("android.intent.action.MAIN").
+                apply {
+                    action = Intent.ACTION_SEND
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
+                    putExtra("jid", "$number@s.whatsapp.net")
+                    `package` = "com.whatsapp"
+                }
         startActivity(sendIntent)
     } catch (e: Exception) {
         toast(e.toString())
@@ -126,12 +124,12 @@ fun Context.doesContactExists(number: String): Boolean {
 }
 
 fun Context.getSaveContactIntent(name: String, number: String, email: String) {
-    val intent = Intent(Intent.ACTION_INSERT)
-    intent.type = ContactsContract.Contacts.CONTENT_TYPE
-
-    intent.putExtra(ContactsContract.Intents.Insert.NAME, name)
-    intent.putExtra(ContactsContract.Intents.Insert.PHONE, number)
-    intent.putExtra(ContactsContract.Intents.Insert.EMAIL, email)
-
+    val intent = Intent(Intent.ACTION_INSERT).
+            apply {
+                type = ContactsContract.Contacts.CONTENT_TYPE
+                putExtra(ContactsContract.Intents.Insert.NAME, name)
+                putExtra(ContactsContract.Intents.Insert.PHONE, number)
+                putExtra(ContactsContract.Intents.Insert.EMAIL, email)
+            }
     startActivity(intent)
 }
