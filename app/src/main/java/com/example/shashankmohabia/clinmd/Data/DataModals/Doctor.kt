@@ -21,7 +21,7 @@ class Doctor(
         //val ITEM_MAP: MutableMap<String, DummyContent.DummyItem> = HashMap<String, DummyContent.DummyItem>()
     }
 
-    private fun addItem(item: Doctor) {
+    fun addItem(item: Doctor) {
         Doctor.doctorList.add(item)
         //DummyContent.ITEM_MAP.put(item.id, item)
     }

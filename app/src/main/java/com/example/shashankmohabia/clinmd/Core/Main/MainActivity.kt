@@ -26,6 +26,7 @@ import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.AppointmentReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadDoctorData
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
 import com.firebase.ui.auth.AuthUI
@@ -35,8 +36,8 @@ import org.jetbrains.anko.toast
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
 import com.example.shashankmohabia.clinmd.Utils.Extensions.*
+import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.startActivity
 
 class MainActivity:
@@ -69,7 +70,11 @@ class MainActivity:
 
         mainFrame.getInFocus()
         setBottomNavBar()
-        LoadPatientData().loadPatientDetails(this)
+
+        doAsync {
+           LoadDoctorData().loadDoctorList(this@MainActivity, "ClinMd1")
+        }
+
     }
 
 
@@ -255,19 +260,6 @@ class MainActivity:
                         .addOnCompleteListener {
                             startActivity<InformationActivity>()
                             finish()
-                        }
-            }
-            R.id.nav_delete_account -> {
-                AuthUI.getInstance()
-                        .delete(this)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                startActivity<InformationActivity>()
-                                finish()
-
-                            } else {
-                                toast("Unable to delete account")
-                            }
                         }
             }
         }

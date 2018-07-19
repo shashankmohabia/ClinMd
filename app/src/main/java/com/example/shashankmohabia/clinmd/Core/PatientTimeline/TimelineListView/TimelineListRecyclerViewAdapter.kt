@@ -4,12 +4,14 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment.TimelineListFragmentInteractionListener
+import com.example.shashankmohabia.clinmd.Data.DataModals.Doctor
 import com.example.shashankmohabia.clinmd.R
+import kotlinx.android.synthetic.main.timeline_cell_content.view.*
+import kotlinx.android.synthetic.main.timeline_cell_title.view.*
 import java.util.HashSet
 
-class TimelineListRecyclerViewAdapter(private val mValues: MutableList<DummyContent.DummyItem>, private val mListener: TimelineListFragmentInteractionListener?) :
+class TimelineListRecyclerViewAdapter(private val mValues: MutableList<Doctor>, private val mListener: TimelineListFragmentInteractionListener?) :
         RecyclerView.Adapter<TimelineListRecyclerViewAdapter.ViewHolder>() {
 
     private val unfoldedIndexes = HashSet<Int>()
@@ -20,17 +22,10 @@ class TimelineListRecyclerViewAdapter(private val mValues: MutableList<DummyCont
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        /*
-        holder.mItem = mValues.get(position)
-        holder.mTitleView.setText(mValues.get(position).title)
-        holder.mContentView.setText(mValues.get(position).details)*/
+        holder.bindHolder(position)
 
         holder.mView.setOnClickListener {
-            if (null != mListener) {
-                // Notify the active callbacks interface (the activity, if the
-                // fragment is attached to one) that an item has been selected.
-                mListener!!.onTimelineListFragmentInteraction(holder)
-            }
+            mListener?.onTimelineListFragmentInteraction(holder)
         }
     }
 
@@ -38,30 +33,21 @@ class TimelineListRecyclerViewAdapter(private val mValues: MutableList<DummyCont
         return mValues.size
     }
 
-    fun registerToggle(position: Int) {
-        if (unfoldedIndexes.contains(position))
-            registerFold(position)
-        else
-            registerUnfold(position)
-    }
-
-    fun registerFold(position: Int) {
-        unfoldedIndexes.remove(position)
-    }
-
-    fun registerUnfold(position: Int) {
-        unfoldedIndexes.add(position)
-    }
-
-
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        /*val mTitleView: TextView
-        val mContentView: TextView
-        var mItem: DummyItem? = null*/
 
-        init {
-            /*mTitleView = mView.findViewById(R.id.title) as TextView
-            mContentView = mView.findViewById(R.id.cell) as TextView*/
+        fun bindHolder(position: Int) {
+            with(mValues[position]){
+                itemView.apply {
+                    title_doctor_name.text = "$first_name $last_name"
+                    title_doctor_spec.text = specialization
+
+                    content_doctor_name.text = "$first_name $last_name"
+                    content_doctor_spec.text = specialization
+                    content_doctor_address.text = clinic_address
+                    content_doctor_contact.text = "$phone $email"
+                }
+
+            }
         }
 
         /* public override fun toString(): String {

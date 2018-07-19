@@ -1,4 +1,5 @@
 package com.example.shashankmohabia.clinmd.Data.ServerClasses
+
 import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
@@ -39,7 +40,7 @@ class LoadPatientData {
                 override fun onChildAdded(dataSnapshot: DataSnapshot, prevChildKey: String?) {
                     val map = dataSnapshot.value as Map<*, *>?
                     familyList.add(
-                            Patient(
+                            Patient("ClinMd1",
                                     map!!["first_name"].toString(),
                                     map["last_name"].toString(),
                                     map["phone"].toString(),
