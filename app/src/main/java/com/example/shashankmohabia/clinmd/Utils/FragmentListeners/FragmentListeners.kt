@@ -2,7 +2,6 @@ package com.example.shashankmohabia.clinmd.Utils.FragmentListeners
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.R
@@ -31,7 +30,9 @@ object FragmentListeners :
             }.show()
         }
 
-
+        item.mView.patient_appointment_button.setOnClickListener {
+            context.getDatePickerIntent()
+        }
 
         item.mView.patient_location_button.setOnClickListener {
             val address = "MNIT, Jaipur, Rajasthan"
@@ -44,7 +45,7 @@ object FragmentListeners :
 
         item.mView.patient_call_button.setOnClickListener {
             val number = "+918504939946"
-            makeCall(number)
+            context.makeCall(number)
         }
 
         item.mView.patient_chat_button.setOnClickListener {

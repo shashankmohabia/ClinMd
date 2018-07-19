@@ -131,12 +131,9 @@ class MainActivity:
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
         setTimelineFragmentInteractions(this, item)
-        item.mView.patient_appointment_button.setOnClickListener {
-            getDatePickerIntent()
-        }
     }
 
-    fun setBottomNavBar() {
+    private fun setBottomNavBar() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
         bottomNavBar.setOnTabSelectListener { tabId ->
@@ -226,12 +223,12 @@ class MainActivity:
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        when (item.itemId) {
+        return when (item.itemId) {
         /* R.id.action_settings -> return true*/
             R.id.action_chat -> {
-                return true
+                true
             }
-            else -> return true
+            else -> true
 
         }
     }
