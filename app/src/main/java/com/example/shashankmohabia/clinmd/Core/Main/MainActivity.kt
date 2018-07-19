@@ -44,14 +44,14 @@ import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import java.util.*
 import android.app.TimePickerDialog
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
+import com.example.shashankmohabia.clinmd.Utils.Extensions.makeInvisible
 import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
 import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showAppointmentRequestSentAlert
+import com.ogaclejapan.arclayout.ArcLayout
 
 
-class MainActivity(
-        private var PatientData: LoadPatientData = LoadPatientData()
-) :
+class MainActivity:
         AppCompatActivity(),
         NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
@@ -82,7 +82,7 @@ class MainActivity(
         nav_view.setNavigationItemSelectedListener(this)
 
         setBottomNavBar()
-        PatientData.loadPatientDetails(this)
+        LoadPatientData().loadPatientDetails(this)
     }
 
 
@@ -190,10 +190,6 @@ class MainActivity(
         }
     }
 
-    fun makeFoldingMenuInVisible() {
-        folding_menu.visibility = View.INVISIBLE
-    }
-
     fun makeBackgroundBlur() {
         mainFrame.foreground.alpha = 220
     }
@@ -209,39 +205,39 @@ class MainActivity(
             when (tabId) {
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
-                        makeFoldingMenuInVisible()
+                        folding_menu.makeInvisible()
                     } else {
                         folding_menu.visibility = View.VISIBLE
                         makeBackgroundBlur()
                         add_family_member_button.setOnClickListener {
                             removeBackgroundBlur()
-                            makeFoldingMenuInVisible()
+                            folding_menu.makeInvisible()
                             startFragmentTransaction(AddFamilyMemberFragment())
                         }
                         add_document_button.setOnClickListener {
                             removeBackgroundBlur()
-                            makeFoldingMenuInVisible()
+                            folding_menu.makeInvisible()
                             startFragmentTransaction(AddDocumentFragment())
                         }
                     }
                 }
                 R.id.tab_home -> {
-                    makeFoldingMenuInVisible()
+                    folding_menu.makeInvisible()
                     removeBackgroundBlur()
                     startFragmentTransaction(HomeFragment())
                 }
                 R.id.tab_timeline -> {
-                    makeFoldingMenuInVisible()
+                    folding_menu.makeInvisible()
                     removeBackgroundBlur()
                     startFragmentTransaction(TimelineListFragment())
                 }
                 R.id.tab_calender -> {
-                    makeFoldingMenuInVisible()
+                    folding_menu.makeInvisible()
                     removeBackgroundBlur()
                     startFragmentTransaction(ReminderFragment())
                 }
                 R.id.tab_analytics -> {
-                    makeFoldingMenuInVisible()
+                    folding_menu.makeInvisible()
                     removeBackgroundBlur()
                     startFragmentTransaction(AnalyticsFragment())
                 }
@@ -371,3 +367,4 @@ class MainActivity(
         return true
     }
 }
+

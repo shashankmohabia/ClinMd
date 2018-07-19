@@ -15,5 +15,4 @@ import org.jetbrains.anko.toast
 
 class DoctorList:App() {
 
-
 }
