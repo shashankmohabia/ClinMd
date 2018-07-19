@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.Utils.Extensions.getShareIntent
 import kotlinx.android.synthetic.main.blog_detail_activity.*
 
 class BlogDetailActivity : AppCompatActivity() {
@@ -35,11 +36,4 @@ class BlogDetailActivity : AppCompatActivity() {
         return true
     }
 
-    private fun getShareIntent() {
-        val intent = Intent(android.content.Intent.ACTION_SEND)
-        intent.type = "text/plain"
-        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Test")
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Random extra text")
-        startActivity(Intent.createChooser(intent, "Share via"))
-    }
 }

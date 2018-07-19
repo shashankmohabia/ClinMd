@@ -56,7 +56,7 @@ class AddFamilyMemberFragment : Fragment() {
         if (context is AddFamilyMemberFragmentInteractionListener) {
             mListener = context
         } else {
-            throw RuntimeException(context!!.toString() + " must implement CalenderFragmentInteractionListener")
+            throw RuntimeException(context!!.toString() + " must implement ReminderFragmentInteractionListener")
         }
     }
 

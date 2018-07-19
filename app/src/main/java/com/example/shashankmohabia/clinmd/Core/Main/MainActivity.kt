@@ -1,12 +1,10 @@
 package com.example.shashankmohabia.clinmd.Core.Main
 
 import android.app.Activity
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
-import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -30,7 +28,6 @@ import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListF
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
@@ -39,32 +36,20 @@ import org.jetbrains.anko.toast
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.add_document_fragment.*
 import kotlinx.android.synthetic.main.add_family_member_fragment.*
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
-import java.util.*
-import android.app.TimePickerDialog
-import android.os.Build
-import android.support.annotation.RequiresApi
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
-import com.example.shashankmohabia.clinmd.Utils.Extensions.getInFocus
-import com.example.shashankmohabia.clinmd.Utils.Extensions.getOutOfFocus
-import com.example.shashankmohabia.clinmd.Utils.Extensions.makeInvisible
-import com.example.shashankmohabia.clinmd.Utils.Extensions.makeVisible
-import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
-import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
-import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showAppointmentRequestSentAlert
-import com.ogaclejapan.arclayout.ArcLayout
-
+import com.example.shashankmohabia.clinmd.Utils.Extensions.*
+import org.jetbrains.anko.startActivity
 
 class MainActivity:
         AppCompatActivity(),
         NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
         BlogListFragment.BlogFragmentInteractionListener,
-        ReminderFragment.CalenderFragmentInteractionListener,
+        ReminderFragment.ReminderFragmentInteractionListener,
         HomeFragment.HomeFragmentInteractionListener,
         TimelineListFragment.TimelineListFragmentInteractionListener,
-        AnalyticsFragment.SettingsFragmentInteractionListener,
+        AnalyticsFragment.AnalysisFragmentInteractionListener,
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         AppointmentReminderListFragment.AppointmentReminderFragmentInteractionListener,
@@ -72,7 +57,6 @@ class MainActivity:
 {
 
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -95,13 +79,10 @@ class MainActivity:
     override fun onAddDocumentFragmentInteraction(uri: Int) {
         when (uri) {
             upload_document.id -> {
-                val intent = Intent(Intent.ACTION_GET_CONTENT)
-                intent.type = "image/*"
-                Intents.startActivityForResult(intent, 1)
+                getGalleryIntent(1)
             }
             new_document.id -> {
-                val intent = Intent("android.media.action.IMAGE_CAPTURE")
-                startActivityForResult(intent, 0)
+                getCameraIntent(0)
             }
         }
     }
@@ -126,27 +107,27 @@ class MainActivity:
     }
 
     override fun NewsFeedFragmentInteraction(item: View) {
-        startActivity(Intent(this, NewsFeedDetailActivity::class.java))
+        startActivity<NewsFeedDetailActivity>()
     }
 
     override fun onHomeFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onCalenderFragmentInteraction(uri: Uri) {
+    override fun onReminderFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onSettingsFragmentInteraction(uri: Uri) {
+    override fun onAnalysisFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun blogReadMoreInteraction(item: Int) {
-        startActivity(Intent(this, BlogDetailActivity::class.java))
+        startActivity<BlogDetailActivity>()
     }
 
     override fun blogShareButtonInteraction(position: Int) {
-        getShareIntent(this)
+        getShareIntent()
     }
 
     override fun onTimelineListFragmentInteraction(item: TimelineListRecyclerViewAdapter.ViewHolder) {
@@ -156,49 +137,6 @@ class MainActivity:
         }
     }
 
-    fun getDatePickerIntent() {
-        val calender = Calendar.getInstance()
-        DatePickerDialog(
-                this,
-                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                    val date = getDate(year, monthOfYear, dayOfMonth)
-                    getTimePickerIntent(date)
-                },
-                calender.get(Calendar.YEAR),
-                calender.get(Calendar.MONTH),
-                calender.get(Calendar.DAY_OF_MONTH)
-        ).apply {
-            setButton(DatePickerDialog.BUTTON_POSITIVE, "Continue", this)
-            setTitle("Choose date")
-            show()
-        }
-    }
-
-    fun getTimePickerIntent(date: String) {
-        val calender = Calendar.getInstance()
-        val currentHour = calender.get(Calendar.HOUR_OF_DAY)
-        val currentMinute = calender.get(Calendar.MINUTE)
-        TimePickerDialog(
-                this,
-                TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
-                    val time = getTime(selectedHour, selectedMinute)
-                    showAppointmentRequestSentAlert(this, date, time)
-                },
-                currentHour,
-                currentMinute,
-                false
-        ).apply {
-            setButton(TimePickerDialog.BUTTON_POSITIVE, "request appointment", this)
-            setButton(TimePickerDialog.BUTTON_NEGATIVE, "Change Date", this)
-            setTitle("Choose Time")
-            setOnCancelListener { getDatePickerIntent() }
-            show()
-        }
-    }
-
-
-
-    @RequiresApi(Build.VERSION_CODES.M)
     fun setBottomNavBar() {
         bottomNavBar.selectTabWithId(R.id.tab_home)
         startFragmentTransaction(HomeFragment())
@@ -207,8 +145,9 @@ class MainActivity:
                 R.id.tab_plus -> {
                     if (folding_menu.visibility == View.VISIBLE) {
                         folding_menu.makeInvisible()
+                        mainFrame.getInFocus()
                     } else {
-                        folding_menu.visibility = View.VISIBLE
+                        folding_menu.makeVisible()
                         mainFrame.getOutOfFocus()
                         add_family_member_button.setOnClickListener {
                             mainFrame.getInFocus()
@@ -245,28 +184,6 @@ class MainActivity:
             }
 
         }
-
-        bottomNavBar.setOnTabReselectListener { tabId ->
-            when (tabId) {
-                R.id.tab_plus -> {
-                    if (folding_menu.visibility == View.VISIBLE) {
-                        mainFrame.getInFocus()
-                        folding_menu.makeInvisible()
-                    } else {
-                        mainFrame.getOutOfFocus()
-                        folding_menu.makeVisible()
-                    }
-                }
-
-
-            }
-        }
-    }
-
-    fun startFragmentTransaction(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-                .replace(R.id.mainFrame, fragment)
-                .commit()
     }
 
     override fun onBackPressed() {
@@ -368,6 +285,13 @@ class MainActivity:
         return true
     }
 }
+
+
+
+
+
+
+
 
 
 
