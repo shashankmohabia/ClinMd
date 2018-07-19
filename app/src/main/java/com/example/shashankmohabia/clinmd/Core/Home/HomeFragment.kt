@@ -4,14 +4,13 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
 import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.R
-import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
+import com.example.shashankmohabia.clinmd.Utils.Extensions.setupViewPager
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
@@ -40,26 +39,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        slidingtabs()
+        val tabs_home_list = listOf("Blog", "News")
+        setupViewPager(tabs_home, tabs_home_list, pager_home, BlogListFragment(), NewsListFragment())
     }
-
-    private fun slidingtabs() {
-        setupViewPager(pager_home)
-        tabs_home.setupWithViewPager(pager_home)
-    }
-
-    private fun setupViewPager(pager: ViewPager?) {
-        val adapter = PageViewerAdapter(childFragmentManager)
-
-        val f1 = BlogListFragment()
-        adapter.addFragment(f1, "Blog")
-
-        val f2 = NewsListFragment()
-        adapter.addFragment(f2, "Feed")
-
-        pager?.adapter = adapter
-    }
-
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)

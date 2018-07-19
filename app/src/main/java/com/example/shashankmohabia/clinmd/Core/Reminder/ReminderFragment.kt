@@ -8,11 +8,16 @@ import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.shashankmohabia.clinmd.Core.Home.Blog.BlogListView.BlogListFragment
+import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.NewsListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.AppointmentReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListFragment
 
 import com.example.shashankmohabia.clinmd.R
+import com.example.shashankmohabia.clinmd.Utils.Extensions.setupViewPager
+import com.example.shashankmohabia.clinmd.Utils.Extensions.slidingtabs
 import com.example.shashankmohabia.clinmd.Utils.PageViewers.PageViewerAdapter
+import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.reminder_fragment.*
 
 /**
@@ -47,26 +52,9 @@ class ReminderFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        slidingtabs()
+        val tabs_reminder_list = listOf("Appointment", "Pills")
+        setupViewPager(tabs_reminder, tabs_reminder_list, pager_reminder, AppointmentReminderListFragment(), PillsReminderListFragment())
     }
-
-    private fun slidingtabs() {
-        setupViewPager(pager_reminder)
-        tabs_reminder.setupWithViewPager(pager_reminder)
-    }
-
-    private fun setupViewPager(pager: ViewPager?) {
-        val adapter = PageViewerAdapter(childFragmentManager)
-
-        val f1 = AppointmentReminderListFragment()
-        adapter.addFragment(f1, "Appointments")
-
-        val f2 = PillsReminderListFragment()
-        adapter.addFragment(f2, "Pills")
-
-        pager?.adapter = adapter
-    }
-
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
@@ -128,3 +116,5 @@ class ReminderFragment : Fragment() {
         }
     }
 }// Required empty public constructor
+
+
