@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Utils.Formators
-import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs
 import org.jetbrains.anko.makeCall
 import org.jetbrains.anko.toast
 import java.util.*
@@ -64,7 +63,7 @@ fun Context.getTimePickerIntent(date: String) {
             this,
             TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
                 val time = Formators.getTime(selectedHour, selectedMinute)
-                Dialogs.showAppointmentRequestSentAlert(this, date, time)
+                showAppointmentRequestSentAlert(date, time)
             },
             currentHour,
             currentMinute,

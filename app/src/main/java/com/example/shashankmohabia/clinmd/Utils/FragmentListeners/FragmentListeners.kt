@@ -1,20 +1,15 @@
 package com.example.shashankmohabia.clinmd.Utils.FragmentListeners
 
 import android.app.Activity
-import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
-import android.widget.DatePicker
-import com.example.shashankmohabia.clinmd.Core.Main.MainActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineDetailView.PatientHistoryActivity
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListRecyclerViewAdapter
 import com.example.shashankmohabia.clinmd.R
 import com.example.shashankmohabia.clinmd.Utils.Extensions.*
-import com.example.shashankmohabia.clinmd.Utils.Intents.Intents
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import org.jetbrains.anko.alert
-import org.jetbrains.anko.toast
 
 /**
  * Created by Shashank Mohabia on 7/12/2018.
@@ -34,8 +29,7 @@ object FragmentListeners :
             }.show()
         }
 
-        /*item.mView.patient_appointment_button.setOnClickListener {
-        }*/
+
 
         item.mView.patient_location_button.setOnClickListener {
             val address = "MNIT, Jaipur, Rajasthan"

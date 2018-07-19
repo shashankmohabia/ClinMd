@@ -1,7 +1,5 @@
 package com.example.shashankmohabia.clinmd.Utils.Extensions
 
-import android.os.Build
-import android.support.annotation.RequiresApi
 import android.view.View
 import android.widget.FrameLayout
 

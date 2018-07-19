@@ -28,7 +28,6 @@ import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListF
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.dummy.DummyContent
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
-import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showProgressDialog
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.android.synthetic.main.main_app_bar.*
@@ -93,7 +92,7 @@ class MainActivity:
                 val title = "Please Wait"
                 val msg = "Checking in our records"
                 val duration = 3000
-                showProgressDialog(this, title, msg, duration)
+                showProgressDialog(title, msg, duration)
             }
         }
     }
