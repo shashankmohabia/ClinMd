@@ -19,7 +19,7 @@ object Dialogs :
 
 
     fun showAppointmentRequestSentAlert(context: Context, date: String, time: String) {
-        val msg = "An appointment on $date at $time has been requested.\n You can see your confirmed appointments in your reminders"
+        val msg = "An appointment on $date at $time has been requested.\n\n You can see your confirmed appointments in your reminders"
         context.alert(msg) {
             title = "Appointment request sent"
             positiveButton("ok"){}

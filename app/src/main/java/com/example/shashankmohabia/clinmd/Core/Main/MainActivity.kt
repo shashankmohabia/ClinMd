@@ -43,12 +43,15 @@ import com.example.shashankmohabia.clinmd.Utils.Intents.Intents.getShareIntent
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import java.util.*
 import android.app.TimePickerDialog
+import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadPatientData
 import com.example.shashankmohabia.clinmd.Utils.Formators.getDate
 import com.example.shashankmohabia.clinmd.Utils.Formators.getTime
 import com.example.shashankmohabia.clinmd.Utils.UI.Dialogs.showAppointmentRequestSentAlert
 
 
-class MainActivity :
+class MainActivity(
+        private var PatientData: LoadPatientData = LoadPatientData()
+) :
         AppCompatActivity(),
         NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
@@ -60,7 +63,8 @@ class MainActivity :
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         AppointmentReminderListFragment.AppointmentReminderFragmentInteractionListener,
-        PillsReminderListFragment.PillsReminderListFragmentInteractionListener {
+        PillsReminderListFragment.PillsReminderListFragmentInteractionListener
+{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,8 +82,7 @@ class MainActivity :
         nav_view.setNavigationItemSelectedListener(this)
 
         setBottomNavBar()
-
-
+        PatientData.loadPatientDetails(this)
     }
 
 
@@ -173,7 +176,7 @@ class MainActivity :
                 this,
                 TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
                     val time = getTime(selectedHour, selectedMinute)
-                    showAppointmentRequestSentAlert(this,date, time)
+                    showAppointmentRequestSentAlert(this, date, time)
                 },
                 currentHour,
                 currentMinute,

@@ -7,19 +7,19 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import org.jetbrains.anko.toast
 import java.util.ArrayList
-import android.app.Activity
+import android.content.Context
 
 
-object LoadPatientData : Activity() {
-    val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child("Patient Id")
-    lateinit var phone: String
-    var familyList = ArrayList<Patient>()
+class LoadPatientData {
 
-
-    fun loadPatientDetails() {
+    fun loadPatientDetails(context: Context) {
+        val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child("Patient Id")
+        lateinit var phone: String
+        val familyList = ArrayList<Patient>()
         if (FirebaseAuth.getInstance().currentUser != null) {
             phone = FirebaseAuth.getInstance().currentUser?.phoneNumber.toString()
-            dbRef.orderByChild("phone").equalTo(phone).addChildEventListener(object : ChildEventListener {
+            context.toast(phone)
+            dbRef.orderByChild("mobile").equalTo(phone).addChildEventListener(object : ChildEventListener {
                 override fun onCancelled(p0: DatabaseError) {
                     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                 }
@@ -46,13 +46,13 @@ object LoadPatientData : Activity() {
                                     map["age"].toString()
                             )
                     )
-                    toast("size = " + familyList.size)
-                    toast(dataSnapshot.value.toString())
+                    context.toast("size = " + familyList.size)
+                    context.toast(dataSnapshot.value.toString())
                 }
 
             })
         } else {
-            toast("Problem Loading Data")
+            context.toast("Problem Loading Data")
         }
     }
 }
