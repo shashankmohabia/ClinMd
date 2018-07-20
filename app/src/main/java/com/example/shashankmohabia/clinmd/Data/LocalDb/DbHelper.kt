@@ -13,7 +13,7 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
         DbHelper.DB_NAME, null, DbHelper.DB_VERSION) {
 
     companion object {
-        val DB_NAME = "forecast.db"
+        val DB_NAME = "ClinMd.db"
         val DB_VERSION = 1
         val instance by lazy { DbHelper() }
     }
@@ -28,18 +28,16 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
                 DoctorTable.PHONE to TEXT,
                 DoctorTable.EMAIL to TEXT)
 
-        /*db.createTable(DayForecastTable.NAME, true,
-                DayForecastTable.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT,
-                DayForecastTable.DATE to INTEGER,
-                DayForecastTable.DESCRIPTION to TEXT,
-                DayForecastTable.HIGH to INTEGER,
-                DayForecastTable.LOW to INTEGER,
-                DayForecastTable.ICON_URL to TEXT,
-                DayForecastTable.CITY_ID to INTEGER)*/
+        db.createTable(PageTable.NAME, true,
+                PageTable.ID to TEXT,
+                PageTable.DATE to TEXT,
+                PageTable.FILE to BLOB,
+                PageTable.DOCTOR_ID to TEXT)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.dropTable(DoctorTable.NAME, true)
+        db.dropTable(PageTable.NAME, true)
         onCreate(db)
     }
 }

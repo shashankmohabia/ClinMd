@@ -14,7 +14,8 @@ class Doctor(
         val specialization: String,
         val clinic_address: String,
         val phone: String,
-        val email: String
+        val email: String,
+        val pageList: MutableList<Page>
 ) {
     companion object {
         val doctorList: MutableList<Doctor> = ArrayList()

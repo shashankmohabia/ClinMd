@@ -14,3 +14,11 @@ object DoctorTable{
     val PHONE = "phone"
     val EMAIL = "email"
 }
+
+object PageTable{
+    var NAME = "Page"
+    val ID = "_id"
+    val FILE = "file"
+    val DATE = "date"
+    val DOCTOR_ID = "doctor_id"
+}
