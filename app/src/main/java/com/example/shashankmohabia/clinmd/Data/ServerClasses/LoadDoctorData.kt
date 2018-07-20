@@ -1,7 +1,7 @@
 package com.example.shashankmohabia.clinmd.Data.ServerClasses
 
 import android.content.Context
-import com.example.shashankmohabia.clinmd.Data.DataModals.Doctor
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import org.jetbrains.anko.toast

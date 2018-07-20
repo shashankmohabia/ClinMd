@@ -5,7 +5,7 @@ package com.example.shashankmohabia.clinmd.Data.LocalDb
  */
 
 object DoctorTable{
-    val NAME = "Doctor"
+    val NAME = "DoctorModel"
     val ID = "_id"
     val FIRST_NAME = "first_name"
     val LAST_NAME = "last_name"
@@ -14,6 +14,7 @@ object DoctorTable{
     val PHONE = "phone"
     val EMAIL = "email"
 }
+/*
 
 object PageTable{
     var NAME = "Page"
@@ -21,4 +22,4 @@ object PageTable{
     val FILE = "file"
     val DATE = "date"
     val DOCTOR_ID = "doctor_id"
-}
+}*/

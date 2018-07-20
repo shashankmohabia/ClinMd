@@ -1,6 +1,6 @@
 package com.example.shashankmohabia.clinmd.Data.ServerClasses
 
-import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Patient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot

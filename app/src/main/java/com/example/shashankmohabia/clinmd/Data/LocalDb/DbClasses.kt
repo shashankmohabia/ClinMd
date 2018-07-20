@@ -1,12 +1,13 @@
 package com.example.shashankmohabia.clinmd.Data.LocalDb
 
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Page
 import java.sql.Blob
 import java.util.HashMap
 
 /**
  * Created by Shashank Mohabia on 7/20/2018.
  */
-class Doctor(map: MutableMap<String, Any?>, val PageList: List<Page>) {
+class DoctorModel(val map: MutableMap<String, Any?>, val PageList: MutableList<Page>?) {
     var _id: String by map
     var first_name: String by map
     var last_name: String by map
@@ -16,7 +17,7 @@ class Doctor(map: MutableMap<String, Any?>, val PageList: List<Page>) {
     var email: String by map
 
 
-    constructor(_id: String, first_name: String, last_name: String, specialization: String, clinic_address: String, phone: String, email: String, PageList: List<Page>)
+    constructor(_id: String, first_name: String, last_name: String, specialization: String, clinic_address: String, phone: String, email: String, PageList: MutableList<Page>?)
             : this(HashMap(), PageList) {
         this._id = _id
         this.first_name = first_name
@@ -28,7 +29,7 @@ class Doctor(map: MutableMap<String, Any?>, val PageList: List<Page>) {
     }
 }
 
-class Page(map: MutableMap<String, Any?>) {
+/*class Page(map: MutableMap<String, Any?>) {
     var _id: String by map
     var doctor_id: String by map
     var date: String by map
@@ -41,5 +42,5 @@ class Page(map: MutableMap<String, Any?>) {
         this.date = date
         this.file = file
     }
-}
+}*/
 

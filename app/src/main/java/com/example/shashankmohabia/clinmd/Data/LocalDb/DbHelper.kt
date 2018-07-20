@@ -28,16 +28,16 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
                 DoctorTable.PHONE to TEXT,
                 DoctorTable.EMAIL to TEXT)
 
-        db.createTable(PageTable.NAME, true,
+        /*db.createTable(PageTable.NAME, true,
                 PageTable.ID to TEXT,
                 PageTable.DATE to TEXT,
                 PageTable.FILE to BLOB,
-                PageTable.DOCTOR_ID to TEXT)
+                PageTable.DOCTOR_ID to TEXT)*/
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.dropTable(DoctorTable.NAME, true)
-        db.dropTable(PageTable.NAME, true)
+        /*db.dropTable(PageTable.NAME, true)*/
         onCreate(db)
     }
 }

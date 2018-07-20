@@ -54,10 +54,10 @@ object FragmentListeners :
             if (context.doesContactExists(number)) {           //919694169864
                 context.getWhatsAppIntent(number.substringAfterLast('+'))
             } else {
-                context.alert("You have to save this number to chat with your Doctor") {
+                context.alert("You have to save this number to chat with your DoctorModel") {
                     title = "Number Not Found"
                     positiveButton("Save this number") {
-                        val name = "Doctor"
+                        val name = "DoctorModel"
                         val email = "doc@gmail.com"
                         context.getSaveContactIntent(name, number, email)
                     }

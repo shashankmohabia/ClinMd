@@ -98,7 +98,7 @@ fun Context.getWhatsAppIntent(number: String) {
                 apply {
                     action = Intent.ACTION_SEND
                     type = "text/plain"
-                    putExtra(Intent.EXTRA_TEXT, "Hi Doctor")
+                    putExtra(Intent.EXTRA_TEXT, "Hi DoctorModel")
                     putExtra("jid", "$number@s.whatsapp.net")
                     `package` = "com.whatsapp"
                 }

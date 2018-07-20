@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Data.DataModals
+package com.example.shashankmohabia.clinmd.Data.DomainModals
 
 import java.io.File
 import java.util.*
@@ -17,8 +17,8 @@ data class Page(
         //val ITEM_MAP: MutableMap<String, DummyContent.DummyItem> = HashMap<String, DummyContent.DummyItem>()
     }
 
-    /*fun addItem(item: Doctor) {
-        Doctor.doctorList.add(item)
+    /*fun addItem(item: DoctorModel) {
+        DoctorModel.doctorList.add(item)
         //DummyContent.ITEM_MAP.put(item.id, item)
     }*/
 

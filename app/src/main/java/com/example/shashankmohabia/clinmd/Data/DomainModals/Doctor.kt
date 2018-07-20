@@ -1,8 +1,6 @@
-package com.example.shashankmohabia.clinmd.Data.DataModals
+package com.example.shashankmohabia.clinmd.Data.DomainModals
 
-import com.example.shashankmohabia.clinmd.Core.Home.NewsFeed.NewsFeedListView.dummy.DummyContent
 import java.util.ArrayList
-import java.util.HashMap
 
 /**
  * Created by Shashank Mohabia on 7/10/2018.

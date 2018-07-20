@@ -1,4 +1,4 @@
-package com.example.shashankmohabia.clinmd.Data.DataModals
+package com.example.shashankmohabia.clinmd.Data.DomainModals
 
 /**
  * Created by Shashank Mohabia on 7/10/2018.

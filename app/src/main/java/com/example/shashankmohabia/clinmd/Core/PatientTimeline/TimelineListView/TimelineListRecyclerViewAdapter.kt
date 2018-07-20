@@ -5,11 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Core.PatientTimeline.TimelineListView.TimelineListFragment.TimelineListFragmentInteractionListener
-import com.example.shashankmohabia.clinmd.Data.DataModals.Doctor
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
 import com.example.shashankmohabia.clinmd.R
 import kotlinx.android.synthetic.main.timeline_cell_content.view.*
 import kotlinx.android.synthetic.main.timeline_cell_title.view.*
-import java.util.HashSet
 
 class TimelineListRecyclerViewAdapter(private val mValues: MutableList<Doctor>, private val mListener: TimelineListFragmentInteractionListener?) :
         RecyclerView.Adapter<TimelineListRecyclerViewAdapter.ViewHolder>() {
