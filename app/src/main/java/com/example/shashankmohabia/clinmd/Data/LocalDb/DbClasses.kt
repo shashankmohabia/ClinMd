@@ -16,6 +16,9 @@ class DoctorModel(val map: MutableMap<String, Any?>, val PageList: MutableList<P
     var phone: String by map
     var email: String by map
 
+    companion object {
+        var doctor_list:MutableList<DoctorModel> = ArrayList()
+    }
 
     constructor(_id: String, first_name: String, last_name: String, specialization: String, clinic_address: String, phone: String, email: String, PageList: MutableList<Page>?)
             : this(HashMap(), PageList) {

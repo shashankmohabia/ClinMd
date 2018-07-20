@@ -42,7 +42,7 @@ import com.example.shashankmohabia.clinmd.Utils.Extensions.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.startActivity
 
-class MainActivity:
+class MainActivity :
         AppCompatActivity(),
         NewsListFragment.NewsFeedFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener,
@@ -54,8 +54,7 @@ class MainActivity:
         AddDocumentFragment.AddDocumentFragmentInteractionListener,
         AddFamilyMemberFragment.AddFamilyMemberFragmentInteractionListener,
         AppointmentReminderListFragment.AppointmentReminderFragmentInteractionListener,
-        PillsReminderListFragment.PillsReminderListFragmentInteractionListener
-{
+        PillsReminderListFragment.PillsReminderListFragmentInteractionListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,8 +71,10 @@ class MainActivity:
 
         mainFrame.getInFocus()
         setBottomNavBar()
+        doAsync {
+            DbFunctions().save(Doctor.doctorList)
+        }
 
-        DbFunctions().save(Doctor.doctorList)
 
     }
 

@@ -9,7 +9,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
+import com.example.shashankmohabia.clinmd.Data.LocalDb.DbFunctions
+import com.example.shashankmohabia.clinmd.Data.LocalDb.DoctorModel
 import com.example.shashankmohabia.clinmd.R
 /**
  * A fragment representing a list of Items.
@@ -47,7 +48,8 @@ class TimelineListFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            val adapter= TimelineListRecyclerViewAdapter(Doctor.doctorList, mListener)
+            DoctorModel.doctor_list = DbFunctions().requestDoctorData() as MutableList<DoctorModel>
+            val adapter= TimelineListRecyclerViewAdapter(DoctorModel.doctor_list, mListener)
             view.adapter = adapter
 
         }
