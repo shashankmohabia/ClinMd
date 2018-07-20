@@ -26,6 +26,8 @@ import com.example.shashankmohabia.clinmd.Core.Analytics.AnalyticsFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Appointments.AppointmentReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.PillsReminderListFragment
 import com.example.shashankmohabia.clinmd.Core.Reminder.Piils.dummy.DummyContent
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
+import com.example.shashankmohabia.clinmd.Data.LocalDb.DbFunctions
 import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadDoctorData
 import com.example.shashankmohabia.clinmd.UI.InformationActivity
 import com.example.shashankmohabia.clinmd.Utils.FragmentListeners.FragmentListeners.setTimelineFragmentInteractions
@@ -71,7 +73,7 @@ class MainActivity:
         mainFrame.getInFocus()
         setBottomNavBar()
 
-
+        DbFunctions().save(Doctor.doctorList)
 
     }
 
