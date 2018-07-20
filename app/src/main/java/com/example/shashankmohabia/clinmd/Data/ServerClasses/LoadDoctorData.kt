@@ -2,7 +2,6 @@ package com.example.shashankmohabia.clinmd.Data.ServerClasses
 
 import android.content.Context
 import com.example.shashankmohabia.clinmd.Data.DataModals.Doctor
-import com.example.shashankmohabia.clinmd.Data.DataModals.Patient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import org.jetbrains.anko.toast
@@ -17,7 +16,7 @@ class LoadDoctorData {
     fun loadDoctorList(context: Context, id: String) {
         val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child(id).child("Doctors")
         if (FirebaseAuth.getInstance().currentUser != null) {
-            dbRef.addChildEventListener(object :ChildEventListener{
+            dbRef.addChildEventListener(object : ChildEventListener {
                 override fun onCancelled(p0: DatabaseError) {
                     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                 }
@@ -32,7 +31,8 @@ class LoadDoctorData {
 
                 override fun onChildAdded(dataSnapshot: DataSnapshot, p1: String?) {
                     val doctor_id = dataSnapshot.key.toString()
-                    loadDoctorDetails(context,doctor_id)
+                    loadDoctorDetails(context, doctor_id)
+                    LoadDoctorPages().loadDoctorPages(context, id, doctor_id)
                 }
 
                 override fun onChildRemoved(p0: DataSnapshot) {
@@ -47,7 +47,7 @@ class LoadDoctorData {
 
     private fun loadDoctorDetails(context: Context, doctor_id: String) {
         val doctorDb = FirebaseDatabase.getInstance().reference.child("Doctors").child("Doctor Id").child(doctor_id)
-        doctorDb.addListenerForSingleValueEvent(object : ValueEventListener{
+        doctorDb.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
@@ -62,7 +62,8 @@ class LoadDoctorData {
                                 map["speciality"].toString(),
                                 map["clinicAddress"].toString(),
                                 map["phone"].toString(),
-                                map["email"].toString()
+                                map["email"].toString(),
+                                null
                         )
                 )
             }

@@ -4,8 +4,10 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.shashankmohabia.clinmd.Authentication.PinActivity
+import com.example.shashankmohabia.clinmd.Data.ServerClasses.LoadDoctorData
 import com.example.shashankmohabia.clinmd.R
 import com.google.firebase.auth.FirebaseAuth
+import org.jetbrains.anko.doAsync
 import java.lang.Thread.sleep
 
 /**
@@ -21,6 +23,9 @@ class BootActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.splash_activity)
+        doAsync {
+            LoadDoctorData().loadDoctorList(this@BootActivity, "ClinMd1")
+        }
 
         val intent = if (Auth.currentUser != null) {
             Intent(this, PinActivity::class.java)

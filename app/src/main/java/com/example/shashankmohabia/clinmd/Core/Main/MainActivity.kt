@@ -71,9 +71,7 @@ class MainActivity:
         mainFrame.getInFocus()
         setBottomNavBar()
 
-        doAsync {
-           LoadDoctorData().loadDoctorList(this@MainActivity, "ClinMd1")
-        }
+
 
     }
 
