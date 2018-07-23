@@ -20,6 +20,8 @@ class PatientHistoryActivity :
         super.onCreate(savedInstanceState)
         setContentView(R.layout.patient_history_activity)
 
+        title = intent.extras.getString("doctor_id")
+
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()

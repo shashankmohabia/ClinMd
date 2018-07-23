@@ -26,6 +26,9 @@ class SimpleAdapter(context: Context, listener: OnRecyclerItemClickListener) :
 
 class DemoViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : BaseViewHolder<PageModal, OnRecyclerItemClickListener>(itemView, listener) {
     override fun onBind(item: PageModal?) {
+        with(item){
+            itemView.pageTimestamp.text = this?.timestamp ?: "Date not available"
+        }
     }
 
     init {
