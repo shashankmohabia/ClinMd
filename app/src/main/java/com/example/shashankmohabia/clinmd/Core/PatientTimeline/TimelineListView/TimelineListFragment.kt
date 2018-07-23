@@ -50,7 +50,7 @@ class TimelineListFragment : Fragment() {
             } else {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
-            DoctorModel.doctor_list = DbFunctions().requestDoctorData() as MutableList<DoctorModel>
+            DoctorModel.doctor_list = DbFunctions().requestDoctorData("ClinMd1") as MutableList<DoctorModel>
             toast(DoctorModel.doctor_list.size.toString())
             val adapter= TimelineListRecyclerViewAdapter(DoctorModel.doctor_list, mListener)
             view.adapter = adapter

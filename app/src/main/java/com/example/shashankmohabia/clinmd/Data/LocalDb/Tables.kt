@@ -22,5 +22,5 @@ object PageTable{
     val DOCTOR_ID = "doctor_id"
     val PATIENT_ID = "patient_id"
     val TIMESTAMP = "timestamp"
-    val FILE = "file"
+    /*val FILE = "file"*/
 }

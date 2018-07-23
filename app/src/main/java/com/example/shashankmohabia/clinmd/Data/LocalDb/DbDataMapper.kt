@@ -12,7 +12,7 @@ class DbDataMapper {
     }
 
     fun convertPageFromDomain(page: Page) = with(page) {
-        PageModal(id, doctor_id, patient_id, timestamp, file)
+        PageModal(id, doctor_id, patient_id, timestamp)
     }
 
 }

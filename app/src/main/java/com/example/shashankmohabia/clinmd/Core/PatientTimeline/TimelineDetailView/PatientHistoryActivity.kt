@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import com.example.shashankmohabia.clinmd.Data.DomainModals.Page
 import com.example.shashankmohabia.clinmd.Data.LocalDb.DbFunctions
 import com.example.shashankmohabia.clinmd.Data.LocalDb.PageModal
 import com.example.shashankmohabia.clinmd.R
@@ -35,10 +34,8 @@ class PatientHistoryActivity :
 
 
 
-        PageModal.page_list = DbFunctions().requestDoctorPages() as MutableList<PageModal>
+        PageModal.page_list = DbFunctions().requestDoctorPages("1234", "ClinMd1") as MutableList<PageModal>
         toast(PageModal.page_list.size.toString())
-
-        toast(Page.pageList.size.toString())
     }
 
     override fun onItemClick(position: Int) {

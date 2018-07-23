@@ -39,19 +39,19 @@ class PageModal(val map: MutableMap<String, Any?>) {
     var doctor_id: String by map
     var patient_id: String by map
     var timestamp: String by map
-    var file: ByteArray? by map
+    /*var file: Blob by map*/
 
     companion object {
         var page_list: MutableList<PageModal> = ArrayList()
     }
 
-    constructor(_id: String, doctor_id: String, patient_id: String, timestamp: String, file: ByteArray?)
+    constructor(_id: String, doctor_id: String, patient_id: String, timestamp: String)
             : this(HashMap()) {
         this._id = _id
         this.doctor_id = doctor_id
         this.patient_id = patient_id
         this.timestamp = timestamp
-        this.file = file
+        /*this.file = file*/
     }
 }
 

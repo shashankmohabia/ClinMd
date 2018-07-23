@@ -33,8 +33,8 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
                 PageTable.ID to TEXT,
                 PageTable.DOCTOR_ID to TEXT,
                 PageTable.PATIENT_ID to TEXT,
-                PageTable.TIMESTAMP to TEXT,
-                PageTable.FILE to BLOB)
+                PageTable.TIMESTAMP to TEXT
+                /*PageTable.FILE to BLOB*/)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
