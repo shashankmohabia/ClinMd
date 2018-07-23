@@ -49,7 +49,7 @@ fun Context.getDatePickerIntent() {
             calender.get(Calendar.DAY_OF_MONTH)
     ).apply {
         setButton(DatePickerDialog.BUTTON_POSITIVE, "Continue", this)
-        setTitle("Choose date")
+        setTitle("Choose timestamp")
         show()
     }
 }

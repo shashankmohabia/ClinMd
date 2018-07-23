@@ -21,6 +21,6 @@ object PageTable{
     var NAME = "Page"
     val ID = "_id"
     val FILE = "file"
-    val DATE = "date"
+    val DATE = "timestamp"
     val DOCTOR_ID = "doctor_id"
 }*/
