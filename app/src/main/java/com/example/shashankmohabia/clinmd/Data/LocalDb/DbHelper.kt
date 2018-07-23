@@ -39,7 +39,7 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.dropTable(DoctorTable.NAME, true)
-        /*db.dropTable(PageTable.NAME, true)*/
+        db.dropTable(PageTable.NAME, true)
         onCreate(db)
     }
 }

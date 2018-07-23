@@ -34,7 +34,7 @@ class DoctorModel(val map: MutableMap<String, Any?>) {
     }
 }
 
-class PageModal(map: MutableMap<String, Any?>) {
+class PageModal(val map: MutableMap<String, Any?>) {
     var _id: String by map
     var doctor_id: String by map
     var patient_id: String by map

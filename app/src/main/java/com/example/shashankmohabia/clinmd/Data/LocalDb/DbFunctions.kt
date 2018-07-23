@@ -2,7 +2,9 @@ package com.example.shashankmohabia.clinmd.Data.LocalDb
 
 import android.content.Context
 import android.database.DatabaseUtils
+import android.util.Log
 import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Page
 import com.example.shashankmohabia.clinmd.Utils.App
 import com.example.shashankmohabia.clinmd.Utils.Extensions.clear
 import com.example.shashankmohabia.clinmd.Utils.Extensions.parseList
@@ -29,15 +31,24 @@ class DbFunctions(val ctx: Context = App.instance,
 
     fun save() = dbHelper.use {
 
-        if(!InetAddress.getByName("google.com").equals("")){
+        if (!InetAddress.getByName("google.com").equals("")) {
             clear(DoctorTable.NAME)
+            clear(PageTable.NAME)
+
+
             for (doctor in Doctor.doctorList) {
-                with(dbDataMapper.convertFromDomain(doctor)) {
+                with(dbDataMapper.convertDoctorFromDomain(doctor)) {
                     insert(DoctorTable.NAME, *map.toVarargArray())
                 }
             }
+
+            for (page in Page.pageList) {
+                with(dbDataMapper.convertPageFromDomain(page)) {
+                    insert(PageTable.NAME, *map.toVarargArray())
+                }
+            }
         }
-        ctx.toast(DatabaseUtils.queryNumEntries(this, "Doctor").toString())
+
 
     }
 }
