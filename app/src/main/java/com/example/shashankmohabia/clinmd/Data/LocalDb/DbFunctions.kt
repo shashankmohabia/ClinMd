@@ -27,11 +27,11 @@ class DbFunctions(val ctx: Context = App.instance,
     }
 
 
-    fun save(doctorList: MutableList<Doctor>) = dbHelper.use {
+    fun save() = dbHelper.use {
 
         if(!InetAddress.getByName("google.com").equals("")){
             clear(DoctorTable.NAME)
-            for (doctor in doctorList) {
+            for (doctor in Doctor.doctorList) {
                 with(dbDataMapper.convertFromDomain(doctor)) {
                     insert(DoctorTable.NAME, *map.toVarargArray())
                 }

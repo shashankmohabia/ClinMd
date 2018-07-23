@@ -72,7 +72,7 @@ class MainActivity :
         mainFrame.getInFocus()
         setBottomNavBar()
         doAsync {
-            DbFunctions().save(Doctor.doctorList)
+            DbFunctions().save()
         }
 
 
