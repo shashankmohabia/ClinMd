@@ -7,6 +7,7 @@ package com.example.shashankmohabia.clinmd.Data.LocalDb
 object DoctorTable{
     val NAME = "Doctor"
     val ID = "_id"
+    val PATIENT_ID = "patient_id"
     val FIRST_NAME = "first_name"
     val LAST_NAME = "last_name"
     val SPEC = "specialization"

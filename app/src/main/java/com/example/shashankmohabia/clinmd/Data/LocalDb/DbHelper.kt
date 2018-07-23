@@ -21,6 +21,7 @@ class DbHelper(ctx: Context = App.instance) : ManagedSQLiteOpenHelper(ctx,
     override fun onCreate(db: SQLiteDatabase) {
         db.createTable(DoctorTable.NAME, true,
                 DoctorTable.ID to TEXT,
+                DoctorTable.PATIENT_ID to TEXT,
                 DoctorTable.FIRST_NAME to TEXT,
                 DoctorTable.LAST_NAME to TEXT,
                 DoctorTable.SPEC to TEXT,

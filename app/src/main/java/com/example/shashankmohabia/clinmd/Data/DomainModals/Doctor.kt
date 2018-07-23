@@ -7,13 +7,13 @@ import java.util.ArrayList
  */
 class Doctor(
         val id: String,
+        val patient_id: String,
         val first_name: String,
         val last_name: String,
         val specialization: String,
         val clinic_address: String,
         val phone: String,
-        val email: String,
-        val pageList: MutableList<Page>?
+        val email: String
 ) {
     companion object {
         val doctorList: MutableList<Doctor> = ArrayList()

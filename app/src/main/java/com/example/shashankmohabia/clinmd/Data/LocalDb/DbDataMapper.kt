@@ -7,7 +7,7 @@ import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
  */
 class DbDataMapper {
     fun convertFromDomain(doctor: Doctor) = with(doctor) {
-        DoctorModel(id, first_name, last_name,specialization, clinic_address, phone, email, pageList)
+        DoctorModel(id, patient_id, first_name, last_name, specialization, clinic_address, phone, email)
     }
 
 }

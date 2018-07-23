@@ -31,7 +31,7 @@ class LoadDoctorData {
 
                 override fun onChildAdded(dataSnapshot: DataSnapshot, p1: String?) {
                     val doctor_id = dataSnapshot.key.toString()
-                    loadDoctorDetails(context, doctor_id)
+                    loadDoctorDetails(context, id, doctor_id)
                     LoadDoctorPages().loadDoctorPages(context, id, doctor_id)
                 }
 
@@ -45,7 +45,7 @@ class LoadDoctorData {
         }
     }
 
-    private fun loadDoctorDetails(context: Context, doctor_id: String) {
+    private fun loadDoctorDetails(context: Context, patient_id: String, doctor_id: String) {
         val doctorDb = FirebaseDatabase.getInstance().reference.child("Doctors").child("Doctor Id").child(doctor_id)
         doctorDb.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -56,14 +56,14 @@ class LoadDoctorData {
                 val map = dataSnapshot.value as Map<*, *>?
                 Doctor.doctorList.add(
                         Doctor(
-                                map!!["registrationID"].toString(),
-                                map["firstName"].toString(),
+                                doctor_id,
+                                patient_id,
+                                map!!["firstName"].toString(),
                                 map["lastName"].toString(),
                                 map["speciality"].toString(),
                                 map["clinicAddress"].toString(),
                                 map["phone"].toString(),
-                                map["email"].toString(),
-                                null
+                                map["email"].toString()
                         )
                 )
             }

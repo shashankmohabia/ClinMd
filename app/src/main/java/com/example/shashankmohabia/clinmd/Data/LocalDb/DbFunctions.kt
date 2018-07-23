@@ -1,6 +1,5 @@
 package com.example.shashankmohabia.clinmd.Data.LocalDb
 
-import android.app.Activity
 import android.content.Context
 import android.database.DatabaseUtils
 import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
@@ -23,7 +22,7 @@ class DbFunctions(val ctx: Context = App.instance,
 
     fun requestDoctorData() = dbHelper.use {
         select(DoctorTable.NAME)
-                .parseList { DoctorModel(HashMap(it), null) }
+                .parseList { DoctorModel(HashMap(it)) }
 
     }
 

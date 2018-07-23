@@ -7,8 +7,9 @@ import java.util.HashMap
 /**
  * Created by Shashank Mohabia on 7/20/2018.
  */
-class DoctorModel(val map: MutableMap<String, Any?>, val PageList: MutableList<Page>?) {
+class DoctorModel(val map: MutableMap<String, Any?>) {
     var _id: String by map
+    var patient_id: String by map
     var first_name: String by map
     var last_name: String by map
     var specialization: String by map
@@ -17,12 +18,13 @@ class DoctorModel(val map: MutableMap<String, Any?>, val PageList: MutableList<P
     var email: String by map
 
     companion object {
-        var doctor_list:MutableList<DoctorModel> = ArrayList()
+        var doctor_list: MutableList<DoctorModel> = ArrayList()
     }
 
-    constructor(_id: String, first_name: String, last_name: String, specialization: String, clinic_address: String, phone: String, email: String, PageList: MutableList<Page>?)
-            : this(HashMap(), PageList) {
+    constructor(_id: String, patient_id: String, first_name: String, last_name: String, specialization: String, clinic_address: String, phone: String, email: String)
+            : this(HashMap()) {
         this._id = _id
+        this.patient_id = patient_id
         this.first_name = first_name
         this.last_name = last_name
         this.specialization = specialization
