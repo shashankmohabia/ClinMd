@@ -2,6 +2,7 @@ package com.example.shashankmohabia.clinmd.Data.ServerClasses
 
 import android.content.Context
 import com.example.shashankmohabia.clinmd.Data.DomainModals.Doctor
+import com.example.shashankmohabia.clinmd.Utils.App
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import org.jetbrains.anko.toast
@@ -11,9 +12,9 @@ import org.jetbrains.anko.toast
  * Created by Shashank Mohabia on 7/19/2018.
  */
 
-class LoadDoctorData {
+class LoadDoctorData(private val ctx: Context = App.instance) {
 
-    fun loadDoctorList(context: Context, id: String) {
+    fun loadDoctorList(id: String) {
         val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child(id).child("Doctors")
         if (FirebaseAuth.getInstance().currentUser != null) {
             dbRef.addChildEventListener(object : ChildEventListener {
@@ -31,8 +32,8 @@ class LoadDoctorData {
 
                 override fun onChildAdded(dataSnapshot: DataSnapshot, p1: String?) {
                     val doctor_id = dataSnapshot.key.toString()
-                    loadDoctorDetails(context, id, doctor_id)
-                    LoadDoctorPages().loadDoctorPages(context, id, doctor_id)
+                    loadDoctorDetails(id, doctor_id)
+                    LoadDoctorPages().loadDoctorPages(id, doctor_id)
                 }
 
                 override fun onChildRemoved(p0: DataSnapshot) {
@@ -41,11 +42,11 @@ class LoadDoctorData {
 
             })
         } else {
-            context.toast("Problem Loading Data")
+            ctx.toast("Problem Loading Data")
         }
     }
 
-    private fun loadDoctorDetails(context: Context, patient_id: String, doctor_id: String) {
+    private fun loadDoctorDetails(patient_id: String, doctor_id: String) {
         val doctorDb = FirebaseDatabase.getInstance().reference.child("Doctors").child("Doctor Id").child(doctor_id)
         doctorDb.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {

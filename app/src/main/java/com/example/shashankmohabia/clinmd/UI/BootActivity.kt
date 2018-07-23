@@ -26,7 +26,7 @@ class BootActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.splash_activity)
-        LoadDoctorData().loadDoctorList(this@BootActivity, "ClinMd1")
+        LoadDoctorData().loadDoctorList("ClinMd1")
 
         val intent = if (Auth.currentUser != null) {
             Intent(this, PinActivity::class.java)
