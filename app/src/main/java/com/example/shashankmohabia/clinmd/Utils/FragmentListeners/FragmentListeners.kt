@@ -40,7 +40,10 @@ object FragmentListeners :
         }
 
         item.mView.patient_history_button.setOnClickListener {
-            context.startActivity<PatientHistoryActivity>()
+            context.startActivity<PatientHistoryActivity>(
+                    "doctor_id" to item.item!!._id,
+                    "patient_id" to item.item!!.patient_id
+            )
         }
 
         item.mView.patient_call_button.setOnClickListener {

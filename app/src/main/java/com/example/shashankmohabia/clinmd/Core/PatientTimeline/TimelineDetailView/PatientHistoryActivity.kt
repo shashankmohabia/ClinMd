@@ -32,9 +32,11 @@ class PatientHistoryActivity :
         historyList.adapter = hadapter
         hadapter.items = list
 
+        PageModal.page_list = DbFunctions().requestDoctorPages(
+                intent.extras.getString("doctor_id"),
+                intent.extras.getString("patient_id")
+        ) as MutableList<PageModal>
 
-
-        PageModal.page_list = DbFunctions().requestDoctorPages("1234", "ClinMd1") as MutableList<PageModal>
         toast(PageModal.page_list.size.toString())
     }
 
