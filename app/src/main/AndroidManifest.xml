@@ -61,7 +61,7 @@
             android:name=".Core.PatientTimeline.TimelineDetailView.PatientHistoryDetailActivity"
             android:label="@string/title_activity_patient_history_detail"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Core.Home.NewsFeed.NewsFeedDetailView.NewsFeedDetailActivity"
             android:label="@string/title_activity_news_feed_detail"
