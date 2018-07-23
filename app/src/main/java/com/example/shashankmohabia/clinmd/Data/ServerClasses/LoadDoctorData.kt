@@ -14,8 +14,8 @@ import org.jetbrains.anko.toast
 
 class LoadDoctorData(private val ctx: Context = App.instance) {
 
-    fun loadDoctorList(id: String) {
-        val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child(id).child("Doctors")
+    fun loadDoctorList(patient_id: String) {
+        val dbRef = FirebaseDatabase.getInstance().reference.child("Patients").child(patient_id).child("Doctors")
         if (FirebaseAuth.getInstance().currentUser != null) {
             dbRef.addChildEventListener(object : ChildEventListener {
                 override fun onCancelled(p0: DatabaseError) {
@@ -32,8 +32,8 @@ class LoadDoctorData(private val ctx: Context = App.instance) {
 
                 override fun onChildAdded(dataSnapshot: DataSnapshot, p1: String?) {
                     val doctor_id = dataSnapshot.key.toString()
-                    loadDoctorDetails(id, doctor_id)
-                    LoadDoctorPages().loadDoctorPages(id, doctor_id)
+                    loadDoctorDetails(patient_id, doctor_id)
+
                 }
 
                 override fun onChildRemoved(p0: DataSnapshot) {
@@ -67,6 +67,7 @@ class LoadDoctorData(private val ctx: Context = App.instance) {
                                 map["email"].toString()
                         )
                 )
+                LoadDoctorPages().loadDoctorPages(patient_id, doctor_id)
             }
         })
 
