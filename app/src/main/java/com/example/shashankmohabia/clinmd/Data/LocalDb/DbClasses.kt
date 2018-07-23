@@ -34,18 +34,20 @@ class DoctorModel(val map: MutableMap<String, Any?>) {
     }
 }
 
-/*class Page(map: MutableMap<String, Any?>) {
+class PageModal(map: MutableMap<String, Any?>) {
     var _id: String by map
     var doctor_id: String by map
+    var patient_id: String by map
     var timestamp: String by map
-    var file: Blob by map
+    var file: ByteArray? by map
 
-    constructor(_id: String, doctor_id: String, timestamp: String, file: Blob)
+    constructor(_id: String, doctor_id: String, patient_id: String, timestamp: String, file: ByteArray?)
             : this(HashMap()) {
         this._id = _id
         this.doctor_id = doctor_id
+        this.patient_id = patient_id
         this.timestamp = timestamp
         this.file = file
     }
-}*/
+}
 
