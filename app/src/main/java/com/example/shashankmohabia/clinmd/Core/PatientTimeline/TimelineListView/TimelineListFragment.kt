@@ -12,6 +12,8 @@ import android.view.ViewGroup
 import com.example.shashankmohabia.clinmd.Data.LocalDb.DbFunctions
 import com.example.shashankmohabia.clinmd.Data.LocalDb.DoctorModel
 import com.example.shashankmohabia.clinmd.R
+import org.jetbrains.anko.support.v4.toast
+
 /**
  * A fragment representing a list of Items.
  *
@@ -49,6 +51,7 @@ class TimelineListFragment : Fragment() {
                 view.layoutManager = GridLayoutManager(context, mColumnCount)
             }
             DoctorModel.doctor_list = DbFunctions().requestDoctorData() as MutableList<DoctorModel>
+            toast(DoctorModel.doctor_list.size.toString())
             val adapter= TimelineListRecyclerViewAdapter(DoctorModel.doctor_list, mListener)
             view.adapter = adapter
 

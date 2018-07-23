@@ -27,6 +27,11 @@ class DbFunctions(val ctx: Context = App.instance,
                 .parseList { DoctorModel(HashMap(it)) }
 
     }
+    fun requestDoctorPages() = dbHelper.use {
+        select(PageTable.NAME)
+                .parseList { PageModal(HashMap(it)) }
+
+    }
 
 
     fun save() = dbHelper.use {

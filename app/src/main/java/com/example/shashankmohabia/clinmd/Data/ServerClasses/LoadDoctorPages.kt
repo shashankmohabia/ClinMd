@@ -46,7 +46,6 @@ class LoadDoctorPages(private val ctx: Context = App.instance) {
                                     getPageData(doctor_id, map["page"].toString())
                             )
                     )
-                    ctx.toast(Page.pageList.size.toString())
                 }
 
                 override fun onChildRemoved(p0: DataSnapshot) {

@@ -4,10 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import com.example.shashankmohabia.clinmd.Data.DomainModals.Page
+import com.example.shashankmohabia.clinmd.Data.LocalDb.DbFunctions
+import com.example.shashankmohabia.clinmd.Data.LocalDb.PageModal
 import com.example.shashankmohabia.clinmd.R
 import com.leodroidcoder.genericadapter.OnRecyclerItemClickListener
 import kotlinx.android.synthetic.main.patient_history_activity.*
 import kotlinx.android.synthetic.main.patient_history_content.*
+import org.jetbrains.anko.toast
 
 class PatientHistoryActivity :
         AppCompatActivity(),
@@ -28,6 +32,13 @@ class PatientHistoryActivity :
         val hadapter = SimpleAdapter(this, this)
         historyList.adapter = hadapter
         hadapter.items = list
+
+
+
+        PageModal.page_list = DbFunctions().requestDoctorPages() as MutableList<PageModal>
+        toast(PageModal.page_list.size.toString())
+
+        toast(Page.pageList.size.toString())
     }
 
     override fun onItemClick(position: Int) {

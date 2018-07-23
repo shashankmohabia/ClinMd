@@ -41,6 +41,10 @@ class PageModal(val map: MutableMap<String, Any?>) {
     var timestamp: String by map
     var file: ByteArray? by map
 
+    companion object {
+        var page_list: MutableList<PageModal> = ArrayList()
+    }
+
     constructor(_id: String, doctor_id: String, patient_id: String, timestamp: String, file: ByteArray?)
             : this(HashMap()) {
         this._id = _id
