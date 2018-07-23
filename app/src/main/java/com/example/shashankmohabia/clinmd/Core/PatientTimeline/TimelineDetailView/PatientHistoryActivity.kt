@@ -24,13 +24,6 @@ class PatientHistoryActivity :
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        val list = ArrayList<String>()
-        for (i in 0..25) {
-            list.add("item $i")
-        }
-        val hadapter = SimpleAdapter(this, this)
-        historyList.adapter = hadapter
-        hadapter.items = list
 
         PageModal.page_list = DbFunctions().requestDoctorPages(
                 intent.extras.getString("doctor_id"),
@@ -38,6 +31,12 @@ class PatientHistoryActivity :
         ) as MutableList<PageModal>
 
         toast(PageModal.page_list.size.toString())
+
+        val hadapter = SimpleAdapter(this, this)
+        historyList.adapter = hadapter
+        hadapter.items = PageModal.page_list
+
+
     }
 
     override fun onItemClick(position: Int) {

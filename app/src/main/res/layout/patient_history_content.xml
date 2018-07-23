@@ -5,22 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="20dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginLeft="10dp"
     android:orientation="vertical"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="10dp"
     android:weightSum="10">
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center_vertical"
-        android:paddingLeft="30dp"
-        android:text="Doctor's name"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/historyList"
@@ -28,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:layout_weight="6"
+        android:layout_weight="9"
         android:clipChildren="false"
         android:overScrollMode="never"
         app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
@@ -40,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:gravity="center_vertical"
         android:layout_marginTop="20dp"
         android:paddingLeft="30dp"
